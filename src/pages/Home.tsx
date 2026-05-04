@@ -202,8 +202,8 @@ export default function Home() {
               <div className="text-center text-primary">GastroHub</div>
             </div>
             {[
-              { label: "Provision pro Bestellung", lieferando: "15–30 %", gastrohub: "0 %" },
-              { label: "Monatliche Grundgebühr", lieferando: "Ab €99/Monat", gastrohub: "Einmalzahlung" },
+              { label: "Provision pro Bestellung", lieferando: "15–30 %", gastrohub: "Ab 5 % (oder Einmalzahlung)" },
+              { label: "Monatliche Grundgebühr", lieferando: "Ab €99/Monat", gastrohub: "Kein Abo" },
               { label: "Kundendaten gehören", lieferando: "Lieferando", gastrohub: "Ihnen" },
               { label: "Eigenes Branding", lieferando: "Nein", gastrohub: "Vollständig" },
               { label: "Zahlungsabwicklung", lieferando: "Lieferando", gastrohub: "Direkt (Stripe)" },
@@ -221,7 +221,7 @@ export default function Home() {
                 <span className="font-bold text-red-600">€36.000 pro Jahr</span>.
               </p>
               <p className="text-slate-700 text-base mt-2">
-                Mit GastroHub zahlen Sie <span className="font-bold text-emerald-600">einmal</span> — und behalten den Rest.
+                Mit GastroHub zahlen Sie <span className="font-bold text-emerald-600">deutlich weniger</span> — und behalten den Rest.
               </p>
             </div>
           </div>
@@ -231,34 +231,48 @@ export default function Home() {
       {/* Pricing */}
       <section className="py-20 lg:py-28 bg-slate-50">
         <div className="container mx-auto px-4">
-          <div className="max-w-2xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Einmal zahlen. Für immer nutzen.</h2>
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Flexible Preismodelle</h2>
             <p className="text-lg text-slate-600 mb-10">
-              Kein Abo. Keine Provision. Keine versteckten Gebühren. Sie zahlen einmal und nutzen GastroHub dauerhaft — inklusive allen Funktionen.
+              Wählen Sie das Modell, das zu Ihrem Restaurant passt — beide deutlich günstiger als Lieferando.
             </p>
-            <div className="bg-white rounded-2xl shadow-md border border-slate-200 p-10 mb-8">
-              <div className="flex flex-col items-center gap-6">
-                {[
-                  { icon: "✅", text: "Vollständiges Bestellsystem mit Checkout & Zahlung" },
-                  { icon: "✅", text: "Admin-Dashboard für Smartphone & Desktop" },
-                  { icon: "✅", text: "Kunden-Login, Wunschliste & Bestellhistorie" },
-                  { icon: "✅", text: "Echtzeit-Benachrichtigungen per Telegram & E-Mail" },
-                  { icon: "✅", text: "Lieferzonen, Coupons, Statistiken & mehr" },
-                  { icon: "✅", text: "Kein Monatsabo, 0 % Provision" },
-                ].map((item, i) => (
-                  <div key={i} className="flex items-center gap-3 text-slate-700 w-full max-w-sm">
-                    <span className="text-lg">{item.icon}</span>
-                    <span className="text-sm text-left">{item.text}</span>
-                  </div>
-                ))}
+            <div className="grid md:grid-cols-2 gap-6 mb-8">
+              {/* Option A: One-time */}
+              <div className="bg-white rounded-2xl shadow-md border border-slate-200 p-8 text-left flex flex-col">
+                <div className="text-2xl font-extrabold text-slate-900 mb-1">Einmalzahlung</div>
+                <div className="text-slate-500 text-sm mb-6">Einmalige Einrichtungsgebühr, kein Abo</div>
+                <ul className="space-y-3 text-sm text-slate-700 flex-1">
+                  {[
+                    "0 % Provision auf jede Bestellung",
+                    "Kein monatliches Abo",
+                    "Vollständiges Bestellsystem",
+                    "Wartung & Updates werden separat abgerechnet",
+                  ].map((t, i) => (
+                    <li key={i} className="flex items-start gap-2"><Check className="w-4 h-4 text-emerald-500 mt-0.5 shrink-0" />{t}</li>
+                  ))}
+                </ul>
               </div>
-              <div className="mt-8 pt-8 border-t border-slate-100 text-center">
-                <p className="text-slate-500 text-sm mb-4">Preis auf Anfrage — individuell nach Restaurantgröße</p>
-                <Button asChild size="lg" className="h-14 px-10 text-base font-semibold">
-                  <Link href="/kontakt">Angebot anfragen</Link>
-                </Button>
+              {/* Option B: Provision */}
+              <div className="bg-white rounded-2xl shadow-md border-2 border-primary p-8 text-left flex flex-col relative">
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full">Empfohlen</div>
+                <div className="text-2xl font-extrabold text-slate-900 mb-1">Provision</div>
+                <div className="text-slate-500 text-sm mb-6">Niedrige Beteiligung statt Einmalgebühr</div>
+                <ul className="space-y-3 text-sm text-slate-700 flex-1">
+                  {[
+                    "5 % Provision — Grundpaket",
+                    "7 % Provision — inkl. Wartung & Support",
+                    "Weit unter Lieferando (15–30 %)",
+                    "Vollständiges Bestellsystem",
+                  ].map((t, i) => (
+                    <li key={i} className="flex items-start gap-2"><Check className="w-4 h-4 text-emerald-500 mt-0.5 shrink-0" />{t}</li>
+                  ))}
+                </ul>
               </div>
             </div>
+            <p className="text-slate-500 text-sm mb-6">Alle Preise individuell nach Restaurantgröße — sprechen Sie uns an.</p>
+            <Button asChild size="lg" className="h-14 px-10 text-base font-semibold">
+              <Link href="/kontakt">Angebot anfragen</Link>
+            </Button>
           </div>
         </div>
       </section>
@@ -278,7 +292,7 @@ export default function Home() {
                   <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold text-lg">1</div>
                   <div>
                     <h4 className="text-xl font-bold text-slate-900 mb-2">Registrieren</h4>
-                    <p className="text-slate-600">Melden Sie sich an und wählen Sie die passende Einmalzahlung für Ihr Restaurant.</p>
+                    <p className="text-slate-600">Melden Sie sich an und wählen Sie das passende Preismodell für Ihr Restaurant.</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
@@ -305,8 +319,8 @@ export default function Home() {
                 <div className="absolute inset-12 rounded-full border-4 border-primary/30 animate-[spin_40s_linear_infinite_reverse]"></div>
                 <div className="w-48 h-48 bg-white shadow-xl rounded-2xl z-10 flex flex-col items-center justify-center p-6 text-center rotate-3 hover:rotate-0 transition-transform">
                   <PackageOpen className="w-16 h-16 text-primary mb-4" />
-                  <div className="font-bold text-slate-900">Startklar in 24h</div>
-                  <div className="text-sm text-slate-500">Voller Support inklusive</div>
+                  <div className="font-bold text-slate-900">Schnell startklar</div>
+                  <div className="text-sm text-slate-500">Wir begleiten Sie beim Setup</div>
                 </div>
               </div>
             </div>
@@ -318,18 +332,16 @@ export default function Home() {
       <section className="py-20 bg-slate-100 text-slate-900 relative overflow-hidden">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#cbd5e11a_1px,transparent_1px),linear-gradient(to_bottom,#cbd5e11a_1px,transparent_1px)] bg-[size:24px_24px]"></div>
         <div className="container mx-auto px-4 relative z-10">
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-8 text-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto text-center">
             <motion.div initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.4 }}>
-              <div className="text-4xl md:text-5xl font-extrabold mb-2">0%</div>
-              <div className="text-slate-600 font-medium">Provision pro Bestellung</div>
+              <div className="text-4xl md:text-5xl font-extrabold mb-2">ab 5%</div>
+              <div className="text-slate-600 font-medium">Provision — oder Einmalzahlung</div>
+              <div className="text-slate-400 text-sm mt-1">Lieferando verlangt 15–30 %</div>
             </motion.div>
             <motion.div initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: 0.1 }}>
-              <div className="text-4xl md:text-5xl font-extrabold mb-2">24h</div>
-              <div className="text-slate-600 font-medium">Setup-Zeit</div>
-            </motion.div>
-            <motion.div initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: 0.2 }}>
-              <div className="text-4xl md:text-5xl font-extrabold mb-2">1×</div>
-              <div className="text-slate-600 font-medium">Einmalzahlung, dauerhaft nutzen</div>
+              <div className="text-4xl md:text-5xl font-extrabold mb-2">100%</div>
+              <div className="text-slate-600 font-medium">Ihre Kundendaten, Ihr Branding</div>
+              <div className="text-slate-400 text-sm mt-1">Keine Abhängigkeit von Plattformen</div>
             </motion.div>
           </div>
         </div>
@@ -338,9 +350,9 @@ export default function Home() {
       {/* Final CTA */}
       <section className="py-24 bg-white text-center text-slate-900">
         <div className="container mx-auto px-4 max-w-4xl">
-          <h2 className="text-3xl md:text-5xl font-bold mb-6 leading-tight">Einmal zahlen. Restaurant behalten.</h2>
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 leading-tight">Ihr Restaurant. Ihre Bestellungen.</h2>
             <p className="text-xl text-slate-600 mb-10 max-w-2xl mx-auto">
-            Einmal zahlen, dauerhaft nutzen — keine monatlichen Kosten, keine Umsatzbeteiligung.
+            Wählen Sie das Modell, das zu Ihnen passt — deutlich günstig als Lieferando, ohne Abhängigkeit von fremden Plattformen.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Button asChild size="lg" className="h-14 px-8 text-lg font-semibold bg-sky-600 text-white hover:bg-sky-700">
@@ -352,7 +364,7 @@ export default function Home() {
           </div>
           <div className="mt-8 text-slate-500 text-sm flex items-center justify-center gap-4">
             <span className="flex items-center"><Check className="w-4 h-4 mr-1 text-emerald-500" /> Keine Kreditkarte nötig</span>
-            <span className="flex items-center"><Check className="w-4 h-4 mr-1 text-emerald-500" /> Keine Provision pro Bestellung</span>
+            <span className="flex items-center"><Check className="w-4 h-4 mr-1 text-emerald-500" /> Weit unter Lieferando-Konditionen</span>
           </div>
         </div>
       </section>
