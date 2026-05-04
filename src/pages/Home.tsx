@@ -203,7 +203,7 @@ export default function Home() {
               <div className="text-center text-primary">GastroHub</div>
             </div>
             {[
-              { label: "Provision", lieferando: "15–30 %", ubereats: "15–30 %", gastrohub: "Ab 5 % (oder Einmalzahlung)" },
+              { label: "Provision", lieferando: "15–30 %", ubereats: "15–30 %", gastrohub: "5 % / 7 % (fest) oder Einmal" },
               { label: "Monatl. Gebühr", lieferando: "Ab €99/Mo.", ubereats: "Ab €0 (höhere %)", gastrohub: "Kein Abo" },
               { label: "Kundendaten", lieferando: "Plattform", ubereats: "Plattform", gastrohub: "Ihnen" },
               { label: "Eigenes Branding", lieferando: "Nein", ubereats: "Nein", gastrohub: "Vollständig" },
@@ -336,8 +336,8 @@ export default function Home() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto text-center">
             <motion.div initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.4 }}>
-              <div className="text-4xl md:text-5xl font-extrabold mb-2">ab 5%</div>
-              <div className="text-slate-600 font-medium">Provision — oder Einmalzahlung</div>
+              <div className="text-4xl md:text-5xl font-extrabold mb-2">5 % / 7 %</div>
+              <div className="text-slate-600 font-medium">Festprovision — oder Einmalzahlung</div>
               <div className="text-slate-400 text-sm mt-1">Lieferando verlangt 15–30 %</div>
             </motion.div>
             <motion.div initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: 0.1 }}>
