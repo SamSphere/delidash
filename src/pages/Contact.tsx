@@ -24,11 +24,11 @@ export default function Contact() {
             </div>
             
             <a 
-              href="mailto:hallo@deliverdirect.de" 
+              href="mailto:kontakt@gastrohub.dev" 
               className="inline-block text-3xl md:text-4xl font-bold text-primary hover:text-blue-700 transition-colors mb-8 border-b-2 border-transparent hover:border-blue-700 pb-1"
               data-testid="link-email"
             >
-              hallo@deliverdirect.de
+              kontakt@gastrohub.dev
             </a>
             
             <div className="grid sm:grid-cols-2 gap-6 mt-8 border-t border-slate-100 pt-8 text-left">
@@ -43,7 +43,7 @@ export default function Contact() {
                 <MapPin className="h-5 w-5 text-slate-400 shrink-0 mt-0.5" />
                 <div>
                   <h4 className="font-semibold text-slate-900">Standort</h4>
-                  <p className="text-slate-600 text-sm">Berlin, Deutschland<br/>Remote First Team</p>
+                  <p className="text-slate-600 text-sm">Dietmannsried, Deutschland<br/>Remote First Team</p>
                 </div>
               </div>
             </div>

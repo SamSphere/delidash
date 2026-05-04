@@ -239,26 +239,22 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Social Proof / Stats */}
+      {/* Key Facts */}
       <section className="py-20 bg-slate-100 text-slate-900 relative overflow-hidden">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#cbd5e11a_1px,transparent_1px),linear-gradient(to_bottom,#cbd5e11a_1px,transparent_1px)] bg-[size:24px_24px]"></div>
         <div className="container mx-auto px-4 relative z-10">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-8 text-center">
             <motion.div initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.4 }}>
-              <div className="text-4xl md:text-5xl font-extrabold mb-2">500+</div>
-              <div className="text-slate-600 font-medium">Restaurants</div>
+              <div className="text-4xl md:text-5xl font-extrabold mb-2">0%</div>
+              <div className="text-slate-600 font-medium">Provision pro Bestellung</div>
             </motion.div>
             <motion.div initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: 0.1 }}>
-              <div className="text-4xl md:text-5xl font-extrabold mb-2">0%</div>
-              <div className="text-slate-600 font-medium">0% Share</div>
+              <div className="text-4xl md:text-5xl font-extrabold mb-2">24h</div>
+              <div className="text-slate-600 font-medium">Setup-Zeit</div>
             </motion.div>
             <motion.div initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: 0.2 }}>
-              <div className="text-4xl md:text-5xl font-extrabold mb-2">24h</div>
-              <div className="text-slate-600 font-medium">Setup</div>
-            </motion.div>
-            <motion.div initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: 0.3 }}>
-              <div className="text-4xl md:text-5xl font-extrabold mb-2">98%</div>
-              <div className="text-slate-600 font-medium">Zufriedenheit</div>
+              <div className="text-4xl md:text-5xl font-extrabold mb-2">1×</div>
+              <div className="text-slate-600 font-medium">Einmalzahlung, dauerhaft nutzen</div>
             </motion.div>
           </div>
         </div>
@@ -281,7 +277,7 @@ export default function Home() {
           </div>
           <div className="mt-8 text-slate-500 text-sm flex items-center justify-center gap-4">
             <span className="flex items-center"><Check className="w-4 h-4 mr-1 text-emerald-500" /> Keine Kreditkarte nötig</span>
-            <span className="flex items-center"><Check className="w-4 h-4 mr-1 text-emerald-500" /> 14 Tage kostenlos testen</span>
+            <span className="flex items-center"><Check className="w-4 h-4 mr-1 text-emerald-500" /> Keine Provision pro Bestellung</span>
           </div>
         </div>
       </section>
