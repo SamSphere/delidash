@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://gastrohub.dev/</loc><priority>1.0</priority></url>
-  <url><loc>https://gastrohub.dev/#/demo</loc><priority>0.8</priority></url>
-  <url><loc>https://gastrohub.dev/#/faq</loc><priority>0.7</priority></url>
-  <url><loc>https://gastrohub.dev/#/kontakt</loc><priority>0.6</priority></url>
-  <url><loc>https://gastrohub.dev/#/impressum</loc><priority>0.3</priority></url>
-  <url><loc>https://gastrohub.dev/#/datenschutz</loc><priority>0.3</priority></url>
+  <url>
+    <loc>https://gastrohub.dev/</loc>
+    <priority>1.0</priority>
+    <changefreq>weekly</changefreq>
+  </url>
 </urlset>

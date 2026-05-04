@@ -31,7 +31,7 @@ export default function Contact() {
               kontakt@gastrohub.dev
             </a>
 
-            <p className="text-slate-500 text-sm mt-6">Wir antworten in der Regel innerhalb von 24 Stunden.</p>
+            <p className="text-slate-500 text-sm mt-6">Wir antworten werktags in der Regel am selben oder nächsten Tag.</p>
           </Card>
         </div>
       </div>

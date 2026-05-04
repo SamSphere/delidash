@@ -145,7 +145,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-3">Schnell im Restaurantalltag</h3>
                 <p className="text-slate-600 leading-relaxed">
-                  In weniger als 24 Stunden live gehen. Menü, Fotos und Bestellungen sind schnell eingerichtet und sofort nutzbar.
+                  Schnell live gehen. Menü, Fotos und Bestellungen sind in wenigen Tagen eingerichtet und sofort nutzbar.
                 </p>
               </Card>
             </motion.div>
@@ -170,7 +170,7 @@ export default function Home() {
               { icon: UserRound, title: "Kunden-Login", text: "Login, Registrierung und Kontobereich für wiederkehrende Gäste." },
               { icon: Settings, title: "Admin auf dem Handy", text: "Bestellungen annehmen, Lieferzeiten setzen, Artikel offline nehmen, neue Gerichte mit Fotos anlegen und alles direkt am Telefon steuern." },
               { icon: Cookie, title: "Cookie Banner", text: "Banner anzeigen und Einwilligung bequem akzeptieren." },
-              { icon: Languages, title: "Sprachwechsel", text: "Verfügbar auf Deutsch, Englisch und Arabisch, weitere Sprachen auf Anfrage." },
+              { icon: Languages, title: "Sprachwechsel", text: "Verfügbar auf Deutsch, Englisch, Arabisch und Türkisch, weitere Sprachen auf Anfrage." },
               { icon: CheckCircle2, title: "FAQ & Recht", text: "FAQ, AGB, Impressum und Datenschutz sind direkt eingebunden." },
               { icon: ArrowRight, title: "Kontaktwege", text: "E-Mail, Telefon und Demo-Kontaktwege für direkte Anfragen." },
               { icon: TrendingUp, title: "Mobile-optimiert", text: "Vollständig mobile-optimierte Web-App für Menü, Warenkorb, Checkout und Kundenkonto, ohne App-Installation." },
