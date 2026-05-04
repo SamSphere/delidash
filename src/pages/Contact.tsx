@@ -43,7 +43,7 @@ export default function Contact() {
                 <MapPin className="h-5 w-5 text-slate-400 shrink-0 mt-0.5" />
                 <div>
                   <h4 className="font-semibold text-slate-900">Standort</h4>
-                  <p className="text-slate-600 text-sm">Dietmannsried, Deutschland<br/>Remote First Team</p>
+                  <p className="text-slate-600 text-sm">Stuttgart, Deutschland<br/>Remote First Team</p>
                 </div>
               </div>
             </div>
