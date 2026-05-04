@@ -14,23 +14,23 @@ const faqSections = [
     items: [
       {
         q: "Was kostet GastroHub?",
-        a: "Wir bieten zwei Modelle an. Einmalzahlung: Sie zahlen einmalig, danach keine monatlichen Gebühren und 0 % Provision. Provisionmodell: 5 % pro Bestellung ohne Wartungskosten, oder 7 % inkl. vollständiger Wartung und Support. Den genauen Preis für die Einmalzahlung teilen wir nach einem kurzen Gespräch mit, da er je nach Umfang variiert.",
+        a: "Wir bieten zwei Modelle an. Einmalzahlung: einmalige Zahlung, danach 0 % Provision und keine monatlichen Gebühren. Provisionsmodell: 5 % pro Bestellung (Wartung separat) oder 7 % pro Bestellung inkl. vollständiger Wartung und Support. Den genauen Preis für die Einmalzahlung nennen wir Ihnen nach einem kurzen Gespräch, da er je nach Umfang variiert.",
       },
       {
-        q: "Gibt es eine Testphase?",
-        a: "Ja, Sie können die Demo direkt auf dieser Website unverbindlich und kostenlos ausprobieren, ohne Kreditkarte oder Registrierung.",
+        q: "Was ist der Unterschied zwischen den beiden Preismodellen?",
+        a: "Beim Einmalzahlungsmodell tragen Sie einmalig die Kosten und zahlen danach keine Provision. Das lohnt sich, wenn Ihr Umsatz wächst. Beim Provisionsmodell entfällt die Anfangszahlung, dafür gehen 5 % oder 7 % jeder Bestellung an GastroHub. Das 7%-Modell beinhaltet vollständigen Wartungssupport, beim 5%-Modell wird Wartung gesondert berechnet. Beide Modelle sind deutlich günstiger als Lieferando oder Uber Eats.",
       },
       {
-        q: "Gibt es laufende Kosten?",
-        a: "Das hängt vom gewählten Modell ab. Bei der Einmalzahlung entstehen keine weiteren Pflichtkosten durch GastroHub. Beim Provisionsmodell fällt pro Bestellung eine Provision von 5 % oder 7 % an. In beiden Fällen können externe Kosten für Domain oder Zahlungsanbieter anfallen, diese liegen außerhalb unseres Produkts.",
+        q: "Kann ich von Lieferando oder Uber Eats zu GastroHub wechseln?",
+        a: "Ja, und viele unserer Kunden kommen genau daher. Wir übernehmen Ihr bestehendes Menü, richten Ihr eigenes Bestellsystem ein und begleiten Sie beim Übergang. Sie behalten alle Ihre Kundendaten und zahlen keine Provision mehr an Drittplattformen.",
       },
       {
         q: "Gibt es eine Mindestvertragslaufzeit?",
-        a: "Nein. Es gibt keine Vertragsbindung. Beim Einmalzahlungsmodell nutzen Sie das System dauerhaft ohne weitere Verpflichtungen. Beim Provisionsmodell können wir die Bedingungen gemeinsam festlegen.",
+        a: "Nein. Beim Einmalzahlungsmodell gibt es keinerlei Bindung. Beim Provisionsmodell legen wir die Konditionen gemeinsam fest.",
       },
       {
-        q: "Fallen Provisionen pro Bestellung an?",
-        a: "Das hängt vom Modell ab. Beim Einmalzahlungsmodell erhebt GastroHub 0 % Provision. Beim Provisionsmodell fallen 5 % oder 7 % pro Bestellung an, dafür entfällt die einmalige Zahlung. Beide Modelle sind deutlich günstiger als Lieferando oder Uber Eats.",
+        q: "Kann ich GastroHub kostenlos testen?",
+        a: "Ja. Die interaktive Demo auf dieser Website steht Ihnen jederzeit frei zur Verfügung, ohne Registrierung oder Kreditkarte. Sie können sowohl die Kundensicht als auch das Admin-Dashboard ausprobieren.",
       },
     ],
   },
@@ -39,23 +39,23 @@ const faqSections = [
     items: [
       {
         q: "Wie lange dauert die Einrichtung?",
-        a: "Die Einrichtung ist in der Regel innerhalb weniger Tage abgeschlossen. Unser Team unterstützt Sie aktiv bei der Konfiguration, dem Menü-Import und der Inbetriebnahme.",
+        a: "Die Einrichtung ist in der Regel innerhalb weniger Tage abgeschlossen. Unser Team begleitet Sie bei Konfiguration, Menü-Import und Inbetriebnahme.",
       },
       {
         q: "Brauche ich technische Kenntnisse?",
-        a: "Nein. Wir richten alles für Sie ein. Die Bedienung im Alltag, Menü pflegen, Bestellungen annehmen, Öffnungszeiten ändern, erfolgt über ein einfaches Dashboard auf dem Smartphone.",
+        a: "Nein. Wir richten alles für Sie ein. Im Alltag verwalten Sie Menü, Bestellungen und Öffnungszeiten über ein übersichtliches Dashboard auf dem Smartphone.",
       },
       {
         q: "Kann ich mein bestehendes Menü übernehmen?",
-        a: "Ja. Wir importieren Ihr Menü automatisch oder helfen Ihnen, es manuell einzurichten. Kategorien, Varianten, Extras und Fotos werden dabei sauber übernommen.",
+        a: "Ja. Wir helfen Ihnen, Ihr Menü einzurichten. Kategorien, Varianten, Extras und Fotos werden dabei vollständig übernommen.",
       },
       {
         q: "Benötige ich eine eigene Domain?",
-        a: "Nicht zwingend für den Start. Wir können das System auch unter einer Subdomain oder einem bestehenden Link bereitstellen. Eine eigene Domain (z. B. bestellen.ihr-restaurant.de) empfehlen wir für einen professionellen Auftritt.",
+        a: "Nicht zwingend. Für den Start können wir eine Subdomain einrichten. Eine eigene Domain wie bestellen.ihr-restaurant.de empfehlen wir für einen professionellen Auftritt.",
       },
       {
         q: "Welche Geräte werden unterstützt?",
-        a: "Das Owner-Dashboard funktioniert vollständig über den Browser auf Smartphone, Tablet und Desktop. Ihre Kunden können über jeden modernen Browser bestellen, keine App-Installation notwendig.",
+        a: "Ihr Dashboard läuft vollständig im Browser auf Smartphone, Tablet und Desktop. Ihre Kunden bestellen über jeden modernen Browser, ohne App-Installation.",
       },
     ],
   },
@@ -63,12 +63,16 @@ const faqSections = [
     title: "Funktionen & Betrieb",
     items: [
       {
+        q: "Wie werde ich über neue Bestellungen informiert?",
+        a: "Neue Bestellungen werden Ihnen sofort per Telegram-Nachricht und E-Mail gemeldet. Sie können Bestellungen direkt aus dem Dashboard annehmen oder ablehnen und den Status in Echtzeit aktualisieren.",
+      },
+      {
         q: "Brauche ich eigene Fahrer?",
-        a: "Für die Lieferung benötigen Sie entweder eigene Fahrer oder einen externen Kurierdienst. GastroHub verwaltet die Bestellungen und benachrichtigt Sie in Echtzeit, die Lieferlogistik organisieren Sie selbst.",
+        a: "Für die Lieferung benötigen Sie entweder eigene Fahrer oder einen externen Kurierdienst. GastroHub verwaltet die Bestellungen und hält Sie in Echtzeit auf dem Laufenden, die Lieferlogistik organisieren Sie selbst.",
       },
       {
         q: "Kann ich Öffnungszeiten und Liefergebiete selbst einstellen?",
-        a: "Ja. Sie stellen Öffnungszeiten, Mindestbestellwerte, Lieferzonen und Pausenzeiten direkt im Dashboard ein, jederzeit und ohne unsere Hilfe.",
+        a: "Ja. Öffnungszeiten, Mindestbestellwerte, Lieferzonen und Pausenzeiten stellen Sie jederzeit selbst im Dashboard ein.",
       },
       {
         q: "Kann ich Gerichte temporär deaktivieren?",
@@ -76,7 +80,7 @@ const faqSections = [
       },
       {
         q: "Welche Zahlungsmethoden werden unterstützt?",
-        a: "GastroHub unterstützt gängige Online-Zahlungsmethoden wie Kreditkarte und PayPal über einen Zahlungsanbieter Ihrer Wahl (z. B. Stripe). Die Integration richten wir bei der Einrichtung für Sie ein.",
+        a: "Online-Zahlungen laufen über einen Anbieter Ihrer Wahl (z. B. Stripe): Kreditkarte, PayPal und weitere. Zusätzlich können Sie Barzahlung bei der Lieferung aktivieren.",
       },
       {
         q: "Gibt es eine mehrsprachige Unterstützung?",
@@ -88,12 +92,16 @@ const faqSections = [
     title: "Support & Datenschutz",
     items: [
       {
-        q: "Was passiert, wenn ich ein technisches Problem habe?",
-        a: "Unser Support ist per E-Mail erreichbar und antwortet in der Regel innerhalb von 24 Stunden. Bei dringenden Problemen bemühen wir uns um eine schnellstmögliche Lösung.",
+        q: "Wie erreiche ich den Support?",
+        a: "Unser Support ist per E-Mail erreichbar. Wir antworten werktags in der Regel am selben oder nächsten Tag. Bei dringenden Problemen bemühen wir uns um eine schnellstmögliche Lösung.",
+      },
+      {
+        q: "Werden meine Daten gesichert?",
+        a: "Ja. Alle Bestell- und Kundendaten werden regelmäßig gesichert. Im Falle eines technischen Problems stellen wir den letzten Stand wieder her.",
       },
       {
         q: "Wem gehören meine Kundendaten?",
-        a: "Ihnen. Alle Bestelldaten und Kundendaten gehören ausschließlich Ihrem Restaurant. Wir verkaufen oder teilen diese Daten niemals mit Dritten.",
+        a: "Ihnen. Alle Bestell- und Kundendaten gehören ausschließlich Ihrem Restaurant. Wir verkaufen oder teilen diese Daten niemals mit Dritten.",
       },
       {
         q: "Ist GastroHub DSGVO-konform?",
