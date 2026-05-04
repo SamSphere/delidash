@@ -170,7 +170,7 @@ export default function Home() {
               { icon: UserRound, title: "Kunden-Login", text: "Login, Registrierung und Kontobereich für wiederkehrende Gäste." },
               { icon: Settings, title: "Admin auf dem Handy", text: "Bestellungen annehmen, Lieferzeiten setzen, Artikel offline nehmen, neue Gerichte mit Fotos anlegen und alles direkt am Telefon steuern." },
               { icon: Cookie, title: "Cookie Banner", text: "Banner anzeigen und Einwilligung bequem akzeptieren." },
-              { icon: Languages, title: "Sprachwechsel", text: "Deutsch, Englisch und Arabisch für mehr Reichweite." },
+              { icon: Languages, title: "Sprachwechsel", text: "Verfügbar auf Deutsch, Englisch und Arabisch — weitere Sprachen auf Anfrage." },
               { icon: CheckCircle2, title: "FAQ & Recht", text: "FAQ, AGB, Impressum und Datenschutz sind direkt eingebunden." },
               { icon: ArrowRight, title: "Kontaktwege", text: "E-Mail, Telefon und Demo-Kontaktwege für direkte Anfragen." },
               { icon: TrendingUp, title: "Mobile-optimiert", text: "Vollständig mobile-optimierte Web-App für Menü, Warenkorb, Checkout und Kundenkonto — ohne App-Installation." },
@@ -195,28 +195,30 @@ export default function Home() {
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Was kostet Sie Lieferando wirklich?</h2>
             <p className="text-lg text-slate-600">Vergleichen Sie selbst — und rechnen Sie nach, was Sie jährlich sparen.</p>
           </div>
-          <div className="max-w-2xl mx-auto">
-            <div className="grid grid-cols-3 text-sm font-semibold text-slate-500 uppercase tracking-wide mb-3 px-4">
+          <div className="max-w-3xl mx-auto overflow-x-auto">
+            <div className="grid grid-cols-4 text-xs font-semibold text-slate-500 uppercase tracking-wide mb-3 px-4 min-w-[560px]">
               <div></div>
               <div className="text-center">Lieferando</div>
+              <div className="text-center">Uber Eats</div>
               <div className="text-center text-primary">GastroHub</div>
             </div>
             {[
-              { label: "Provision pro Bestellung", lieferando: "15–30 %", gastrohub: "Ab 5 % (oder Einmalzahlung)" },
-              { label: "Monatliche Grundgebühr", lieferando: "Ab €99/Monat", gastrohub: "Kein Abo" },
-              { label: "Kundendaten gehören", lieferando: "Lieferando", gastrohub: "Ihnen" },
-              { label: "Eigenes Branding", lieferando: "Nein", gastrohub: "Vollständig" },
-              { label: "Zahlungsabwicklung", lieferando: "Lieferando", gastrohub: "Direkt (Stripe)" },
+              { label: "Provision", lieferando: "15–30 %", ubereats: "15–30 %", gastrohub: "Ab 5 % (oder Einmalzahlung)" },
+              { label: "Monatl. Gebühr", lieferando: "Ab €99/Mo.", ubereats: "Ab €0 (höhere %)", gastrohub: "Kein Abo" },
+              { label: "Kundendaten", lieferando: "Plattform", ubereats: "Plattform", gastrohub: "Ihnen" },
+              { label: "Eigenes Branding", lieferando: "Nein", ubereats: "Nein", gastrohub: "Vollständig" },
+              { label: "Zahlung", lieferando: "Plattform", ubereats: "Plattform", gastrohub: "Direkt (Stripe)" },
             ].map((row, i) => (
-              <div key={i} className={`grid grid-cols-3 px-4 py-4 rounded-xl mb-2 items-center ${i % 2 === 0 ? "bg-slate-50" : "bg-white"}`}>
+              <div key={i} className={`grid grid-cols-4 px-4 py-4 rounded-xl mb-2 items-center min-w-[560px] ${i % 2 === 0 ? "bg-slate-50" : "bg-white"}`}>
                 <div className="text-sm font-medium text-slate-700">{row.label}</div>
                 <div className="text-center text-sm text-red-500 font-medium">{row.lieferando}</div>
+                <div className="text-center text-sm text-red-400 font-medium">{row.ubereats}</div>
                 <div className="text-center text-sm text-emerald-600 font-semibold">{row.gastrohub}</div>
               </div>
             ))}
             <div className="mt-6 bg-blue-50 border border-blue-100 rounded-2xl p-6 text-center">
               <p className="text-slate-700 text-base">
-                Bei <span className="font-bold text-slate-900">€10.000 Monatsumsatz</span> zahlen Sie Lieferando bis zu{" "}
+                Bei <span className="font-bold text-slate-900">€10.000 Monatsumsatz</span> zahlen Sie Lieferando oder Uber Eats bis zu{" "}
                 <span className="font-bold text-red-600">€3.000 pro Monat</span> — das sind{" "}
                 <span className="font-bold text-red-600">€36.000 pro Jahr</span>.
               </p>
