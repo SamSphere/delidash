@@ -14,23 +14,23 @@ const faqSections = [
     items: [
       {
         q: "Was kostet GastroHub?",
-        a: "GastroHub funktioniert als Einmalzahlung, keine monatlichen Gebühren, keine Provision pro Bestellung. Den genauen Preis teilen wir Ihnen nach einem kurzen Gespräch mit, da er je nach Umfang Ihres Restaurants variiert. Kontaktieren Sie uns einfach für ein Angebot.",
+        a: "Wir bieten zwei Modelle an. Einmalzahlung: Sie zahlen einmalig, danach keine monatlichen Gebühren und 0 % Provision. Provisionmodell: 5 % pro Bestellung ohne Wartungskosten, oder 7 % inkl. vollständiger Wartung und Support. Den genauen Preis für die Einmalzahlung teilen wir nach einem kurzen Gespräch mit, da er je nach Umfang variiert.",
       },
       {
         q: "Gibt es eine Testphase?",
         a: "Ja, Sie können die Demo direkt auf dieser Website unverbindlich und kostenlos ausprobieren, ohne Kreditkarte oder Registrierung.",
       },
       {
-        q: "Gibt es laufende Kosten nach der Einmalzahlung?",
-        a: "Nein. Nach der Einmalzahlung entstehen keine weiteren Pflichtkosten durch GastroHub. Optional können Kosten für Ihre eigene Domain oder einen externen Zahlungsanbieter anfallen, das liegt jedoch außerhalb unseres Produkts.",
+        q: "Gibt es laufende Kosten?",
+        a: "Das hängt vom gewählten Modell ab. Bei der Einmalzahlung entstehen keine weiteren Pflichtkosten durch GastroHub. Beim Provisionsmodell fällt pro Bestellung eine Provision von 5 % oder 7 % an. In beiden Fällen können externe Kosten für Domain oder Zahlungsanbieter anfallen, diese liegen außerhalb unseres Produkts.",
       },
       {
         q: "Gibt es eine Mindestvertragslaufzeit?",
-        a: "Nein. Es gibt keine Vertragsbindung. Sie zahlen einmal und nutzen das System dauerhaft.",
+        a: "Nein. Es gibt keine Vertragsbindung. Beim Einmalzahlungsmodell nutzen Sie das System dauerhaft ohne weitere Verpflichtungen. Beim Provisionsmodell können wir die Bedingungen gemeinsam festlegen.",
       },
       {
         q: "Fallen Provisionen pro Bestellung an?",
-        a: "Nein. GastroHub erhebt 0 % Provision auf Ihre Bestellungen. Alle Einnahmen gehören Ihnen.",
+        a: "Das hängt vom Modell ab. Beim Einmalzahlungsmodell erhebt GastroHub 0 % Provision. Beim Provisionsmodell fallen 5 % oder 7 % pro Bestellung an, dafür entfällt die einmalige Zahlung. Beide Modelle sind deutlich günstiger als Lieferando oder Uber Eats.",
       },
     ],
   },
@@ -39,7 +39,7 @@ const faqSections = [
     items: [
       {
         q: "Wie lange dauert die Einrichtung?",
-        a: "Die Einrichtung dauert in der Regel weniger als 24 Stunden. Unser Team unterstützt Sie aktiv bei der Konfiguration, dem Menü-Import und der Inbetriebnahme.",
+        a: "Die Einrichtung ist in der Regel innerhalb weniger Tage abgeschlossen. Unser Team unterstützt Sie aktiv bei der Konfiguration, dem Menü-Import und der Inbetriebnahme.",
       },
       {
         q: "Brauche ich technische Kenntnisse?",
@@ -80,7 +80,7 @@ const faqSections = [
       },
       {
         q: "Gibt es eine mehrsprachige Unterstützung?",
-        a: "Ja. Die Plattform unterstützt Deutsch, Englisch und Arabisch, damit erreichen Sie mehr Kunden ohne zusätzlichen Aufwand.",
+        a: "Ja. Die Plattform unterstützt aktuell Deutsch, Englisch, Arabisch und Türkisch. Weitere Sprachen sind auf Anfrage möglich.",
       },
     ],
   },
