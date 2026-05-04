@@ -331,25 +331,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Key Facts */}
-      <section className="py-20 bg-slate-100 text-slate-900 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#cbd5e11a_1px,transparent_1px),linear-gradient(to_bottom,#cbd5e11a_1px,transparent_1px)] bg-[size:24px_24px]"></div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto text-center">
-            <motion.div initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.4 }}>
-              <div className="text-4xl md:text-5xl font-extrabold mb-2">5 % / 7 %</div>
-              <div className="text-slate-600 font-medium">Festprovision, oder Einmalzahlung</div>
-              <div className="text-slate-400 text-sm mt-1">Lieferando verlangt 15–30 %</div>
-            </motion.div>
-            <motion.div initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: 0.1 }}>
-              <div className="text-4xl md:text-5xl font-extrabold mb-2">100%</div>
-              <div className="text-slate-600 font-medium">Ihre Kundendaten, Ihr Branding</div>
-              <div className="text-slate-400 text-sm mt-1">Keine Abhängigkeit von Plattformen</div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
       {/* Final CTA */}
       <section className="py-24 bg-white text-center text-slate-900">
         <div className="container mx-auto px-4 max-w-4xl">
