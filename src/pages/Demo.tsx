@@ -19,15 +19,42 @@ type AdminTab = "orders" | "menu" | "drafts" | "grocery" | "ai" | "customers" |
                 "reviews" | "custorders" | "settings";
 
 const menuItems = [
-  { id: 1, name: "Pizza Margherita", desc: "Tomate, Mozzarella, Basilikum", price: 10.5, category: "Pizza", available: true },
-  { id: 2, name: "Döner Teller", desc: "Hähnchen, Salat, Soße, Reis", price: 11.9, category: "Döner", available: true },
-  { id: 3, name: "Burger Deluxe", desc: "Rindfleisch, Cheddar, Sauce", price: 9.9, category: "Burger", available: true },
-  { id: 4, name: "Falafel Box", desc: "Falafel, Hummus, Salat", price: 8.5, category: "Vegetarisch", available: true },
-  { id: 5, name: "Cola 0,5L", desc: "Kalt serviert", price: 2.5, category: "Getränke", available: true },
-  { id: 6, name: "Pommes", desc: "Mit Ketchup & Mayo", price: 3.5, category: "Beilagen", available: false },
-  { id: 7, name: "Pizza Salami", desc: "Tomate, Mozzarella, Salami", price: 11.5, category: "Pizza", available: true },
-  { id: 8, name: "Ayran", desc: "500ml", price: 2.0, category: "Getränke", available: true },
+  { id: 1, name: "Pizza Margherita", desc: "Tomate, Mozzarella, Basilikum", price: 10.5, category: "Pizza", available: true,
+    img: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=120&h=120&fit=crop&auto=format&q=80" },
+  { id: 2, name: "Döner Teller", desc: "Hähnchen, Salat, Soße, Reis", price: 11.9, category: "Döner", available: true,
+    img: "https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?w=120&h=120&fit=crop&auto=format&q=80" },
+  { id: 3, name: "Burger Deluxe", desc: "Rindfleisch, Cheddar, Sauce", price: 9.9, category: "Burger", available: true,
+    img: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=120&h=120&fit=crop&auto=format&q=80" },
+  { id: 4, name: "Falafel Box", desc: "Falafel, Hummus, Salat", price: 8.5, category: "Vegetarisch", available: true,
+    img: "https://images.unsplash.com/photo-1505253716362-afaea1d3d1af?w=120&h=120&fit=crop&auto=format&q=80" },
+  { id: 5, name: "Cola 0,5L", desc: "Kalt serviert", price: 2.5, category: "Getränke", available: true,
+    img: "https://images.unsplash.com/photo-1629203851122-3726ecdf080e?w=120&h=120&fit=crop&auto=format&q=80" },
+  { id: 6, name: "Pommes", desc: "Mit Ketchup & Mayo", price: 3.5, category: "Beilagen", available: false,
+    img: "https://images.unsplash.com/photo-1573080496219-bb964701c394?w=120&h=120&fit=crop&auto=format&q=80" },
+  { id: 7, name: "Pizza Salami", desc: "Tomate, Mozzarella, Salami", price: 11.5, category: "Pizza", available: true,
+    img: "https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?w=120&h=120&fit=crop&auto=format&q=80" },
+  { id: 8, name: "Ayran", desc: "500ml", price: 2.0, category: "Getränke", available: true,
+    img: "https://images.unsplash.com/photo-1559181567-c3190bfdb2e8?w=120&h=120&fit=crop&auto=format&q=80" },
 ];
+
+type AdminLang = "de" | "en" | "ar" | "tr";
+
+const TAB_LABELS: Record<AdminTab, Record<AdminLang, string>> = {
+  orders:     { de: "Bestellungen",      en: "Orders",          ar: "الطلبات",          tr: "Siparişler" },
+  menu:       { de: "Speisekarte",        en: "Menu",            ar: "قائمة الطعام",     tr: "Menü" },
+  drafts:     { de: "Entwürfe",           en: "Drafts",          ar: "المسودات",         tr: "Taslaklar" },
+  grocery:    { de: "Einkaufsliste",      en: "Grocery",         ar: "قائمة البقالة",    tr: "Market Listesi" },
+  ai:         { de: "KI-Assistent",       en: "AI Assistant",    ar: "المساعد الذكي",    tr: "Yapay Zeka" },
+  customers:  { de: "Kunden",             en: "Customers",       ar: "العملاء",          tr: "Müşteriler" },
+  controller: { de: "Abrechnung",         en: "Accounting",      ar: "المحاسبة",         tr: "Muhasebe" },
+  stats:      { de: "Statistiken",        en: "Statistics",      ar: "الإحصائيات",       tr: "İstatistikler" },
+  coupons:    { de: "Gutscheine",         en: "Coupons",         ar: "القسائم",          tr: "Kuponlar" },
+  zones:      { de: "Lieferzonen",        en: "Delivery Zones",  ar: "مناطق التوصيل",   tr: "Teslimat Bölgeleri" },
+  staff:      { de: "Mitarbeiter",        en: "Staff",           ar: "الموظفون",         tr: "Personel" },
+  reviews:    { de: "Bewertungen",        en: "Reviews",         ar: "التقييمات",        tr: "Değerlendirmeler" },
+  custorders: { de: "Kundenbestellungen", en: "Customer Orders", ar: "طلبات العملاء",    tr: "Müşteri Siparişleri" },
+  settings:   { de: "Einstellungen",      en: "Settings",        ar: "الإعدادات",        tr: "Ayarlar" },
+};
 
 const ADMIN_NAV: { key: AdminTab; label: string; icon: React.ReactNode; badge?: number }[] = [
   { key: "orders",     label: "Bestellungen",       icon: <ShoppingBag className="h-4 w-4 shrink-0" />,     badge: 2 },
@@ -52,10 +79,14 @@ export default function Demo() {
   const [view, setView] = useState<ViewTab>("kunde");
   const [customerSection, setCustomerSection] = useState<CustomerSection>("menu");
   const [adminTab, setAdminTab] = useState<AdminTab>("orders");
+  const [adminLang, setAdminLang] = useState<AdminLang>("de");
   const [cart, setCart] = useState<Record<number, number>>({ 1: 1, 2: 1 });
   const [deliveryType, setDeliveryType] = useState<"lieferung" | "abholung">("lieferung");
   const [notifCount, setNotifCount] = useState(3);
   const [showNotifs, setShowNotifs] = useState(false);
+
+  const L = (key: AdminTab) => TAB_LABELS[key][adminLang];
+  const isRTL = adminLang === "ar";
 
   // orders state
   const [order1Status, setOrder1Status] = useState<"Neu" | "In Zubereitung">("Neu");
@@ -158,20 +189,25 @@ export default function Demo() {
                         <h2 className="text-sm font-semibold text-slate-500 uppercase tracking-wide mb-3">{cat}</h2>
                         <div className="space-y-3">
                           {items.map(item => (
-                            <div key={item.id} className="bg-white rounded-xl border border-slate-200 p-4 flex items-center justify-between shadow-sm">
-                              <div>
-                                <p className="font-semibold text-slate-900">{item.name}</p>
-                                <p className="text-sm text-slate-500 mt-0.5">{item.desc}</p>
-                                <p className="text-sm font-bold text-primary mt-1">{item.price.toFixed(2)} €</p>
-                              </div>
-                              <div className="flex items-center gap-2">
-                                {cart[item.id] ? (
-                                  <>
-                                    <button onClick={() => removeFromCart(item.id)} className="w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 flex items-center justify-center"><Minus className="h-4 w-4 text-slate-600" /></button>
-                                    <span className="w-5 text-center font-semibold text-slate-900">{cart[item.id]}</span>
-                                  </>
-                                ) : null}
-                                <button onClick={() => addToCart(item.id)} className="w-8 h-8 rounded-full bg-primary hover:bg-primary/90 flex items-center justify-center"><Plus className="h-4 w-4 text-white" /></button>
+                            <div key={item.id} className="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden flex">
+                              {item.img && (
+                                <img src={item.img} alt={item.name} className="w-24 h-24 object-cover flex-shrink-0" loading="lazy" />
+                              )}
+                              <div className="flex-1 p-4 flex items-center justify-between min-w-0">
+                                <div className="min-w-0 mr-3">
+                                  <p className="font-semibold text-slate-900">{item.name}</p>
+                                  <p className="text-sm text-slate-500 mt-0.5 line-clamp-1">{item.desc}</p>
+                                  <p className="text-sm font-bold text-primary mt-1">{item.price.toFixed(2)} €</p>
+                                </div>
+                                <div className="flex items-center gap-2 flex-shrink-0">
+                                  {cart[item.id] ? (
+                                    <>
+                                      <button onClick={() => removeFromCart(item.id)} className="w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 flex items-center justify-center transition-colors"><Minus className="h-4 w-4 text-slate-600" /></button>
+                                      <span className="w-5 text-center font-semibold text-slate-900">{cart[item.id]}</span>
+                                    </>
+                                  ) : null}
+                                  <button onClick={() => addToCart(item.id)} className="w-8 h-8 rounded-full bg-primary hover:bg-primary/90 flex items-center justify-center transition-colors"><Plus className="h-4 w-4 text-white" /></button>
+                                </div>
                               </div>
                             </div>
                           ))}
@@ -410,14 +446,14 @@ export default function Demo() {
 
       {/* ── ADMIN VIEW ── */}
       {view === "admin" && (
-        <div className="flex flex-1 overflow-hidden">
+        <div className="flex flex-1 overflow-hidden" dir={isRTL ? "rtl" : "ltr"}>
           {/* Sidebar */}
           <aside className="w-56 bg-slate-900 text-slate-300 flex-shrink-0 flex flex-col border-r border-slate-800">
             <div className="flex-1 py-4 px-3 space-y-0.5 overflow-y-auto">
-              {ADMIN_NAV.map(({ key, label, icon, badge }) => (
+              {ADMIN_NAV.map(({ key, icon, badge }) => (
                 <button key={key} onClick={() => setAdminTab(key)} className={`w-full flex items-center gap-2.5 px-3 py-2 rounded-lg text-sm font-medium text-left transition-colors ${adminTab === key ? "bg-blue-600/20 text-blue-400" : "hover:bg-slate-800 hover:text-white"}`}>
                   {icon}
-                  <span className="flex-1">{label}</span>
+                  <span className="flex-1 truncate">{L(key)}</span>
                   {badge !== undefined && badge > 0 && (
                     <span className="flex h-5 min-w-5 items-center justify-center rounded-full bg-blue-500 px-1.5 text-[11px] font-bold text-white">{badge}</span>
                   )}
@@ -425,7 +461,21 @@ export default function Demo() {
               ))}
             </div>
             <div className="p-3 border-t border-slate-800">
-              <div className="flex items-center gap-3 px-3 py-2">
+              {/* Language switcher */}
+              <div className="flex gap-1 mb-3 px-1">
+                {(["de","en","ar","tr"] as AdminLang[]).map(lg => (
+                  <button key={lg} onClick={() => setAdminLang(lg)} className={`flex-1 py-1 rounded text-[11px] font-bold uppercase transition-colors ${adminLang === lg ? "bg-blue-600 text-white" : "text-slate-500 hover:text-white hover:bg-slate-700"}`}>
+                    {lg.toUpperCase()}
+                  </button>
+                ))}
+              </div>
+              <p className="text-[10px] text-slate-600 text-center mb-3 leading-tight">
+                {adminLang === "de" && "Weitere Sprachen? Kontaktieren Sie uns."}
+                {adminLang === "en" && "More languages? Contact us."}
+                {adminLang === "ar" && "لغات أخرى؟ تواصل معنا."}
+                {adminLang === "tr" && "Başka dil? Bize ulaşın."}
+              </p>
+              <div className="flex items-center gap-3 px-2 py-2">
                 <div className="w-8 h-8 rounded-full bg-slate-700 flex items-center justify-center text-sm font-bold text-white">MR</div>
                 <div className="flex-1 min-w-0">
                   <p className="text-sm font-medium text-white truncate">Mario's Pizza</p>
@@ -435,26 +485,17 @@ export default function Demo() {
             </div>
           </aside>
 
-          {/* Mobile tab scroller */}
-          <div className="md:hidden absolute top-14 left-0 right-0 bg-slate-900 z-10 overflow-x-auto flex border-b border-slate-800">
-            {ADMIN_NAV.map(({ key, label }) => (
-              <button key={key} onClick={() => setAdminTab(key)} className={`shrink-0 px-3 py-2 text-xs font-medium border-b-2 transition-colors ${adminTab === key ? "border-blue-400 text-blue-400" : "border-transparent text-slate-400"}`}>
-                {label}
-              </button>
-            ))}
-          </div>
-
           <main className="flex-1 flex flex-col min-w-0 overflow-hidden">
             {/* Header */}
             <header className="h-14 bg-white border-b border-slate-200 flex items-center justify-between px-6 flex-shrink-0">
               <h1 className="text-lg font-bold text-slate-900 flex items-center gap-2">
-                {ADMIN_NAV.find(n => n.key === adminTab)?.label}
+                {L(adminTab)}
                 {adminTab === "orders" && <Badge variant="secondary" className="bg-blue-100 text-blue-700 border-none animate-pulse text-xs">Live</Badge>}
               </h1>
               <div className="flex items-center gap-3">
                 <div className="relative hidden sm:block">
                   <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-slate-400" />
-                  <Input type="search" placeholder="Suchen..." className="w-48 pl-9 h-9 bg-slate-50 border-slate-200 text-sm" />
+                  <Input type="search" placeholder={adminLang === "ar" ? "بحث..." : adminLang === "tr" ? "Ara..." : adminLang === "en" ? "Search..." : "Suchen..."} className="w-48 pl-9 h-9 bg-slate-50 border-slate-200 text-sm" />
                 </div>
                 <div className="relative">
                   <button onClick={() => setShowNotifs(!showNotifs)} className="relative w-9 h-9 flex items-center justify-center rounded-full hover:bg-slate-100 text-slate-500 transition-colors">
