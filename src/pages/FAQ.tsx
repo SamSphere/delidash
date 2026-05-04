@@ -64,7 +64,7 @@ const faqSections = [
     items: [
       {
         q: "Brauche ich eigene Fahrer?",
-        a: "Nein. Sie können das System sowohl mit eigenen Fahrern als auch mit externen Kurierdiensten nutzen. GastroHub verwaltet die Bestellungen, die Lieferlogistik entscheiden Sie selbst.",
+        a: "Für die Lieferung benötigen Sie entweder eigene Fahrer oder einen externen Kurierdienst. GastroHub verwaltet die Bestellungen und benachrichtigt Sie in Echtzeit, die Lieferlogistik organisieren Sie selbst.",
       },
       {
         q: "Kann ich Öffnungszeiten und Liefergebiete selbst einstellen?",
