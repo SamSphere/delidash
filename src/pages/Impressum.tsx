@@ -1,4 +1,13 @@
+import { useEffect } from "react";
+
 export default function Impressum() {
+  useEffect(() => {
+    document.title = "Impressum | GastroHub";
+    const meta = document.querySelector('meta[name="description"]') ?? Object.assign(document.createElement("meta"), { name: "description" });
+    (meta as HTMLMetaElement).content = "Impressum von GastroHub, Anbieter für eigene Restaurant-Bestellsysteme ohne Provision.";
+    if (!meta.parentNode) document.head.appendChild(meta);
+  }, []);
+
   return (
     <div className="min-h-[100dvh] bg-white py-20">
       <div className="container mx-auto px-4 max-w-3xl prose prose-slate">

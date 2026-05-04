@@ -114,6 +114,9 @@ const faqSections = [
 export default function FAQ() {
   useEffect(() => {
     document.title = "FAQ | GastroHub";
+    const meta = document.querySelector('meta[name="description"]') ?? Object.assign(document.createElement("meta"), { name: "description" });
+    (meta as HTMLMetaElement).content = "Häufig gestellte Fragen zu GastroHub: Preismodelle, Einrichtung, Funktionen und Datenschutz. Alles, was Restaurantbesitzer über ihr eigenes Bestellsystem wissen müssen.";
+    if (!meta.parentNode) document.head.appendChild(meta);
   }, []);
 
   return (

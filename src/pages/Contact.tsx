@@ -5,6 +5,9 @@ import { useEffect } from "react";
 export default function Contact() {
   useEffect(() => {
     document.title = "Kontakt | GastroHub";
+    const meta = document.querySelector('meta[name="description"]') ?? Object.assign(document.createElement("meta"), { name: "description" });
+    (meta as HTMLMetaElement).content = "Kontaktieren Sie GastroHub. Wir helfen Ihnen beim Aufbau Ihres eigenen Restaurant-Bestellsystems ohne Provision. Antwort werktags am selben oder nächsten Tag.";
+    if (!meta.parentNode) document.head.appendChild(meta);
   }, []);
 
   return (

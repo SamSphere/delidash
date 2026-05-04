@@ -3,6 +3,9 @@ import { useEffect } from "react";
 export default function Datenschutz() {
   useEffect(() => {
     document.title = "Datenschutz | GastroHub";
+    const meta = document.querySelector('meta[name="description"]') ?? Object.assign(document.createElement("meta"), { name: "description" });
+    (meta as HTMLMetaElement).content = "Datenschutzerklärung von GastroHub. DSGVO-konform, europäische Server, Ihre Kundendaten gehören ausschließlich Ihnen.";
+    if (!meta.parentNode) document.head.appendChild(meta);
   }, []);
 
   return (
