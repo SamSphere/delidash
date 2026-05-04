@@ -62,7 +62,7 @@ export default function Home() {
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-600 to-blue-500">Für immer Ihr Restaurant behalten.</span>
               </motion.h1>
               <motion.p variants={itemVariants} className="text-lg md:text-xl text-slate-700 mb-8 max-w-xl leading-relaxed">
-                GastroHub ist Ihr größtes Verkaufsargument: einmal zahlen, für immer nutzen — keine monatlichen Kosten, keine Umsatzbeteiligung und kein Sharing mit Liefer-Apps.
+                GastroHub ist Ihr größtes Verkaufsargument: einmal zahlen, für immer nutzen, keine monatlichen Kosten, keine Umsatzbeteiligung und kein Sharing mit Liefer-Apps.
               </motion.p>
               <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4">
                 <Button asChild size="lg" className="h-14 px-8 text-base font-semibold">
@@ -123,7 +123,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-3">Mehr Direktbestellungen</h3>
                 <p className="text-slate-600 leading-relaxed">
-                  Einmal zahlen, dauerhaft nutzen — unser größter Vorteil für Restaurants.
+                  Einmal zahlen, dauerhaft nutzen, unser größter Vorteil für Restaurants.
                 </p>
               </Card>
             </motion.div>
@@ -158,7 +158,7 @@ export default function Home() {
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Alle wichtigen Funktionen an einem Ort</h2>
             <p className="text-lg text-slate-600">
-              Vom ersten Kontakt bis zur laufenden Bestellung deckt GastroHub den gesamten Ablauf ab — komplett ohne laufende Kosten.
+              Vom ersten Kontakt bis zur laufenden Bestellung deckt GastroHub den gesamten Ablauf ab, komplett ohne laufende Kosten.
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -170,10 +170,10 @@ export default function Home() {
               { icon: UserRound, title: "Kunden-Login", text: "Login, Registrierung und Kontobereich für wiederkehrende Gäste." },
               { icon: Settings, title: "Admin auf dem Handy", text: "Bestellungen annehmen, Lieferzeiten setzen, Artikel offline nehmen, neue Gerichte mit Fotos anlegen und alles direkt am Telefon steuern." },
               { icon: Cookie, title: "Cookie Banner", text: "Banner anzeigen und Einwilligung bequem akzeptieren." },
-              { icon: Languages, title: "Sprachwechsel", text: "Verfügbar auf Deutsch, Englisch und Arabisch — weitere Sprachen auf Anfrage." },
+              { icon: Languages, title: "Sprachwechsel", text: "Verfügbar auf Deutsch, Englisch und Arabisch, weitere Sprachen auf Anfrage." },
               { icon: CheckCircle2, title: "FAQ & Recht", text: "FAQ, AGB, Impressum und Datenschutz sind direkt eingebunden." },
               { icon: ArrowRight, title: "Kontaktwege", text: "E-Mail, Telefon und Demo-Kontaktwege für direkte Anfragen." },
-              { icon: TrendingUp, title: "Mobile-optimiert", text: "Vollständig mobile-optimierte Web-App für Menü, Warenkorb, Checkout und Kundenkonto — ohne App-Installation." },
+              { icon: TrendingUp, title: "Mobile-optimiert", text: "Vollständig mobile-optimierte Web-App für Menü, Warenkorb, Checkout und Kundenkonto, ohne App-Installation." },
               { icon: ShieldCheck, title: "Konto & Einstellungen", text: "Bestellhistorie, Wunschliste, Adressen, Zahlungsarten und Profileinstellungen." },
               { icon: Clock, title: "Admin-Funktionen", text: "Grocery List, AI-Tab, Settings, Customer-Infos, Order Queue, Drafts, Coupons, Zonen, Staff und Reviews." },
               { icon: Check, title: "Backend/API", text: "Menü, Orders, Checkout Sessions, Uploads, Telegram-Test und Webhook-Integration für Stripe-Zahlungen." },
@@ -192,8 +192,8 @@ export default function Home() {
       <section className="py-20 lg:py-28 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Was kostet Sie Lieferando wirklich?</h2>
-            <p className="text-lg text-slate-600">Vergleichen Sie selbst — und rechnen Sie nach, was Sie jährlich sparen.</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Plattformgebühren im Vergleich</h2>
+            <p className="text-lg text-slate-600">Vergleichen Sie selbst, und rechnen Sie nach, was Sie jährlich sparen.</p>
           </div>
           <div className="max-w-3xl mx-auto overflow-x-auto">
             <div className="grid grid-cols-4 text-xs font-semibold text-slate-500 uppercase tracking-wide mb-3 px-4 min-w-[560px]">
@@ -218,13 +218,14 @@ export default function Home() {
             ))}
             <div className="mt-6 bg-blue-50 border border-blue-100 rounded-2xl p-6 text-center">
               <p className="text-slate-700 text-base">
-                Bei <span className="font-bold text-slate-900">€10.000 Monatsumsatz</span> zahlen Sie Lieferando oder Uber Eats bis zu{" "}
-                <span className="font-bold text-red-600">€3.000 pro Monat</span> — das sind{" "}
-                <span className="font-bold text-red-600">€36.000 pro Jahr</span>.
+                Bei <span className="font-bold text-slate-900">€10.000 Monatsumsatz</span> können Plattformprovisionen bis zu{" "}
+                <span className="font-bold text-red-600">€3.000 pro Monat</span> betragen, das sind bis zu{" "}
+                <span className="font-bold text-red-600">€36.000 pro Jahr</span>.*
               </p>
               <p className="text-slate-700 text-base mt-2">
-                Mit GastroHub zahlen Sie <span className="font-bold text-emerald-600">deutlich weniger</span> — und behalten den Rest.
+                Mit GastroHub zahlen Sie <span className="font-bold text-emerald-600">deutlich weniger</span>, und behalten den Rest.
               </p>
+              <p className="text-xs text-slate-400 mt-4">* Angaben basieren auf veröffentlichten Standardkonditionen. Tatsächliche Provisionsraten können je nach individuellem Vertrag abweichen. Lieferando und Uber Eats sind eingetragene Marken ihrer jeweiligen Inhaber. Diese Darstellung dient dem sachlichen Preisvergleich gemäß § 6 UWG.</p>
             </div>
           </div>
         </div>
@@ -236,7 +237,7 @@ export default function Home() {
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Flexible Preismodelle</h2>
             <p className="text-lg text-slate-600 mb-10">
-              Wählen Sie das Modell, das zu Ihrem Restaurant passt — beide deutlich günstiger als Lieferando.
+              Wählen Sie das Modell, das zu Ihrem Restaurant passt, beide deutlich günstiger als Lieferando.
             </p>
             <div className="grid md:grid-cols-2 gap-6 mb-8">
               {/* Option A: One-time */}
@@ -261,8 +262,8 @@ export default function Home() {
                 <div className="text-slate-500 text-sm mb-6">Niedrige Beteiligung statt Einmalgebühr</div>
                 <ul className="space-y-3 text-sm text-slate-700 flex-1">
                   {[
-                    "5 % Provision — Grundpaket",
-                    "7 % Provision — inkl. Wartung & Support",
+                    "5 % Provision, Grundpaket",
+                    "7 % Provision, inkl. Wartung & Support",
                     "Weit unter Lieferando (15–30 %)",
                     "Vollständiges Bestellsystem",
                   ].map((t, i) => (
@@ -271,7 +272,7 @@ export default function Home() {
                 </ul>
               </div>
             </div>
-            <p className="text-slate-500 text-sm mb-6">Alle Preise individuell nach Restaurantgröße — sprechen Sie uns an.</p>
+            <p className="text-slate-500 text-sm mb-6">Alle Preise individuell nach Restaurantgröße, sprechen Sie uns an.</p>
             <Button asChild size="lg" className="h-14 px-10 text-base font-semibold">
               <Link href="/kontakt">Angebot anfragen</Link>
             </Button>
@@ -337,7 +338,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto text-center">
             <motion.div initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.4 }}>
               <div className="text-4xl md:text-5xl font-extrabold mb-2">5 % / 7 %</div>
-              <div className="text-slate-600 font-medium">Festprovision — oder Einmalzahlung</div>
+              <div className="text-slate-600 font-medium">Festprovision, oder Einmalzahlung</div>
               <div className="text-slate-400 text-sm mt-1">Lieferando verlangt 15–30 %</div>
             </motion.div>
             <motion.div initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: 0.1 }}>
@@ -354,7 +355,7 @@ export default function Home() {
         <div className="container mx-auto px-4 max-w-4xl">
           <h2 className="text-3xl md:text-5xl font-bold mb-6 leading-tight">Ihr Restaurant. Ihre Bestellungen.</h2>
             <p className="text-xl text-slate-600 mb-10 max-w-2xl mx-auto">
-            Wählen Sie das Modell, das zu Ihnen passt — deutlich günstig als Lieferando, ohne Abhängigkeit von fremden Plattformen.
+            Wählen Sie das Modell, das zu Ihnen passt, deutlich günstig als Lieferando, ohne Abhängigkeit von fremden Plattformen.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Button asChild size="lg" className="h-14 px-8 text-lg font-semibold bg-sky-600 text-white hover:bg-sky-700">

@@ -125,7 +125,7 @@ export default function Demo() {
     setTimeout(() => {
       let reply = "Wurde zur Einkaufsliste hinzugefügt ✓";
       if (input.toLowerCase().includes("öl") || input.toLowerCase().includes("oil"))
-        reply = "Verstanden — wie viele Flaschen Öl benötigst du? (Standard: 2L)";
+        reply = "Verstanden, wie viele Flaschen Öl benötigst du? (Standard: 2L)";
       else if (input.toLowerCase().includes("kg") || input.toLowerCase().includes("fleisch"))
         reply = "Notiert! Soll ich direkt eine WhatsApp-Nachricht an den Lieferanten generieren?";
       setAiMessages(m => [...m, { role: "assistant", text: reply }]);
@@ -276,7 +276,7 @@ export default function Demo() {
                   </div>
                 </Card>
 
-                {/* Address — only for delivery */}
+                {/* Address, only for delivery */}
                 {deliveryType === "lieferung" && (
                   <Card className="p-5 mb-4 border-slate-200">
                     <p className="text-sm font-semibold text-slate-700 mb-3">Lieferadresse</p>
@@ -511,7 +511,7 @@ export default function Demo() {
                       <div className="divide-y divide-slate-50">
                         {order1Status === "Neu" && <div className="px-4 py-3 flex gap-3 hover:bg-slate-50"><div className="w-2 h-2 rounded-full bg-blue-500 mt-1.5 shrink-0" /><div><p className="text-sm font-medium text-slate-900">Neue Bestellung #1042</p><p className="text-xs text-slate-500">Vor 2 Min. · 23,50 €</p></div></div>}
                         {order2Status === "Neu" && <div className="px-4 py-3 flex gap-3 hover:bg-slate-50"><div className="w-2 h-2 rounded-full bg-blue-500 mt-1.5 shrink-0" /><div><p className="text-sm font-medium text-slate-900">Neue Bestellung #1041</p><p className="text-xs text-slate-500">Vor 5 Min. · 13,40 €</p></div></div>}
-                        <div className="px-4 py-3 flex gap-3 hover:bg-slate-50"><div className="w-2 h-2 rounded-full bg-orange-400 mt-1.5 shrink-0" /><div><p className="text-sm font-medium text-slate-900">Neue Bewertung — 5 ★</p><p className="text-xs text-slate-500">Vor 30 Min. · Genehmigung ausstehend</p></div></div>
+                        <div className="px-4 py-3 flex gap-3 hover:bg-slate-50"><div className="w-2 h-2 rounded-full bg-orange-400 mt-1.5 shrink-0" /><div><p className="text-sm font-medium text-slate-900">Neue Bewertung, 5 ★</p><p className="text-xs text-slate-500">Vor 30 Min. · Genehmigung ausstehend</p></div></div>
                       </div>
                     </div>
                   )}
@@ -624,12 +624,12 @@ function MenuTab() {
 /* ── DRAFTS TAB ─────────────────────────────────────────────────── */
 function DraftsTab() {
   const drafts = [
-    { id: "#D-055", note: "Telefonbestellung — Döner Teller x1, Pommes x1", total: "15,40 €", time: "10:32", contact: "Klaus R." },
-    { id: "#D-054", note: "WhatsApp — Pizza Salami x2, Ayran x2", total: "27,00 €", time: "10:18", contact: "Fatima K." },
+    { id: "#D-055", note: "Telefonbestellung, Döner Teller x1, Pommes x1", total: "15,40 €", time: "10:32", contact: "Klaus R." },
+    { id: "#D-054", note: "WhatsApp, Pizza Salami x2, Ayran x2", total: "27,00 €", time: "10:18", contact: "Fatima K." },
   ];
   return (
     <div>
-      <p className="text-sm text-slate-500 mb-4">Nicht-Online Bestellungen (Telefon, WhatsApp) — bitte bestätigen.</p>
+      <p className="text-sm text-slate-500 mb-4">Nicht-Online Bestellungen (Telefon, WhatsApp), bitte bestätigen.</p>
       <div className="space-y-3">
         {drafts.map(d => (
           <Card key={d.id} className="p-4 border-slate-200 shadow-sm">
@@ -877,9 +877,9 @@ function CouponsTab() {
 /* ── ZONES TAB ──────────────────────────────────────────────────── */
 function ZonesTab() {
   const zones = [
-    { name: "Zone 1 — Innenstadt", radius: "0–3 km", fee: "2,00 €", minOrder: "12,00 €", active: true },
-    { name: "Zone 2 — Stadtrand", radius: "3–6 km", fee: "3,50 €", minOrder: "18,00 €", active: true },
-    { name: "Zone 3 — Umland", radius: "6–10 km", fee: "5,00 €", minOrder: "25,00 €", active: false },
+    { name: "Zone 1, Innenstadt", radius: "0–3 km", fee: "2,00 €", minOrder: "12,00 €", active: true },
+    { name: "Zone 2, Stadtrand", radius: "3–6 km", fee: "3,50 €", minOrder: "18,00 €", active: true },
+    { name: "Zone 3, Umland", radius: "6–10 km", fee: "5,00 €", minOrder: "25,00 €", active: false },
   ];
   return (
     <div>

@@ -14,15 +14,15 @@ const faqSections = [
     items: [
       {
         q: "Was kostet GastroHub?",
-        a: "GastroHub funktioniert als Einmalzahlung — keine monatlichen Gebühren, keine Provision pro Bestellung. Den genauen Preis teilen wir Ihnen nach einem kurzen Gespräch mit, da er je nach Umfang Ihres Restaurants variiert. Kontaktieren Sie uns einfach für ein Angebot.",
+        a: "GastroHub funktioniert als Einmalzahlung, keine monatlichen Gebühren, keine Provision pro Bestellung. Den genauen Preis teilen wir Ihnen nach einem kurzen Gespräch mit, da er je nach Umfang Ihres Restaurants variiert. Kontaktieren Sie uns einfach für ein Angebot.",
       },
       {
         q: "Gibt es eine Testphase?",
-        a: "Ja — Sie können die Demo direkt auf dieser Website unverbindlich und kostenlos ausprobieren, ohne Kreditkarte oder Registrierung.",
+        a: "Ja, Sie können die Demo direkt auf dieser Website unverbindlich und kostenlos ausprobieren, ohne Kreditkarte oder Registrierung.",
       },
       {
         q: "Gibt es laufende Kosten nach der Einmalzahlung?",
-        a: "Nein. Nach der Einmalzahlung entstehen keine weiteren Pflichtkosten durch GastroHub. Optional können Kosten für Ihre eigene Domain oder einen externen Zahlungsanbieter anfallen — das liegt jedoch außerhalb unseres Produkts.",
+        a: "Nein. Nach der Einmalzahlung entstehen keine weiteren Pflichtkosten durch GastroHub. Optional können Kosten für Ihre eigene Domain oder einen externen Zahlungsanbieter anfallen, das liegt jedoch außerhalb unseres Produkts.",
       },
       {
         q: "Gibt es eine Mindestvertragslaufzeit?",
@@ -43,7 +43,7 @@ const faqSections = [
       },
       {
         q: "Brauche ich technische Kenntnisse?",
-        a: "Nein. Wir richten alles für Sie ein. Die Bedienung im Alltag — Menü pflegen, Bestellungen annehmen, Öffnungszeiten ändern — erfolgt über ein einfaches Dashboard auf dem Smartphone.",
+        a: "Nein. Wir richten alles für Sie ein. Die Bedienung im Alltag, Menü pflegen, Bestellungen annehmen, Öffnungszeiten ändern, erfolgt über ein einfaches Dashboard auf dem Smartphone.",
       },
       {
         q: "Kann ich mein bestehendes Menü übernehmen?",
@@ -55,7 +55,7 @@ const faqSections = [
       },
       {
         q: "Welche Geräte werden unterstützt?",
-        a: "Das Owner-Dashboard funktioniert vollständig über den Browser auf Smartphone, Tablet und Desktop. Ihre Kunden können über jeden modernen Browser bestellen — keine App-Installation notwendig.",
+        a: "Das Owner-Dashboard funktioniert vollständig über den Browser auf Smartphone, Tablet und Desktop. Ihre Kunden können über jeden modernen Browser bestellen, keine App-Installation notwendig.",
       },
     ],
   },
@@ -64,11 +64,11 @@ const faqSections = [
     items: [
       {
         q: "Brauche ich eigene Fahrer?",
-        a: "Nein. Sie können das System sowohl mit eigenen Fahrern als auch mit externen Kurierdiensten nutzen. GastroHub verwaltet die Bestellungen — die Lieferlogistik entscheiden Sie selbst.",
+        a: "Nein. Sie können das System sowohl mit eigenen Fahrern als auch mit externen Kurierdiensten nutzen. GastroHub verwaltet die Bestellungen, die Lieferlogistik entscheiden Sie selbst.",
       },
       {
         q: "Kann ich Öffnungszeiten und Liefergebiete selbst einstellen?",
-        a: "Ja. Sie stellen Öffnungszeiten, Mindestbestellwerte, Lieferzonen und Pausenzeiten direkt im Dashboard ein — jederzeit und ohne unsere Hilfe.",
+        a: "Ja. Sie stellen Öffnungszeiten, Mindestbestellwerte, Lieferzonen und Pausenzeiten direkt im Dashboard ein, jederzeit und ohne unsere Hilfe.",
       },
       {
         q: "Kann ich Gerichte temporär deaktivieren?",
@@ -80,7 +80,7 @@ const faqSections = [
       },
       {
         q: "Gibt es eine mehrsprachige Unterstützung?",
-        a: "Ja. Die Plattform unterstützt Deutsch, Englisch und Arabisch — damit erreichen Sie mehr Kunden ohne zusätzlichen Aufwand.",
+        a: "Ja. Die Plattform unterstützt Deutsch, Englisch und Arabisch, damit erreichen Sie mehr Kunden ohne zusätzlichen Aufwand.",
       },
     ],
   },
