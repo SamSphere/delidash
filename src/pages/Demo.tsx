@@ -2,11 +2,10 @@ import { useState, useEffect } from "react";
 import { Link } from "wouter";
 import {
   PackageOpen, ShoppingCart, Plus, Minus, MapPin, Clock, CreditCard,
-  LayoutDashboard, UtensilsCrossed, FileText, ShoppingBag, Sparkles,
+  UtensilsCrossed, FileText, ShoppingBag, Sparkles,
   Users, BarChart2, Tag, UserCheck, Star, ClipboardList, Settings,
   Bell, Search, MoreHorizontal, Check, X, Pencil, Trash2,
-  TrendingUp, TrendingDown, Package, Euro, ChevronRight, Send,
-  AlertCircle, CheckCircle2, Circle,
+  TrendingUp, TrendingDown, Package, Euro, Send,
 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -14,6 +13,7 @@ import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 
 type ViewTab = "kunde" | "admin";
+type CustomerSection = "menu" | "checkout" | "confirm" | "konto";
 type AdminTab = "orders" | "menu" | "drafts" | "grocery" | "ai" | "customers" |
                 "controller" | "stats" | "coupons" | "zones" | "staff" |
                 "reviews" | "custorders" | "settings";
@@ -50,8 +50,10 @@ export default function Demo() {
   useEffect(() => { document.title = "Demo | GastroHub"; }, []);
 
   const [view, setView] = useState<ViewTab>("kunde");
+  const [customerSection, setCustomerSection] = useState<CustomerSection>("menu");
   const [adminTab, setAdminTab] = useState<AdminTab>("orders");
   const [cart, setCart] = useState<Record<number, number>>({ 1: 1, 2: 1 });
+  const [deliveryType, setDeliveryType] = useState<"lieferung" | "abholung">("lieferung");
   const [notifCount, setNotifCount] = useState(3);
   const [showNotifs, setShowNotifs] = useState(false);
 
@@ -121,92 +123,288 @@ export default function Demo() {
 
       {/* ── CUSTOMER VIEW ── */}
       {view === "kunde" && (
-        <div className="flex flex-1 overflow-hidden">
-          <div className="flex-1 overflow-auto p-6">
-            <div className="max-w-2xl mx-auto">
-              <div className="mb-6">
-                <h1 className="text-2xl font-bold text-slate-900 mb-1">Mario's Pizza</h1>
-                <div className="flex items-center gap-3 text-sm text-slate-500">
-                  <span className="flex items-center gap-1"><Clock className="h-4 w-4" /> 25–35 Min.</span>
-                  <span className="flex items-center gap-1"><MapPin className="h-4 w-4" /> Lieferung ab €15</span>
-                </div>
-              </div>
-              {["Pizza", "Döner", "Burger", "Vegetarisch", "Beilagen", "Getränke"].map(cat => {
-                const items = menuItems.filter(m => m.category === cat && m.available);
-                if (!items.length) return null;
-                return (
-                  <div key={cat} className="mb-8">
-                    <h2 className="text-sm font-semibold text-slate-500 uppercase tracking-wide mb-3">{cat}</h2>
-                    <div className="space-y-3">
-                      {items.map(item => (
-                        <div key={item.id} className="bg-white rounded-xl border border-slate-200 p-4 flex items-center justify-between shadow-sm">
-                          <div>
-                            <p className="font-semibold text-slate-900">{item.name}</p>
-                            <p className="text-sm text-slate-500 mt-0.5">{item.desc}</p>
-                            <p className="text-sm font-bold text-primary mt-1">{item.price.toFixed(2)} €</p>
-                          </div>
-                          <div className="flex items-center gap-2">
-                            {cart[item.id] ? (
-                              <>
-                                <button onClick={() => removeFromCart(item.id)} className="w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 flex items-center justify-center transition-colors">
-                                  <Minus className="h-4 w-4 text-slate-600" />
-                                </button>
-                                <span className="w-5 text-center font-semibold text-slate-900">{cart[item.id]}</span>
-                              </>
-                            ) : null}
-                            <button onClick={() => addToCart(item.id)} className="w-8 h-8 rounded-full bg-primary hover:bg-primary/90 flex items-center justify-center transition-colors">
-                              <Plus className="h-4 w-4 text-white" />
-                            </button>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-          {/* Cart sidebar */}
-          <div className="w-72 bg-white border-l border-slate-200 flex flex-col flex-shrink-0 hidden md:flex">
-            <div className="p-5 border-b border-slate-100">
-              <h2 className="font-bold text-slate-900 flex items-center gap-2">
-                <ShoppingCart className="h-5 w-5 text-primary" />
-                Warenkorb
-                {cartCount > 0 && <Badge className="bg-primary text-white border-none ml-auto">{cartCount}</Badge>}
-              </h2>
-            </div>
-            <div className="flex-1 overflow-auto p-4 space-y-3">
-              {Object.entries(cart).map(([id, qty]) => {
-                const item = menuItems.find(m => m.id === Number(id));
-                if (!item) return null;
-                return (
-                  <div key={id} className="flex items-center justify-between text-sm">
-                    <div className="flex-1 min-w-0">
-                      <p className="font-medium text-slate-900 truncate">{item.name}</p>
-                      <p className="text-slate-500">{(item.price * qty).toFixed(2)} €</p>
-                    </div>
-                    <div className="flex items-center gap-1 ml-2">
-                      <button onClick={() => removeFromCart(Number(id))} className="w-6 h-6 rounded-full bg-slate-100 hover:bg-slate-200 flex items-center justify-center"><Minus className="h-3 w-3" /></button>
-                      <span className="w-4 text-center text-xs font-semibold">{qty}</span>
-                      <button onClick={() => addToCart(Number(id))} className="w-6 h-6 rounded-full bg-slate-100 hover:bg-slate-200 flex items-center justify-center"><Plus className="h-3 w-3" /></button>
-                    </div>
-                  </div>
-                );
-              })}
-              {cartCount === 0 && <p className="text-slate-400 text-sm text-center py-8">Noch nichts im Warenkorb</p>}
-            </div>
-            {cartCount > 0 && (
-              <div className="p-4 border-t border-slate-100">
-                <div className="flex justify-between text-sm mb-1"><span className="text-slate-500">Zwischensumme</span><span className="font-medium">{cartTotal.toFixed(2)} €</span></div>
-                <div className="flex justify-between text-sm mb-4"><span className="text-slate-500">Lieferung</span><span className="font-medium">2,00 €</span></div>
-                <div className="flex justify-between font-bold text-base mb-4"><span>Gesamt</span><span>{(cartTotal + 2).toFixed(2)} €</span></div>
-                <div className="bg-slate-50 rounded-lg p-3 mb-4 text-xs text-slate-500 flex items-start gap-2">
-                  <CreditCard className="h-4 w-4 shrink-0 mt-0.5" />Kreditkarte · PayPal · Apple Pay
-                </div>
-                <Button className="w-full font-semibold" size="sm">Zur Kasse</Button>
-              </div>
+        <div className="flex flex-col flex-1 overflow-hidden">
+          {/* Customer nav tabs */}
+          <div className="bg-white border-b border-slate-200 px-6 flex gap-6 flex-shrink-0">
+            {(["menu", "konto"] as const).map(s => (
+              <button key={s} onClick={() => setCustomerSection(s)} className={`py-3 text-sm font-medium border-b-2 transition-colors -mb-px ${customerSection === s || (s === "menu" && (customerSection === "checkout" || customerSection === "confirm")) ? "border-primary text-primary" : "border-transparent text-slate-500 hover:text-slate-800"}`}>
+                {s === "menu" ? "Speisekarte" : "Mein Konto"}
+              </button>
+            ))}
+            {(customerSection === "checkout" || customerSection === "confirm") && (
+              <button onClick={() => setCustomerSection("checkout")} className="py-3 text-sm font-medium border-b-2 border-primary text-primary -mb-px">
+                Kasse
+              </button>
             )}
           </div>
+
+          {/* MENU step */}
+          {customerSection === "menu" && (
+            <div className="flex flex-1 overflow-hidden">
+              <div className="flex-1 overflow-auto p-6">
+                <div className="max-w-2xl mx-auto">
+                  <div className="mb-6">
+                    <h1 className="text-2xl font-bold text-slate-900 mb-1">Mario's Pizza</h1>
+                    <div className="flex items-center gap-3 text-sm text-slate-500">
+                      <span className="flex items-center gap-1"><Clock className="h-4 w-4" /> 25–35 Min.</span>
+                      <span className="flex items-center gap-1"><MapPin className="h-4 w-4" /> Lieferung ab €15</span>
+                    </div>
+                  </div>
+                  {["Pizza", "Döner", "Burger", "Vegetarisch", "Beilagen", "Getränke"].map(cat => {
+                    const items = menuItems.filter(m => m.category === cat && m.available);
+                    if (!items.length) return null;
+                    return (
+                      <div key={cat} className="mb-8">
+                        <h2 className="text-sm font-semibold text-slate-500 uppercase tracking-wide mb-3">{cat}</h2>
+                        <div className="space-y-3">
+                          {items.map(item => (
+                            <div key={item.id} className="bg-white rounded-xl border border-slate-200 p-4 flex items-center justify-between shadow-sm">
+                              <div>
+                                <p className="font-semibold text-slate-900">{item.name}</p>
+                                <p className="text-sm text-slate-500 mt-0.5">{item.desc}</p>
+                                <p className="text-sm font-bold text-primary mt-1">{item.price.toFixed(2)} €</p>
+                              </div>
+                              <div className="flex items-center gap-2">
+                                {cart[item.id] ? (
+                                  <>
+                                    <button onClick={() => removeFromCart(item.id)} className="w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 flex items-center justify-center"><Minus className="h-4 w-4 text-slate-600" /></button>
+                                    <span className="w-5 text-center font-semibold text-slate-900">{cart[item.id]}</span>
+                                  </>
+                                ) : null}
+                                <button onClick={() => addToCart(item.id)} className="w-8 h-8 rounded-full bg-primary hover:bg-primary/90 flex items-center justify-center"><Plus className="h-4 w-4 text-white" /></button>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+              {/* Cart sidebar */}
+              <div className="w-72 bg-white border-l border-slate-200 flex flex-col flex-shrink-0">
+                <div className="p-5 border-b border-slate-100">
+                  <h2 className="font-bold text-slate-900 flex items-center gap-2">
+                    <ShoppingCart className="h-5 w-5 text-primary" />Warenkorb
+                    {cartCount > 0 && <Badge className="bg-primary text-white border-none ml-auto">{cartCount}</Badge>}
+                  </h2>
+                </div>
+                <div className="flex-1 overflow-auto p-4 space-y-3">
+                  {Object.entries(cart).map(([id, qty]) => {
+                    const item = menuItems.find(m => m.id === Number(id));
+                    if (!item) return null;
+                    return (
+                      <div key={id} className="flex items-center justify-between text-sm">
+                        <div className="flex-1 min-w-0">
+                          <p className="font-medium text-slate-900 truncate">{item.name}</p>
+                          <p className="text-slate-500">{(item.price * qty).toFixed(2)} €</p>
+                        </div>
+                        <div className="flex items-center gap-1 ml-2">
+                          <button onClick={() => removeFromCart(Number(id))} className="w-6 h-6 rounded-full bg-slate-100 hover:bg-slate-200 flex items-center justify-center"><Minus className="h-3 w-3" /></button>
+                          <span className="w-4 text-center text-xs font-semibold">{qty}</span>
+                          <button onClick={() => addToCart(Number(id))} className="w-6 h-6 rounded-full bg-slate-100 hover:bg-slate-200 flex items-center justify-center"><Plus className="h-3 w-3" /></button>
+                        </div>
+                      </div>
+                    );
+                  })}
+                  {cartCount === 0 && <p className="text-slate-400 text-sm text-center py-8">Noch nichts im Warenkorb</p>}
+                </div>
+                {cartCount > 0 && (
+                  <div className="p-4 border-t border-slate-100">
+                    <div className="flex justify-between text-sm mb-1"><span className="text-slate-500">Zwischensumme</span><span className="font-medium">{cartTotal.toFixed(2)} €</span></div>
+                    <div className="flex justify-between text-sm mb-4"><span className="text-slate-500">Lieferung</span><span className="font-medium">2,00 €</span></div>
+                    <div className="flex justify-between font-bold text-base mb-4"><span>Gesamt</span><span>{(cartTotal + 2).toFixed(2)} €</span></div>
+                    <Button className="w-full font-semibold" size="sm" onClick={() => setCustomerSection("checkout")}>Zur Kasse</Button>
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
+
+          {/* CHECKOUT step */}
+          {customerSection === "checkout" && (
+            <div className="flex-1 overflow-auto p-6 bg-slate-50">
+              <div className="max-w-xl mx-auto">
+                <button onClick={() => setCustomerSection("menu")} className="text-sm text-slate-500 hover:text-slate-800 mb-5 flex items-center gap-1">← Zurück zur Speisekarte</button>
+                <h2 className="text-xl font-bold text-slate-900 mb-6">Bestellung abschließen</h2>
+
+                {/* Lieferung / Abholung */}
+                <Card className="p-5 mb-4 border-slate-200">
+                  <p className="text-sm font-semibold text-slate-700 mb-3">Bestellart</p>
+                  <div className="grid grid-cols-2 gap-3">
+                    {(["lieferung", "abholung"] as const).map(t => (
+                      <button key={t} onClick={() => setDeliveryType(t)} className={`py-3 rounded-xl border-2 text-sm font-medium transition-colors ${deliveryType === t ? "border-primary bg-primary/5 text-primary" : "border-slate-200 text-slate-600 hover:border-slate-300"}`}>
+                        {t === "lieferung" ? "🛵  Lieferung" : "🏃  Abholung"}
+                      </button>
+                    ))}
+                  </div>
+                </Card>
+
+                {/* Address — only for delivery */}
+                {deliveryType === "lieferung" && (
+                  <Card className="p-5 mb-4 border-slate-200">
+                    <p className="text-sm font-semibold text-slate-700 mb-3">Lieferadresse</p>
+                    <div className="space-y-3">
+                      <div className="grid grid-cols-3 gap-3">
+                        <div className="col-span-2">
+                          <label className="text-xs text-slate-500 mb-1 block">Straße</label>
+                          <Input defaultValue="Hauptstraße" className="h-9 text-sm" />
+                        </div>
+                        <div>
+                          <label className="text-xs text-slate-500 mb-1 block">Nr.</label>
+                          <Input defaultValue="42" className="h-9 text-sm" />
+                        </div>
+                      </div>
+                      <div className="grid grid-cols-3 gap-3">
+                        <div>
+                          <label className="text-xs text-slate-500 mb-1 block">PLZ</label>
+                          <Input defaultValue="70173" className="h-9 text-sm" />
+                        </div>
+                        <div className="col-span-2">
+                          <label className="text-xs text-slate-500 mb-1 block">Ort</label>
+                          <Input defaultValue="Stuttgart" className="h-9 text-sm" />
+                        </div>
+                      </div>
+                    </div>
+                  </Card>
+                )}
+
+                {/* Contact */}
+                <Card className="p-5 mb-4 border-slate-200">
+                  <p className="text-sm font-semibold text-slate-700 mb-3">Kontakt</p>
+                  <div className="space-y-3">
+                    <div>
+                      <label className="text-xs text-slate-500 mb-1 block">Vor- und Nachname</label>
+                      <Input defaultValue="Max Mustermann" className="h-9 text-sm" />
+                    </div>
+                    <div>
+                      <label className="text-xs text-slate-500 mb-1 block">Telefonnummer</label>
+                      <Input defaultValue="+49 151 12345678" className="h-9 text-sm" />
+                    </div>
+                    <div>
+                      <label className="text-xs text-slate-500 mb-1 block">E-Mail (optional)</label>
+                      <Input defaultValue="max@example.de" className="h-9 text-sm" />
+                    </div>
+                  </div>
+                </Card>
+
+                {/* Payment */}
+                <Card className="p-5 mb-4 border-slate-200">
+                  <p className="text-sm font-semibold text-slate-700 mb-3">Zahlung</p>
+                  <div className="space-y-2">
+                    {["💳  Kreditkarte (Stripe)", "🅿️  PayPal", "🍎  Apple Pay"].map((m, i) => (
+                      <label key={i} className="flex items-center gap-3 p-3 rounded-lg border border-slate-200 cursor-pointer hover:bg-slate-50">
+                        <input type="radio" name="payment" defaultChecked={i === 0} className="accent-primary" />
+                        <span className="text-sm text-slate-700">{m}</span>
+                      </label>
+                    ))}
+                  </div>
+                </Card>
+
+                {/* Order summary */}
+                <Card className="p-5 mb-5 border-slate-200">
+                  <p className="text-sm font-semibold text-slate-700 mb-3">Bestellübersicht</p>
+                  <div className="space-y-2">
+                    {Object.entries(cart).map(([id, qty]) => {
+                      const item = menuItems.find(m => m.id === Number(id));
+                      if (!item) return null;
+                      return (
+                        <div key={id} className="flex justify-between text-sm">
+                          <span className="text-slate-700">{item.name} × {qty}</span>
+                          <span className="font-medium text-slate-800">{(item.price * qty).toFixed(2)} €</span>
+                        </div>
+                      );
+                    })}
+                    <div className="border-t border-slate-100 pt-2 mt-2 flex justify-between text-sm">
+                      <span className="text-slate-500">Lieferung</span><span>2,00 €</span>
+                    </div>
+                    <div className="flex justify-between font-bold text-base">
+                      <span>Gesamt</span><span>{(cartTotal + 2).toFixed(2)} €</span>
+                    </div>
+                  </div>
+                </Card>
+
+                <Button className="w-full h-11 font-semibold text-base" onClick={() => setCustomerSection("confirm")}>
+                  Jetzt bestellen
+                </Button>
+              </div>
+            </div>
+          )}
+
+          {/* CONFIRM step */}
+          {customerSection === "confirm" && (
+            <div className="flex-1 overflow-auto p-6 flex items-center justify-center">
+              <div className="text-center max-w-sm">
+                <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Check className="h-8 w-8 text-emerald-600" />
+                </div>
+                <h2 className="text-2xl font-bold text-slate-900 mb-2">Bestellung eingegangen!</h2>
+                <p className="text-slate-500 mb-6">Deine Bestellung <span className="font-semibold text-slate-700">#1043</span> wird jetzt vorbereitet. Geschätzte Lieferzeit: <span className="font-semibold">25–35 Min.</span></p>
+                <div className="bg-slate-50 rounded-xl p-4 text-left mb-6 space-y-2">
+                  <div className="flex justify-between text-sm"><span className="text-slate-500">Lieferadresse</span><span className="font-medium text-slate-700">Hauptstraße 42, Stuttgart</span></div>
+                  <div className="flex justify-between text-sm"><span className="text-slate-500">Zahlung</span><span className="font-medium text-slate-700">Kreditkarte</span></div>
+                  <div className="flex justify-between text-sm"><span className="text-slate-500">Gesamtbetrag</span><span className="font-bold text-slate-900">{(cartTotal + 2).toFixed(2)} €</span></div>
+                </div>
+                <div className="flex gap-3">
+                  <Button variant="outline" className="flex-1" onClick={() => { setCustomerSection("konto"); }}>Mein Konto</Button>
+                  <Button className="flex-1" onClick={() => { setCustomerSection("menu"); }}>Weiter bestellen</Button>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* KONTO (account) section */}
+          {customerSection === "konto" && (
+            <div className="flex-1 overflow-auto p-6 bg-slate-50">
+              <div className="max-w-xl mx-auto">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white font-bold text-lg">M</div>
+                  <div>
+                    <p className="font-bold text-slate-900">Max Mustermann</p>
+                    <p className="text-sm text-slate-500">max@example.de</p>
+                  </div>
+                </div>
+
+                <h3 className="text-sm font-semibold text-slate-700 mb-3">Bestellhistorie</h3>
+                <div className="space-y-3 mb-6">
+                  {[
+                    { num: "#1043", items: "Pizza Margherita x1, Döner Teller x1", total: `${(cartTotal + 2).toFixed(2)} €`, date: "Heute", status: "In Lieferung" },
+                    { num: "#1039", items: "Pizza Salami x1, Pommes x1", total: "15,00 €", date: "02.05.", status: "Abgeschlossen" },
+                    { num: "#1031", items: "Burger Deluxe x2, Cola x2", total: "24,80 €", date: "28.04.", status: "Abgeschlossen" },
+                  ].map(o => (
+                    <Card key={o.num} className="p-4 border-slate-200 bg-white">
+                      <div className="flex justify-between items-start">
+                        <div>
+                          <p className="text-sm font-semibold text-slate-900">{o.num} · {o.date}</p>
+                          <p className="text-xs text-slate-500 mt-0.5">{o.items}</p>
+                        </div>
+                        <div className="text-right">
+                          <p className="text-sm font-bold text-slate-800">{o.total}</p>
+                          <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${o.status === "Abgeschlossen" ? "bg-slate-100 text-slate-500" : "bg-emerald-100 text-emerald-700"}`}>{o.status}</span>
+                        </div>
+                      </div>
+                    </Card>
+                  ))}
+                </div>
+
+                <h3 className="text-sm font-semibold text-slate-700 mb-3">Gespeicherte Adressen</h3>
+                <Card className="p-4 border-slate-200 bg-white mb-4">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-3">
+                      <MapPin className="h-4 w-4 text-slate-400" />
+                      <div>
+                        <p className="text-sm font-medium text-slate-900">Hauptstraße 42, 70173 Stuttgart</p>
+                        <p className="text-xs text-slate-400">Standardadresse</p>
+                      </div>
+                    </div>
+                    <button className="text-slate-400 hover:text-blue-600"><Pencil className="h-4 w-4" /></button>
+                  </div>
+                </Card>
+
+                <Button variant="outline" className="w-full text-red-500 border-red-200 hover:bg-red-50">Abmelden</Button>
+              </div>
+            </div>
+          )}
         </div>
       )}
 
@@ -214,7 +412,7 @@ export default function Demo() {
       {view === "admin" && (
         <div className="flex flex-1 overflow-hidden">
           {/* Sidebar */}
-          <aside className="w-60 bg-slate-900 text-slate-300 flex-shrink-0 flex flex-col hidden md:flex border-r border-slate-800">
+          <aside className="w-56 bg-slate-900 text-slate-300 flex-shrink-0 flex flex-col border-r border-slate-800">
             <div className="flex-1 py-4 px-3 space-y-0.5 overflow-y-auto">
               {ADMIN_NAV.map(({ key, label, icon, badge }) => (
                 <button key={key} onClick={() => setAdminTab(key)} className={`w-full flex items-center gap-2.5 px-3 py-2 rounded-lg text-sm font-medium text-left transition-colors ${adminTab === key ? "bg-blue-600/20 text-blue-400" : "hover:bg-slate-800 hover:text-white"}`}>
