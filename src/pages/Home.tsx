@@ -173,10 +173,10 @@ export default function Home() {
               { icon: Languages, title: "Sprachwechsel", text: "Deutsch, Englisch und Arabisch für mehr Reichweite." },
               { icon: CheckCircle2, title: "FAQ & Recht", text: "FAQ, AGB, Impressum und Datenschutz sind direkt eingebunden." },
               { icon: ArrowRight, title: "Kontaktwege", text: "E-Mail, Telefon und Demo-Kontaktwege für direkte Anfragen." },
-              { icon: TrendingUp, title: "Mobile App", text: "Kunden-App für Menü, Warenkorb, Checkout und Konto in einer mobilen Oberfläche." },
+              { icon: TrendingUp, title: "Mobile-optimiert", text: "Vollständig mobile-optimierte Web-App für Menü, Warenkorb, Checkout und Kundenkonto — ohne App-Installation." },
               { icon: ShieldCheck, title: "Konto & Einstellungen", text: "Bestellhistorie, Wunschliste, Adressen, Zahlungsarten und Profileinstellungen." },
               { icon: Clock, title: "Admin-Funktionen", text: "Grocery List, AI-Tab, Settings, Customer-Infos, Order Queue, Drafts, Coupons, Zonen, Staff und Reviews." },
-              { icon: Check, title: "Backend/API", text: "Menü, Orders, Checkout Sessions, Uploads und Telegram Test. Neue Gerichte erscheinen automatisch auf der Landing Page." },
+              { icon: Check, title: "Backend/API", text: "Menü, Orders, Checkout Sessions, Uploads, Telegram-Test und Webhook-Integration für Stripe-Zahlungen." },
             ].map((feature) => (
               <Card key={feature.title} className="p-6 border-slate-200 shadow-sm hover:shadow-md transition-shadow bg-slate-50/80">
                 <feature.icon className="h-6 w-6 text-primary mb-4" />
@@ -184,6 +184,81 @@ export default function Home() {
                 <p className="text-slate-600 leading-relaxed">{feature.text}</p>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Comparison: GastroHub vs. Lieferando */}
+      <section className="py-20 lg:py-28 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Was kostet Sie Lieferando wirklich?</h2>
+            <p className="text-lg text-slate-600">Vergleichen Sie selbst — und rechnen Sie nach, was Sie jährlich sparen.</p>
+          </div>
+          <div className="max-w-2xl mx-auto">
+            <div className="grid grid-cols-3 text-sm font-semibold text-slate-500 uppercase tracking-wide mb-3 px-4">
+              <div></div>
+              <div className="text-center">Lieferando</div>
+              <div className="text-center text-primary">GastroHub</div>
+            </div>
+            {[
+              { label: "Provision pro Bestellung", lieferando: "15–30 %", gastrohub: "0 %" },
+              { label: "Monatliche Grundgebühr", lieferando: "Ab €99/Monat", gastrohub: "Einmalzahlung" },
+              { label: "Kundendaten gehören", lieferando: "Lieferando", gastrohub: "Ihnen" },
+              { label: "Eigenes Branding", lieferando: "Nein", gastrohub: "Vollständig" },
+              { label: "Zahlungsabwicklung", lieferando: "Lieferando", gastrohub: "Direkt (Stripe)" },
+            ].map((row, i) => (
+              <div key={i} className={`grid grid-cols-3 px-4 py-4 rounded-xl mb-2 items-center ${i % 2 === 0 ? "bg-slate-50" : "bg-white"}`}>
+                <div className="text-sm font-medium text-slate-700">{row.label}</div>
+                <div className="text-center text-sm text-red-500 font-medium">{row.lieferando}</div>
+                <div className="text-center text-sm text-emerald-600 font-semibold">{row.gastrohub}</div>
+              </div>
+            ))}
+            <div className="mt-6 bg-blue-50 border border-blue-100 rounded-2xl p-6 text-center">
+              <p className="text-slate-700 text-base">
+                Bei <span className="font-bold text-slate-900">€10.000 Monatsumsatz</span> zahlen Sie Lieferando bis zu{" "}
+                <span className="font-bold text-red-600">€3.000 pro Monat</span> — das sind{" "}
+                <span className="font-bold text-red-600">€36.000 pro Jahr</span>.
+              </p>
+              <p className="text-slate-700 text-base mt-2">
+                Mit GastroHub zahlen Sie <span className="font-bold text-emerald-600">einmal</span> — und behalten den Rest.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing */}
+      <section className="py-20 lg:py-28 bg-slate-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-2xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Einmal zahlen. Für immer nutzen.</h2>
+            <p className="text-lg text-slate-600 mb-10">
+              Kein Abo. Keine Provision. Keine versteckten Gebühren. Sie zahlen einmal und nutzen GastroHub dauerhaft — inklusive allen Funktionen.
+            </p>
+            <div className="bg-white rounded-2xl shadow-md border border-slate-200 p-10 mb-8">
+              <div className="flex flex-col items-center gap-6">
+                {[
+                  { icon: "✅", text: "Vollständiges Bestellsystem mit Checkout & Zahlung" },
+                  { icon: "✅", text: "Admin-Dashboard für Smartphone & Desktop" },
+                  { icon: "✅", text: "Kunden-Login, Wunschliste & Bestellhistorie" },
+                  { icon: "✅", text: "Echtzeit-Benachrichtigungen per Telegram & E-Mail" },
+                  { icon: "✅", text: "Lieferzonen, Coupons, Statistiken & mehr" },
+                  { icon: "✅", text: "Kein Monatsabo, 0 % Provision" },
+                ].map((item, i) => (
+                  <div key={i} className="flex items-center gap-3 text-slate-700 w-full max-w-sm">
+                    <span className="text-lg">{item.icon}</span>
+                    <span className="text-sm text-left">{item.text}</span>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-8 pt-8 border-t border-slate-100 text-center">
+                <p className="text-slate-500 text-sm mb-4">Preis auf Anfrage — individuell nach Restaurantgröße</p>
+                <Button asChild size="lg" className="h-14 px-10 text-base font-semibold">
+                  <Link href="/kontakt">Angebot anfragen</Link>
+                </Button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
