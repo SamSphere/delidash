@@ -1,4 +1,4 @@
-import { Mail, Clock, MapPin } from "lucide-react";
+import { Mail } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { useEffect } from "react";
 
@@ -23,30 +23,15 @@ export default function Contact() {
               <Mail className="h-10 w-10 text-primary" />
             </div>
             
-            <a 
-              href="mailto:kontakt@gastrohub.dev" 
-              className="inline-block text-3xl md:text-4xl font-bold text-primary hover:text-blue-700 transition-colors mb-8 border-b-2 border-transparent hover:border-blue-700 pb-1"
+            <a
+              href="mailto:kontakt@gastrohub.dev"
+              className="inline-block text-3xl md:text-4xl font-bold text-primary hover:text-blue-700 transition-colors border-b-2 border-transparent hover:border-blue-700 pb-1"
               data-testid="link-email"
             >
               kontakt@gastrohub.dev
             </a>
-            
-            <div className="grid sm:grid-cols-2 gap-6 mt-8 border-t border-slate-100 pt-8 text-left">
-              <div className="flex gap-3">
-                <Clock className="h-5 w-5 text-slate-400 shrink-0 mt-0.5" />
-                <div>
-                  <h4 className="font-semibold text-slate-900">Antwortzeit</h4>
-                  <p className="text-slate-600 text-sm">Wir antworten in der Regel innerhalb von 24 Stunden.</p>
-                </div>
-              </div>
-              <div className="flex gap-3">
-                <MapPin className="h-5 w-5 text-slate-400 shrink-0 mt-0.5" />
-                <div>
-                  <h4 className="font-semibold text-slate-900">Standort</h4>
-                  <p className="text-slate-600 text-sm">Stuttgart, Deutschland<br/>Remote First Team</p>
-                </div>
-              </div>
-            </div>
+
+            <p className="text-slate-500 text-sm mt-6">Wir antworten in der Regel innerhalb von 24 Stunden.</p>
           </Card>
         </div>
       </div>
