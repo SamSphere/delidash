@@ -163,7 +163,7 @@ export default function Home() {
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { icon: Sparkles, title: "KI-Lieferantenbestellung", text: "Ein Klick aus dem Admin-Dashboard: Die KI verfasst die komplette Bestellung an Ihren Lieferanten – als E-Mail oder WhatsApp, in der gewünschten Sprache. Spart täglich Minuten und verhindert Tippfehler." },
+              { icon: Sparkles, title: "KI-Lieferantenbestellung", text: "Ein Klick aus dem Admin-Dashboard: Die KI verfasst die komplette Bestellung an Ihren Lieferanten als E-Mail oder WhatsApp, in der gewünschten Sprache. Spart täglich Minuten und verhindert Tippfehler." },
               { icon: Globe, title: "Landing/Marketing", text: "Starke Startseite, die GastroHub erklärt und Anfragen erzeugt." },
               { icon: LayoutDashboard, title: "Live Demo & Menü", text: "Klickbare Demo mit Speisekarte, Kategorien und Restaurantnamen." },
               { icon: ShoppingCart, title: "Cart Flow", text: "Artikel hinzufügen, Mengen ändern, entfernen und Zwischensumme sehen." },
