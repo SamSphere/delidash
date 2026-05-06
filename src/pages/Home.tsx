@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import { motion, type Variants } from "framer-motion";
-import { ArrowRight, CheckCircle2, TrendingUp, ShieldCheck, Clock, Check, PackageOpen, Globe, Cookie, UserRound, Settings, ShoppingCart, Languages, LayoutDashboard } from "lucide-react";
+import { ArrowRight, CheckCircle2, TrendingUp, ShieldCheck, Clock, Check, PackageOpen, Globe, Cookie, UserRound, Settings, ShoppingCart, Languages, LayoutDashboard, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { useEffect } from "react";
@@ -163,6 +163,7 @@ export default function Home() {
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
+              { icon: Sparkles, title: "KI-Lieferantenbestellung", text: "Ein Klick aus dem Admin-Dashboard: Die KI verfasst die komplette Bestellung an Ihren Lieferanten – als E-Mail oder WhatsApp, in der gewünschten Sprache. Spart täglich Minuten und verhindert Tippfehler." },
               { icon: Globe, title: "Landing/Marketing", text: "Starke Startseite, die GastroHub erklärt und Anfragen erzeugt." },
               { icon: LayoutDashboard, title: "Live Demo & Menü", text: "Klickbare Demo mit Speisekarte, Kategorien und Restaurantnamen." },
               { icon: ShoppingCart, title: "Cart Flow", text: "Artikel hinzufügen, Mengen ändern, entfernen und Zwischensumme sehen." },
@@ -175,7 +176,7 @@ export default function Home() {
               { icon: ArrowRight, title: "Kontaktwege", text: "E-Mail, Telefon und Demo-Kontaktwege für direkte Anfragen." },
               { icon: TrendingUp, title: "Mobile-optimiert", text: "Vollständig mobile-optimierte Web-App für Menü, Warenkorb, Checkout und Kundenkonto, ohne App-Installation." },
               { icon: ShieldCheck, title: "Konto & Einstellungen", text: "Bestellhistorie, Wunschliste, Adressen, Zahlungsarten und Profileinstellungen." },
-              { icon: Clock, title: "Admin-Funktionen", text: "Grocery List, AI-Tab, Settings, Customer-Infos, Order Queue, Drafts, Coupons, Zonen, Staff und Reviews." },
+              { icon: Clock, title: "Admin-Funktionen", text: "Grocery List, Settings, Customer-Infos, Order Queue, Drafts, Coupons, Zonen, Staff und Reviews." },
               { icon: Check, title: "Backend/API", text: "Menü, Orders, Checkout Sessions, Uploads, Telegram-Test und Webhook-Integration für Stripe-Zahlungen." },
             ].map((feature) => (
               <Card key={feature.title} className="p-6 border-slate-200 shadow-sm hover:shadow-md transition-shadow bg-slate-50/80">
@@ -203,7 +204,7 @@ export default function Home() {
               <div className="text-center text-primary">GastroHub</div>
             </div>
             {[
-              { label: "Provision", lieferando: "15–30 %", ubereats: "15–30 %", gastrohub: "5 % / 7 % (fest) oder Einmal" },
+              { label: "Provision", lieferando: "15–30 %", ubereats: "15–30 %", gastrohub: "5 % oder Einmal" },
               { label: "Monatl. Gebühr", lieferando: "Ab €99/Mo.", ubereats: "Ab €0 (höhere %)", gastrohub: "Kein Abo" },
               { label: "Kundendaten", lieferando: "Plattform", ubereats: "Plattform", gastrohub: "Ihnen" },
               { label: "Eigenes Branding", lieferando: "Nein", ubereats: "Nein", gastrohub: "Vollständig" },
