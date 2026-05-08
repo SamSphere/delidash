@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "wouter";
 import {
-  PackageOpen, ShoppingCart, Plus, Minus, MapPin, Clock, CreditCard,
+  ShoppingCart, Plus, Minus, MapPin, Clock, CreditCard,
   UtensilsCrossed, FileText, ShoppingBag, Sparkles,
   Users, BarChart2, Tag, UserCheck, Star, ClipboardList, Settings,
   Bell, Search, MoreHorizontal, Check, X, Pencil, Trash2,
@@ -136,10 +136,12 @@ export default function Demo() {
     <div className="flex flex-col h-[100dvh] bg-slate-50">
       {/* Top bar */}
       <div className="bg-slate-900 text-white px-4 md:px-6 py-3 flex items-center justify-between flex-shrink-0">
-        <Link href="/" className="flex items-center gap-2">
-          <PackageOpen className="h-5 w-5 text-blue-400" />
-          <span className="font-bold text-lg tracking-tight">GastroHub</span>
-          <Badge className="ml-2 bg-blue-600/30 text-blue-300 border-none text-xs">Demo</Badge>
+        <Link href="/" className="flex items-center gap-2" aria-label="GastroHub Startseite">
+          <img src="/brand/mark-dark.svg" alt="" width="28" height="28" className="h-7 w-7" />
+          <span className="font-extrabold text-lg tracking-tight">
+            <span className="text-white">Gastro</span><span className="text-[#E5B870]">Hub</span>
+          </span>
+          <Badge className="ml-2 bg-primary/25 text-[#E5B870] border-none text-xs">Demo</Badge>
         </Link>
         <div className="flex bg-slate-800 rounded-lg p-1 gap-1">
           <button onClick={() => setView("kunde")} className={`px-3 py-1.5 rounded-md text-sm font-medium transition-colors ${view === "kunde" ? "bg-white text-slate-900" : "text-slate-400 hover:text-white"}`}>
@@ -433,7 +435,7 @@ export default function Demo() {
                         <p className="text-xs text-slate-400">Standardadresse</p>
                       </div>
                     </div>
-                    <button className="text-slate-400 hover:text-blue-600"><Pencil className="h-4 w-4" /></button>
+                    <button className="text-slate-400 hover:text-primary"><Pencil className="h-4 w-4" /></button>
                   </div>
                 </Card>
 
@@ -451,11 +453,11 @@ export default function Demo() {
           <aside className="w-56 bg-slate-900 text-slate-300 flex-shrink-0 flex flex-col border-r border-slate-800">
             <div className="flex-1 py-4 px-3 space-y-0.5 overflow-y-auto">
               {ADMIN_NAV.map(({ key, icon, badge }) => (
-                <button key={key} onClick={() => setAdminTab(key)} className={`w-full flex items-center gap-2.5 px-3 py-2 rounded-lg text-sm font-medium text-left transition-colors ${adminTab === key ? "bg-blue-600/20 text-blue-400" : "hover:bg-slate-800 hover:text-white"}`}>
+                <button key={key} onClick={() => setAdminTab(key)} className={`w-full flex items-center gap-2.5 px-3 py-2 rounded-lg text-sm font-medium text-left transition-colors ${adminTab === key ? "bg-primary/20 text-primary" : "hover:bg-slate-800 hover:text-white"}`}>
                   {icon}
                   <span className="flex-1 truncate">{L(key)}</span>
                   {badge !== undefined && badge > 0 && (
-                    <span className="flex h-5 min-w-5 items-center justify-center rounded-full bg-blue-500 px-1.5 text-[11px] font-bold text-white">{badge}</span>
+                    <span className="flex h-5 min-w-5 items-center justify-center rounded-full bg-primary px-1.5 text-[11px] font-bold text-white">{badge}</span>
                   )}
                 </button>
               ))}
@@ -464,7 +466,7 @@ export default function Demo() {
               {/* Language switcher */}
               <div className="flex gap-1 mb-3 px-1">
                 {(["de","en","ar","tr"] as AdminLang[]).map(lg => (
-                  <button key={lg} onClick={() => setAdminLang(lg)} className={`flex-1 py-1 rounded text-[11px] font-bold uppercase transition-colors ${adminLang === lg ? "bg-blue-600 text-white" : "text-slate-500 hover:text-white hover:bg-slate-700"}`}>
+                  <button key={lg} onClick={() => setAdminLang(lg)} className={`flex-1 py-1 rounded text-[11px] font-bold uppercase transition-colors ${adminLang === lg ? "bg-primary text-white" : "text-slate-500 hover:text-white hover:bg-slate-700"}`}>
                     {lg.toUpperCase()}
                   </button>
                 ))}
@@ -490,7 +492,7 @@ export default function Demo() {
             <header className="h-14 bg-white border-b border-slate-200 flex items-center justify-between px-6 flex-shrink-0">
               <h1 className="text-lg font-bold text-slate-900 flex items-center gap-2">
                 {L(adminTab)}
-                {adminTab === "orders" && <Badge variant="secondary" className="bg-blue-100 text-blue-700 border-none animate-pulse text-xs">Live</Badge>}
+                {adminTab === "orders" && <Badge variant="secondary" className="bg-secondary text-primary-hover border-none animate-pulse text-xs">Live</Badge>}
               </h1>
               <div className="flex items-center gap-3">
                 <div className="relative hidden sm:block">
@@ -506,11 +508,11 @@ export default function Demo() {
                     <div className="absolute right-0 top-11 w-72 bg-white rounded-xl shadow-xl border border-slate-200 z-50 overflow-hidden">
                       <div className="px-4 py-3 border-b border-slate-100 flex items-center justify-between">
                         <span className="text-sm font-semibold text-slate-900">Benachrichtigungen</span>
-                        <button onClick={() => { setNotifCount(0); setShowNotifs(false); }} className="text-xs text-blue-600 hover:underline">Alle gelesen</button>
+                        <button onClick={() => { setNotifCount(0); setShowNotifs(false); }} className="text-xs text-primary hover:underline">Alle gelesen</button>
                       </div>
                       <div className="divide-y divide-slate-50">
-                        {order1Status === "Neu" && <div className="px-4 py-3 flex gap-3 hover:bg-slate-50"><div className="w-2 h-2 rounded-full bg-blue-500 mt-1.5 shrink-0" /><div><p className="text-sm font-medium text-slate-900">Neue Bestellung #1042</p><p className="text-xs text-slate-500">Vor 2 Min. · 23,50 €</p></div></div>}
-                        {order2Status === "Neu" && <div className="px-4 py-3 flex gap-3 hover:bg-slate-50"><div className="w-2 h-2 rounded-full bg-blue-500 mt-1.5 shrink-0" /><div><p className="text-sm font-medium text-slate-900">Neue Bestellung #1041</p><p className="text-xs text-slate-500">Vor 5 Min. · 13,40 €</p></div></div>}
+                        {order1Status === "Neu" && <div className="px-4 py-3 flex gap-3 hover:bg-slate-50"><div className="w-2 h-2 rounded-full bg-primary mt-1.5 shrink-0" /><div><p className="text-sm font-medium text-slate-900">Neue Bestellung #1042</p><p className="text-xs text-slate-500">Vor 2 Min. · 23,50 €</p></div></div>}
+                        {order2Status === "Neu" && <div className="px-4 py-3 flex gap-3 hover:bg-slate-50"><div className="w-2 h-2 rounded-full bg-primary mt-1.5 shrink-0" /><div><p className="text-sm font-medium text-slate-900">Neue Bestellung #1041</p><p className="text-xs text-slate-500">Vor 5 Min. · 13,40 €</p></div></div>}
                         <div className="px-4 py-3 flex gap-3 hover:bg-slate-50"><div className="w-2 h-2 rounded-full bg-orange-400 mt-1.5 shrink-0" /><div><p className="text-sm font-medium text-slate-900">Neue Bewertung, 5 ★</p><p className="text-xs text-slate-500">Vor 30 Min. · Genehmigung ausstehend</p></div></div>
                       </div>
                     </div>
@@ -548,14 +550,14 @@ function OrdersTab({ order1Status, order2Status, acceptOrder }: {
   order2Status: "Neu" | "In Zubereitung";
   acceptOrder: (w: 1 | 2) => void;
 }) {
-  const statusColor = (s: string) => s === "Neu" ? "bg-blue-100 text-blue-700 border-blue-200" : s === "In Zubereitung" ? "bg-yellow-100 text-yellow-700 border-yellow-200" : "bg-emerald-100 text-emerald-700 border-emerald-200";
-  const borderColor = (s: string) => s === "Neu" ? "border-l-blue-500 bg-blue-50/20" : "border-l-yellow-500 bg-white";
+  const statusColor = (s: string) => s === "Neu" ? "bg-secondary text-primary-hover border-primary/25" : s === "In Zubereitung" ? "bg-yellow-100 text-yellow-700 border-yellow-200" : "bg-emerald-100 text-emerald-700 border-emerald-200";
+  const borderColor = (s: string) => s === "Neu" ? "border-l-primary bg-secondary/30" : "border-l-yellow-500 bg-white";
   return (
     <div>
       <div className="grid grid-cols-3 gap-4 mb-6">
         <Card className="p-5 bg-white border-slate-200 shadow-sm"><div className="text-xs font-medium text-slate-500 mb-1">Aktiv</div><div className="text-3xl font-bold text-slate-900">12</div></Card>
         <Card className="p-5 bg-white border-slate-200 shadow-sm"><div className="text-xs font-medium text-slate-500 mb-1">In Lieferung</div><div className="text-3xl font-bold text-slate-900">3</div></Card>
-        <Card className="p-5 bg-blue-600 border-transparent text-white shadow-md"><div className="text-xs font-medium text-blue-200 mb-1">Heute</div><div className="text-3xl font-bold">47</div></Card>
+        <Card className="p-5 bg-primary border-transparent text-white shadow-md"><div className="text-xs font-medium text-primary-foreground/70 mb-1">Heute</div><div className="text-3xl font-bold">47</div></Card>
       </div>
       <h2 className="text-sm font-semibold text-slate-700 mb-3">Aktuelle Bestellungen</h2>
       <div className="space-y-3">
@@ -580,7 +582,7 @@ function OrdersTab({ order1Status, order2Status, acceptOrder }: {
                 {order.idx && order.status === "Neu" && (
                   <div className="flex gap-2">
                     <Button variant="outline" size="sm" className="h-7 text-xs text-red-600 border-red-200 hover:bg-red-50">Ablehnen</Button>
-                    <Button size="sm" className="h-7 text-xs bg-blue-600 hover:bg-blue-700" onClick={() => acceptOrder(order.idx!)}>Akzeptieren</Button>
+                    <Button size="sm" className="h-7 text-xs bg-primary hover:bg-primary-hover" onClick={() => acceptOrder(order.idx!)}>Akzeptieren</Button>
                   </div>
                 )}
                 {order.status !== "Neu" && <button className="text-slate-400 hover:text-slate-600"><MoreHorizontal className="h-5 w-5" /></button>}
@@ -611,7 +613,7 @@ function MenuTab() {
                 <td className="px-4 py-3 hidden md:table-cell"><span className="bg-slate-100 text-slate-600 text-xs px-2 py-0.5 rounded-full">{item.category}</span></td>
                 <td className="px-4 py-3 text-right font-semibold text-slate-800">{item.price.toFixed(2)} €</td>
                 <td className="px-4 py-3 text-center">{item.available ? <span className="inline-flex w-5 h-5 bg-emerald-100 rounded-full items-center justify-center"><Check className="h-3 w-3 text-emerald-600" /></span> : <span className="inline-flex w-5 h-5 bg-red-100 rounded-full items-center justify-center"><X className="h-3 w-3 text-red-500" /></span>}</td>
-                <td className="px-4 py-3"><div className="flex gap-1.5 justify-end"><button className="text-slate-400 hover:text-blue-600"><Pencil className="h-4 w-4" /></button><button className="text-slate-400 hover:text-red-500"><Trash2 className="h-4 w-4" /></button></div></td>
+                <td className="px-4 py-3"><div className="flex gap-1.5 justify-end"><button className="text-slate-400 hover:text-primary"><Pencil className="h-4 w-4" /></button><button className="text-slate-400 hover:text-red-500"><Trash2 className="h-4 w-4" /></button></div></td>
               </tr>
             ))}
           </tbody>
@@ -643,7 +645,7 @@ function DraftsTab() {
               </div>
               <div className="flex gap-2">
                 <Button variant="outline" size="sm" className="h-7 text-xs text-red-600 border-red-200 hover:bg-red-50">Verwerfen</Button>
-                <Button size="sm" className="h-7 text-xs bg-blue-600 hover:bg-blue-700">Bestätigen</Button>
+                <Button size="sm" className="h-7 text-xs bg-primary hover:bg-primary-hover">Bestätigen</Button>
               </div>
             </div>
           </Card>
@@ -673,7 +675,7 @@ function GroceryTab({ checked, setChecked }: { checked: Record<number, boolean>;
       <div className="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
         {items.map((item, i) => (
           <div key={item.id} className={`flex items-center gap-3 px-4 py-3 ${i > 0 ? "border-t border-slate-50" : ""} ${checked[item.id] ? "opacity-40" : ""}`}>
-            <button onClick={() => setChecked(c => ({ ...c, [item.id]: !c[item.id] }))} className={`w-5 h-5 rounded border-2 flex items-center justify-center transition-colors ${checked[item.id] ? "bg-emerald-500 border-emerald-500" : "border-slate-300 hover:border-blue-400"}`}>
+            <button onClick={() => setChecked(c => ({ ...c, [item.id]: !c[item.id] }))} className={`w-5 h-5 rounded border-2 flex items-center justify-center transition-colors ${checked[item.id] ? "bg-emerald-500 border-emerald-500" : "border-slate-300 hover:border-primary"}`}>
               {checked[item.id] && <Check className="h-3 w-3 text-white" />}
             </button>
             <div className="flex-1">
@@ -697,15 +699,15 @@ function AITab({ messages, input, setInput, onSend }: {
 }) {
   return (
     <div className="max-w-2xl mx-auto">
-      <div className="bg-blue-50 border border-blue-100 rounded-xl p-4 mb-4 flex gap-3">
-        <Sparkles className="h-5 w-5 text-blue-500 shrink-0 mt-0.5" />
-        <p className="text-sm text-blue-700">Der KI-Assistent analysiert deine Einkaufsliste und kann automatisch Bestellnachrichten an Lieferanten generieren.</p>
+      <div className="bg-secondary/50 border border-primary/15 rounded-xl p-4 mb-4 flex gap-3">
+        <Sparkles className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+        <p className="text-sm text-primary-hover">Der KI-Assistent analysiert deine Einkaufsliste und kann automatisch Bestellnachrichten an Lieferanten generieren.</p>
       </div>
       <div className="bg-white rounded-xl border border-slate-200 shadow-sm flex flex-col" style={{ height: "420px" }}>
         <div className="flex-1 overflow-auto p-4 space-y-3">
           {messages.map((m, i) => (
             <div key={i} className={`flex ${m.role === "user" ? "justify-end" : "justify-start"}`}>
-              <div className={`max-w-xs rounded-2xl px-4 py-2.5 text-sm ${m.role === "user" ? "bg-blue-600 text-white rounded-br-sm" : "bg-slate-100 text-slate-800 rounded-bl-sm"}`}>
+              <div className={`max-w-xs rounded-2xl px-4 py-2.5 text-sm ${m.role === "user" ? "bg-primary text-white rounded-br-sm" : "bg-slate-100 text-slate-800 rounded-bl-sm"}`}>
                 {m.text}
               </div>
             </div>
@@ -713,7 +715,7 @@ function AITab({ messages, input, setInput, onSend }: {
         </div>
         <div className="p-3 border-t border-slate-100 flex gap-2">
           <Input value={input} onChange={e => setInput(e.target.value)} onKeyDown={e => e.key === "Enter" && onSend()} placeholder="z.B. Tomaten 5kg, Fleisch 10kg..." className="text-sm h-9" />
-          <Button size="sm" className="h-9 px-3 bg-blue-600 hover:bg-blue-700" onClick={onSend}><Send className="h-4 w-4" /></Button>
+          <Button size="sm" className="h-9 px-3 bg-primary hover:bg-primary-hover" onClick={onSend}><Send className="h-4 w-4" /></Button>
         </div>
       </div>
     </div>
@@ -737,7 +739,7 @@ function CustomersTab() {
           {customers.map(c => (
             <tr key={c.email} className="hover:bg-slate-50">
               <td className="px-4 py-3"><div className="font-medium text-slate-900">{c.name}</div><div className="text-xs text-slate-400">{c.email}</div></td>
-              <td className="px-4 py-3 text-center hidden md:table-cell"><span className="bg-blue-50 text-blue-700 text-xs font-semibold px-2 py-0.5 rounded-full">{c.orders}</span></td>
+              <td className="px-4 py-3 text-center hidden md:table-cell"><span className="bg-secondary/50 text-primary-hover text-xs font-semibold px-2 py-0.5 rounded-full">{c.orders}</span></td>
               <td className="px-4 py-3 text-right font-semibold text-slate-800">{c.total}</td>
               <td className="px-4 py-3 text-right text-xs text-slate-500 hidden md:table-cell">{c.lastOrder}</td>
             </tr>
@@ -807,7 +809,7 @@ function StatsTab() {
           { label: "Neue Kunden", value: "28", icon: <Users className="h-5 w-5" /> },
         ].map(s => (
           <Card key={s.label} className="p-4 bg-white border-slate-200 shadow-sm flex items-center gap-4">
-            <div className="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center text-blue-500">{s.icon}</div>
+            <div className="w-10 h-10 rounded-xl bg-secondary/50 flex items-center justify-center text-primary">{s.icon}</div>
             <div><div className="text-xl font-bold text-slate-900">{s.value}</div><div className="text-xs text-slate-500">{s.label}</div></div>
           </Card>
         ))}
@@ -817,7 +819,7 @@ function StatsTab() {
         <div className="flex items-end gap-2 h-32">
           {days.map((d, i) => (
             <div key={d} className="flex-1 flex flex-col items-center gap-1">
-              <div className="w-full rounded-t-md bg-blue-500 transition-all" style={{ height: `${(vals[i] / max) * 100}%`, opacity: i === 6 ? 1 : 0.5 }} />
+              <div className="w-full rounded-t-md bg-primary transition-all" style={{ height: `${(vals[i] / max) * 100}%`, opacity: i === 6 ? 1 : 0.5 }} />
               <span className="text-xs text-slate-400">{d}</span>
             </div>
           ))}
@@ -835,7 +837,7 @@ function StatsTab() {
         ].map(item => (
           <div key={item.name} className="mb-3">
             <div className="flex justify-between text-xs mb-1"><span className="text-slate-700">{item.name}</span><span className="text-slate-500">{item.pct} Bestellungen</span></div>
-            <div className="h-2 bg-slate-100 rounded-full overflow-hidden"><div className="h-full bg-blue-500 rounded-full" style={{ width: `${(item.pct / 78) * 100}%` }} /></div>
+            <div className="h-2 bg-slate-100 rounded-full overflow-hidden"><div className="h-full bg-primary rounded-full" style={{ width: `${(item.pct / 78) * 100}%` }} /></div>
           </div>
         ))}
       </Card>
@@ -899,7 +901,7 @@ function ZonesTab() {
               </div>
               <div className="flex items-center gap-4">
                 <span className="text-sm font-bold text-slate-800">{z.fee} Liefergebühr</span>
-                <button className="text-slate-400 hover:text-blue-600"><Pencil className="h-4 w-4" /></button>
+                <button className="text-slate-400 hover:text-primary"><Pencil className="h-4 w-4" /></button>
               </div>
             </div>
           </Card>
@@ -925,7 +927,7 @@ function StaffTab() {
         {staff.map((s, i) => (
           <div key={s.email} className={`flex items-center justify-between px-4 py-4 ${i > 0 ? "border-t border-slate-50" : ""}`}>
             <div className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-full bg-blue-100 flex items-center justify-center text-blue-700 font-bold text-sm">{s.name.split(" ").map(n => n[0]).join("")}</div>
+              <div className="w-9 h-9 rounded-full bg-secondary flex items-center justify-center text-primary-hover font-bold text-sm">{s.name.split(" ").map(n => n[0]).join("")}</div>
               <div>
                 <p className="text-sm font-semibold text-slate-900">{s.name}</p>
                 <p className="text-xs text-slate-400">{s.email}</p>

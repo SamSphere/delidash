@@ -22,13 +22,13 @@ export default function Contact() {
           </div>
 
           <Card className="p-10 border-none shadow-lg bg-white text-center rounded-2xl">
-            <div className="w-20 h-20 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-8">
+            <div className="w-20 h-20 bg-secondary rounded-full flex items-center justify-center mx-auto mb-8">
               <Mail className="h-10 w-10 text-primary" />
             </div>
-            
+
             <a
               href="mailto:kontakt@gastrohub.dev"
-              className="inline-block text-3xl md:text-4xl font-bold text-primary hover:text-blue-700 transition-colors border-b-2 border-transparent hover:border-blue-700 pb-1"
+              className="inline-block text-3xl md:text-4xl font-bold text-primary hover:text-primary-hover transition-colors border-b-2 border-transparent hover:border-primary-hover pb-1"
               data-testid="link-email"
             >
               kontakt@gastrohub.dev

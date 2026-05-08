@@ -158,7 +158,7 @@ export default function FAQ() {
             ))}
           </div>
 
-          <div className="bg-blue-50 border border-blue-100 rounded-2xl p-8 text-center">
+          <div className="bg-secondary/40 border border-primary/15 rounded-2xl p-8 text-center">
             <h3 className="text-xl font-bold text-slate-900 mb-2">Noch offene Fragen?</h3>
             <p className="text-slate-600 mb-6">Unser Team hilft Ihnen gerne weiter.</p>
             <Button asChild size="lg">

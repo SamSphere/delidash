@@ -43,7 +43,7 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-[100dvh]">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-sky-50 via-white to-slate-50 pt-24 pb-32 lg:pt-36 lg:pb-40 text-slate-900">
+      <section className="relative overflow-hidden bg-gradient-to-b from-secondary/40 via-background to-background pt-24 pb-32 lg:pt-36 lg:pb-40 text-foreground">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#cbd5e11a_1px,transparent_1px),linear-gradient(to_bottom,#cbd5e11a_1px,transparent_1px)] bg-[size:18px_28px]"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -53,13 +53,13 @@ export default function Home() {
               variants={containerVariants}
               className="max-w-2xl"
             >
-              <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-blue-700 font-medium text-sm mb-6 border border-blue-200">
-                <span className="flex h-2 w-2 rounded-full bg-blue-500 animate-pulse"></span>
+              <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary text-primary-hover font-medium text-sm mb-6 border border-primary/20">
+                <span className="flex h-2 w-2 rounded-full bg-primary animate-pulse"></span>
                 Für Restaurants und Gastronomie
               </motion.div>
               <motion.h1 variants={itemVariants} className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] mb-6">
                 Einmal zahlen.<br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-600 to-blue-500">Für immer Ihr Restaurant behalten.</span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-hover">Für immer Ihr Restaurant behalten.</span>
               </motion.h1>
               <motion.p variants={itemVariants} className="text-lg md:text-xl text-slate-700 mb-8 max-w-xl leading-relaxed">
                 GastroHub ist Ihr größtes Verkaufsargument: einmal zahlen, für immer nutzen, keine monatlichen Kosten, keine Umsatzbeteiligung und kein Sharing mit Liefer-Apps.
@@ -217,7 +217,7 @@ export default function Home() {
                 <div className="text-center text-sm text-emerald-600 font-semibold">{row.gastrohub}</div>
               </div>
             ))}
-            <div className="mt-6 bg-blue-50 border border-blue-100 rounded-2xl p-6 text-center">
+            <div className="mt-6 bg-secondary/40 border border-primary/15 rounded-2xl p-6 text-center">
               <p className="text-slate-700 text-base">
                 Bei <span className="font-bold text-slate-900">€10.000 Monatsumsatz</span> können Plattformprovisionen bis zu{" "}
                 <span className="font-bold text-red-600">€3.000 pro Monat</span> betragen, das sind bis zu{" "}

@@ -1,5 +1,5 @@
 import { Link, useLocation } from "wouter";
-import { PackageOpen, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 
@@ -17,11 +17,17 @@ export function Navbar() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2 group">
-          <div className="bg-primary p-1.5 rounded-md text-primary-foreground group-hover:scale-105 transition-transform">
-            <PackageOpen className="h-5 w-5" />
-          </div>
-          <span className="font-bold text-xl tracking-tight text-foreground">GastroHub</span>
+        <Link href="/" className="flex items-center gap-2 group" aria-label="GastroHub Startseite">
+          <img
+            src="/brand/mark-light.svg"
+            alt=""
+            width="32"
+            height="32"
+            className="h-8 w-8 group-hover:scale-105 transition-transform"
+          />
+          <span className="font-extrabold text-xl tracking-tight">
+            <span className="text-foreground">Gastro</span><span className="text-primary-hover">Hub</span>
+          </span>
         </Link>
 
         {/* Desktop Nav */}
