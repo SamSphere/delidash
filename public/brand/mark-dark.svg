@@ -1,7 +1,0 @@
-<svg width="256" height="256" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="GastroHub mark · dark">
-  <rect width="48" height="48" rx="11" fill="#E5B870"></rect>
-  <path d="M 10 32 C 10 21, 17 16, 24 16 C 31 16, 38 21, 38 32 L 38 35 C 38 36.1, 37.1 37, 36 37 L 12 37 C 10.9 37, 10 36.1, 10 35 Z" fill="#2A1F15"></path>
-  <line x1="16" y1="24" x2="20" y2="20" stroke="#E5B870" stroke-width="2" stroke-linecap="round"></line>
-  <line x1="22" y1="22" x2="26" y2="18" stroke="#E5B870" stroke-width="2" stroke-linecap="round"></line>
-  <line x1="28" y1="24" x2="32" y2="20" stroke="#E5B870" stroke-width="2" stroke-linecap="round"></line>
-</svg>

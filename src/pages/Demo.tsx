@@ -137,7 +137,7 @@ export default function Demo() {
       {/* Top bar */}
       <div className="bg-slate-900 text-white px-4 md:px-6 py-3 flex items-center justify-between flex-shrink-0">
         <Link href="/" className="flex items-center gap-2" aria-label="GastroHub Startseite">
-          <img src="/brand/mark-dark.svg" alt="" width="28" height="28" className="h-7 w-7" />
+          <img src="/brand/mark-light.svg" alt="" width="28" height="28" className="h-7 w-7" />
           <span className="font-extrabold text-lg tracking-tight">
             <span className="text-white">Gastro</span><span className="text-[#E5B870]">Hub</span>
           </span>
