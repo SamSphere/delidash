@@ -215,9 +215,7 @@ export default function Home() {
             ))}
             <div className="mt-6 bg-secondary/40 border border-primary/15 rounded-2xl p-6 text-center">
               <p className="text-slate-700 text-base">
-                Bei <span className="font-bold text-slate-900">€10.000 Monatsumsatz</span> können Plattformprovisionen bis zu{" "}
-                <span className="font-bold text-red-600">€3.000 pro Monat</span> betragen, das sind bis zu{" "}
-                <span className="font-bold text-red-600">€36.000 pro Jahr</span>.*
+                Bei branchenüblichen Plattformprovisionen können bei monatlichen Umsätzen im fünfstelligen Bereich erhebliche Kosten anfallen, die mit GastroHub deutlich reduziert werden.
               </p>
               <p className="text-slate-700 text-base mt-2">
                 Mit GastroHub zahlen Sie <span className="font-bold text-emerald-600">deutlich weniger</span>, und behalten den Rest.
