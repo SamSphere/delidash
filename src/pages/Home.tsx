@@ -200,7 +200,7 @@ export default function Home() {
               <div className="text-center text-primary">GastroHub</div>
             </div>
             {[
-              { label: "Provision", lieferando: "15 bis 30 %", ubereats: "15 bis 30 %", gastrohub: "0 % oder 5 %" },
+              { label: "Provision", lieferando: "Branchenüblich deutlich höhere Provisionen", ubereats: "Branchenüblich deutlich höhere Provisionen", gastrohub: "0 % oder 5 %" },
               { label: "Monatl. Gebühr", lieferando: "Ab €99/Mo.", ubereats: "Ab €0 (höhere %)", gastrohub: "Kein Abo" },
               { label: "Kundendaten", lieferando: "Plattform", ubereats: "Plattform", gastrohub: "Ihnen" },
               { label: "Eigenes Branding", lieferando: "Nein", ubereats: "Nein", gastrohub: "Vollständig" },

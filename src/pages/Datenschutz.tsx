@@ -42,6 +42,9 @@ export default function Datenschutz() {
         <p>
           Die Bestellplattform-Anwendungsdaten werden ausschließlich auf Servern in Deutschland (Frankfurt) verarbeitet. Für die Marketing-Website erfolgt ein USA-Transfer an GitHub Pages (siehe Abs. 1).
         </p>
+        <p>
+          Hosting-Auftragsverarbeiter der Bestellplattform: Hetzner Online GmbH, Industriestr. 25, 91710 Gunzenhausen, Deutschland. Sitz: Deutschland. Zweck: Anwendungs-Hosting und Datenspeicherung. AVV gemäß Art. 28 DSGVO abgeschlossen. Kein Drittlandtransfer.
+        </p>
 
         <h2 className="text-xl font-semibold mt-8 mb-4">4. Kontaktaufnahme</h2>
         <p>
