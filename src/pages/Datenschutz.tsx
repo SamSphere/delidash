@@ -118,7 +118,13 @@ export default function Datenschutz() {
 
         <h2 className="text-xl font-semibold mt-8 mb-4">12. Beschwerderecht bei der Aufsichtsbehörde</h2>
         <p>
-          Sie haben das Recht, sich bei einer Datenschutz-Aufsichtsbehörde über die Verarbeitung Ihrer personenbezogenen Daten zu beschweren. Die für GastroHub zuständige Aufsichtsbehörde ist das Bayerische Landesamt für Datenschutzaufsicht (BayLDA), Promenade 18, 91522 Ansbach.
+          Sie haben das Recht, sich bei einer Datenschutz-Aufsichtsbehörde über die Verarbeitung Ihrer personenbezogenen Daten zu beschweren. Die für GastroHub zuständige Aufsichtsbehörde ist:
+        </p>
+        <p>
+          Landesbeauftragter für Datenschutz und Informationsfreiheit Baden-Württemberg<br />
+          Königstraße 10a<br />
+          70173 Stuttgart<br />
+          <a href="https://www.baden-wuerttemberg.datenschutz.de" target="_blank" rel="noopener noreferrer">https://www.baden-wuerttemberg.datenschutz.de</a>
         </p>
 
         <h2 className="text-xl font-semibold mt-8 mb-4">13. Änderung dieser Datenschutzerklärung</h2>
