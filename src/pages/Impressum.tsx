@@ -32,6 +32,18 @@ export default function Impressum() {
           Telefon: +49 151 11017356
         </p>
 
+        <h2 className="text-xl font-semibold mt-8 mb-4">Umsatzsteuer</h2>
+        <p>
+          Gemäß § 19 UStG wird keine Umsatzsteuer berechnet und ausgewiesen.
+        </p>
+
+        <h2 className="text-xl font-semibold mt-8 mb-4">Verantwortlicher nach § 18 Abs. 2 MStV</h2>
+        <p>
+          Osama Farroukh<br />
+          c/o MDC, Welserstraße 3<br />
+          87463 Dietmannsried
+        </p>
+
         <h2 className="text-xl font-semibold mt-8 mb-4">Hinweise</h2>
         <p>
           Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich. Alle auf dieser Website angezeigten Preise und Produktinformationen werden von Drittanbietern bereitgestellt und können Änderungen unterliegen. Bitte überprüfen Sie die Informationen direkt beim Anbieter.

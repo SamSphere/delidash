@@ -25,6 +25,8 @@ export function Footer() {
         <div className="flex flex-wrap justify-center gap-x-8 gap-y-4 text-sm font-medium text-slate-300">
           <Link href="/impressum" className="hover:text-white transition-colors">Impressum</Link>
           <Link href="/datenschutz" className="hover:text-white transition-colors">Datenschutz</Link>
+          <Link href="/agb" className="hover:text-white transition-colors">AGB</Link>
+          <Link href="/cookie-richtlinie" className="hover:text-white transition-colors">Cookie-Richtlinie</Link>
           <Link href="/kontakt" className="hover:text-white transition-colors">Kontakt</Link>
         </div>
         <div className="w-full border-t border-slate-800 pt-6 mt-2 flex justify-center md:justify-end">

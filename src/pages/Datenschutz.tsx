@@ -4,7 +4,7 @@ export default function Datenschutz() {
   useEffect(() => {
     document.title = "Datenschutz | GastroHub";
     const meta = document.querySelector('meta[name="description"]') ?? Object.assign(document.createElement("meta"), { name: "description" });
-    (meta as HTMLMetaElement).content = "Datenschutzerklärung von GastroHub. DSGVO-konform, europäische Server, Ihre Kundendaten gehören ausschließlich Ihnen.";
+    (meta as HTMLMetaElement).content = "Datenschutzerklärung von GastroHub. DSGVO-konform, europäische Server, Stripe Connect als Zahlungsdienstleister.";
     if (!meta.parentNode) document.head.appendChild(meta);
   }, []);
 
@@ -15,12 +15,15 @@ export default function Datenschutz() {
 
         <h2 className="text-xl font-semibold mt-8 mb-4">1. Allgemeine Hinweise</h2>
         <p>
-          Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können. Ausführliche Informationen zum Thema Datenschutz entnehmen Sie unserer nachfolgenden Datenschutzerklärung.
+          Die folgenden Hinweise geben einen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen oder unsere Restaurant-Bestellplattform nutzen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können.
+        </p>
+        <p>
+          Diese Erklärung deckt sowohl den Auftritt auf <strong>gastrohub.dev</strong> als auch die von GastroHub betriebene Bestellplattform ab, die Restaurantbetreiber bei sich einsetzen.
         </p>
 
         <h2 className="text-xl font-semibold mt-8 mb-4">2. Verantwortlicher</h2>
         <p>
-          Verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:
+          Verantwortliche Stelle für die Datenverarbeitung im Sinne der DSGVO ist:
         </p>
         <p>
           Osama Farroukh<br />
@@ -32,25 +35,72 @@ export default function Datenschutz() {
           Telefon: +49 151 11017356
         </p>
 
-        <h2 className="text-xl font-semibold mt-8 mb-4">3. Hosting</h2>
+        <h2 className="text-xl font-semibold mt-8 mb-4">3. Hosting der Webseite</h2>
         <p>
-          Diese Website wird über GitHub Pages (GitHub, Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA) gehostet. Beim Aufruf der Website übermittelt Ihr Browser automatisch technische Daten (z. B. IP-Adresse, Browsertyp, Uhrzeit des Zugriffs) an die Server von GitHub. Diese Daten werden von GitHub gemäß deren Datenschutzrichtlinie verarbeitet. Weitere Informationen finden Sie unter <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement" target="_blank" rel="noopener noreferrer">docs.github.com/privacy</a>.
+          Diese Website wird über GitHub Pages (GitHub, Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA) gehostet. Beim Aufruf der Website übermittelt Ihr Browser automatisch technische Daten (z.B. IP-Adresse, Browsertyp, Uhrzeit des Zugriffs) an die Server von GitHub. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer technisch fehlerfreien Bereitstellung). Übermittlung in die USA erfolgt auf Grundlage des EU-US Data Privacy Frameworks.
+        </p>
+        <p>
+          Die Bestellplattform für Restaurants wird auf Servern in Deutschland (Frankfurt) betrieben. Es werden keine Daten an Dienstleister außerhalb der EU übertragen, sofern in dieser Erklärung nichts Gegenteiliges angegeben ist.
         </p>
 
-        <h2 className="text-xl font-semibold mt-8 mb-4">4. Erhebung von Daten</h2>
+        <h2 className="text-xl font-semibold mt-8 mb-4">4. Kontaktaufnahme</h2>
         <p>
-          Diese Website erhebt selbst keine personenbezogenen Daten aktiv. Es werden keine Kontaktformulare, Nutzungskonten oder Tracking-Tools eingesetzt. Einzig das Anklicken eines Mailto-Links führt zur Übermittlung Ihrer E-Mail-Adresse an Ihr eigenes E-Mail-Programm.
+          Wenn Sie uns per E-Mail oder über den auf der Website angebotenen Mailto-Link kontaktieren, verarbeiten wir Ihre Angaben (Name, E-Mail-Adresse, Inhalt der Nachricht) ausschließlich zur Bearbeitung Ihrer Anfrage. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (Vertragsanbahnung) oder Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Beantwortung von Anfragen).
         </p>
         <p>
-          Technische Zugriffsdaten (Server-Logfiles) werden automatisch durch den Hosting-Anbieter (GitHub Pages) erfasst und liegen nicht in unserem Zugriff.
-        </p>
-
-        <h2 className="text-xl font-semibold mt-8 mb-4">5. Cookies</h2>
-        <p>
-          Diese Website verwendet keine eigenen Cookies. Soweit GitHub Pages beim Aufruf der Seite technisch notwendige Cookies setzt, liegt dies im Verantwortungsbereich von GitHub.
+          Anfragen werden gelöscht, sobald sie abschließend bearbeitet sind und keine gesetzlichen Aufbewahrungspflichten entgegenstehen.
         </p>
 
-        <h2 className="text-xl font-semibold mt-8 mb-4">6. Ihre Rechte</h2>
+        <h2 className="text-xl font-semibold mt-8 mb-4">5. Restaurantbetreiber als Kunden</h2>
+        <p>
+          Wenn Sie als Restaurantbetreiber unsere Plattform buchen, verarbeiten wir Ihre Stammdaten zur Vertragsabwicklung und Rechnungsstellung:
+        </p>
+        <ul>
+          <li>Name und Anschrift des Betriebs</li>
+          <li>Ansprechpartner, E-Mail, Telefon</li>
+          <li>Umsatzsteuer-ID, sofern vorhanden</li>
+          <li>Stripe Connect Account-ID (siehe Abschnitt 7)</li>
+        </ul>
+        <p>
+          Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung). Speicherdauer richtet sich nach den handels- und steuerrechtlichen Aufbewahrungsfristen (in der Regel 10 Jahre nach § 147 AO).
+        </p>
+
+        <h2 className="text-xl font-semibold mt-8 mb-4">6. Daten der Endkunden des Restaurants</h2>
+        <p>
+          Endkunden, die über die von GastroHub bereitgestellte Plattform bei einem Restaurant bestellen, geben dabei personenbezogene Daten ein (Name, Lieferadresse, E-Mail, Telefonnummer, Bestelldetails). Verantwortlicher für diese Daten ist primär der Restaurantbetreiber. GastroHub verarbeitet diese Daten als Auftragsverarbeiter im Sinne von Art. 28 DSGVO ausschließlich im Auftrag und nach Weisung des Restaurantbetreibers.
+        </p>
+        <p>
+          Mit jedem Restaurantbetreiber wird eine Auftragsverarbeitungsvereinbarung (AVV) gemäß Art. 28 DSGVO abgeschlossen, in der die Pflichten und Garantien festgelegt sind. Die Daten werden ausschließlich auf europäischen Servern verarbeitet und nicht an Dritte weitergegeben, mit Ausnahme der unter Abschnitt 7 genannten Zahlungsdienstleister.
+        </p>
+
+        <h2 className="text-xl font-semibold mt-8 mb-4">7. Zahlungsabwicklung über Stripe Connect</h2>
+        <p>
+          Für die Abwicklung der Zahlungen auf der Restaurantplattform setzen wir Stripe Connect ein (Stripe Payments Europe, Limited, 1 Grand Canal Street Lower, Grand Canal Dock, Dublin, Irland). Stripe ist ein eigenständiger Verantwortlicher im Sinne der DSGVO.
+        </p>
+        <p>
+          Bei einer Bestellung mit Online-Zahlung werden die Zahlungsdaten (insbesondere Kartendaten) direkt an Stripe übermittelt. Wir selbst speichern oder sehen keine vollständigen Kartendaten. Stripe verarbeitet die Daten zur Zahlungsabwicklung sowie zur Betrugsprävention. Die Bedingungen finden Sie unter <a href="https://stripe.com/de/privacy" target="_blank" rel="noopener noreferrer">stripe.com/de/privacy</a>.
+        </p>
+        <p>
+          Im Provisionsmodell behält Stripe automatisiert eine Plattformgebühr von 5 % je Transaktion ein und leitet diese an GastroHub weiter. Hierbei werden uns Transaktions-Metadaten (Bestellzeitpunkt, Betrag, Restaurant-Identifikator) übermittelt, jedoch keine Zahlungsmittel und keine vollständigen Endkundendaten. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO.
+        </p>
+
+        <h2 className="text-xl font-semibold mt-8 mb-4">8. Cookies</h2>
+        <p>
+          Diese Website verwendet ausschließlich technisch notwendige Cookies, insbesondere zur Speicherung Ihrer Cookie-Einwilligung. Es werden keine Tracking-, Analyse- oder Marketing-Cookies eingesetzt. Details finden Sie in unserer{" "}
+          <a href="/#/cookie-richtlinie" className="text-primary hover:underline">Cookie-Richtlinie</a>.
+        </p>
+
+        <h2 className="text-xl font-semibold mt-8 mb-4">9. Server-Logfiles</h2>
+        <p>
+          Bei jedem Aufruf der Website werden technische Zugriffsdaten (Server-Logfiles) automatisiert durch den Hosting-Anbieter (GitHub Pages) bzw. unseren Plattform-Hosting-Anbieter erfasst. Dazu zählen IP-Adresse, Datum und Uhrzeit, aufgerufene URL, übertragene Datenmenge, Referrer-URL, User-Agent. Diese Daten werden ausschließlich zur Sicherstellung des fehlerfreien Betriebs und zur Abwehr von Missbrauch verarbeitet und nach spätestens 90 Tagen gelöscht. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO.
+        </p>
+
+        <h2 className="text-xl font-semibold mt-8 mb-4">10. Datensicherheit</h2>
+        <p>
+          Wir setzen technische und organisatorische Maßnahmen ein, um Ihre Daten gegen Verlust, Manipulation und unbefugten Zugriff zu schützen. Die Verbindung zur Website ist SSL/TLS-verschlüsselt. Zugriffe auf die Plattform sind passwortgeschützt und protokolliert.
+        </p>
+
+        <h2 className="text-xl font-semibold mt-8 mb-4">11. Ihre Rechte</h2>
         <p>
           Sie haben gegenüber uns folgende Rechte hinsichtlich Ihrer personenbezogenen Daten:
         </p>
@@ -66,9 +116,14 @@ export default function Datenschutz() {
           Zur Ausübung Ihrer Rechte wenden Sie sich bitte per E-Mail an <a href="mailto:kontakt@gastrohub.dev">kontakt@gastrohub.dev</a>.
         </p>
 
-        <h2 className="text-xl font-semibold mt-8 mb-4">7. Beschwerderecht bei der Aufsichtsbehörde</h2>
+        <h2 className="text-xl font-semibold mt-8 mb-4">12. Beschwerderecht bei der Aufsichtsbehörde</h2>
         <p>
-          Sie haben das Recht, sich bei einer Datenschutz-Aufsichtsbehörde über die Verarbeitung Ihrer personenbezogenen Daten zu beschweren. Die zuständige Aufsichtsbehörde für Bayern ist der Bayerische Landesbeauftragte für den Datenschutz (BayLfD), Wagmüllerstraße 18, 80538 München.
+          Sie haben das Recht, sich bei einer Datenschutz-Aufsichtsbehörde über die Verarbeitung Ihrer personenbezogenen Daten zu beschweren. Die für GastroHub zuständige Aufsichtsbehörde ist das Bayerische Landesamt für Datenschutzaufsicht (BayLDA), Promenade 18, 91522 Ansbach.
+        </p>
+
+        <h2 className="text-xl font-semibold mt-8 mb-4">13. Änderung dieser Datenschutzerklärung</h2>
+        <p>
+          Wir behalten uns vor, diese Datenschutzerklärung anzupassen, sofern dies rechtliche Änderungen oder Anpassungen unserer Dienste erforderlich machen. Die jeweils aktuelle Fassung finden Sie stets auf dieser Seite.
         </p>
 
         <p className="text-sm text-slate-400 mt-12">Stand: Mai 2026</p>
