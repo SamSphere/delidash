@@ -28,7 +28,7 @@ export default function AGB() {
 
         <h2 className="text-xl font-semibold mt-8 mb-4">§ 3 Vertragsschluss</h2>
         <p>
-          Der Vertrag kommt durch Annahme eines individuellen Angebots von GastroHub durch den Kunden in Textform (z.B. per E-Mail) zustande. Die auf gastrohub.dev dargestellten Preismodelle stellen kein bindendes Angebot dar, sondern eine Aufforderung zur Angebotsabgabe.
+          Der Vertrag kommt durch Annahme eines individuellen Angebots von GastroHub durch den Kunden in Textform (z.B. per E-Mail) zustande. Die auf gastrohub.dev dargestellten Preismodelle stellen kein bindendes Angebot dar, sondern eine Aufforderung zur Angebotsabgabe (invitatio ad offerendum). Der Vertrag kommt ausschließlich durch Annahme eines individuellen Angebots in Textform zustande.
         </p>
 
         <h2 className="text-xl font-semibold mt-8 mb-4">§ 4 Preismodelle und Zahlung</h2>
@@ -70,7 +70,7 @@ export default function AGB() {
 
         <h2 className="text-xl font-semibold mt-8 mb-4">§ 8 Datenschutz und Auftragsverarbeitung</h2>
         <p>
-          Soweit GastroHub im Auftrag des Kunden personenbezogene Daten von Endkunden des Restaurants verarbeitet, schließen die Parteien eine separate Auftragsverarbeitungsvereinbarung (AVV) gemäß Art. 28 DSGVO ab. Weitere Informationen zur Datenverarbeitung finden Sie in der{" "}
+          Soweit GastroHub im Auftrag des Kunden personenbezogene Daten von Endkunden des Restaurants verarbeitet, schließen die Parteien eine separate Auftragsverarbeitungsvereinbarung (AVV) gemäß Art. 28 DSGVO ab. Der AVV wird vor Beginn der ersten Verarbeitung personenbezogener Daten von Endkunden des Restaurantbetreibers abgeschlossen. Weitere Informationen zur Datenverarbeitung finden Sie in der{" "}
           <a href="/#/datenschutz" className="text-primary hover:underline">Datenschutzerklärung</a>.
         </p>
 

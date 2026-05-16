@@ -90,7 +90,12 @@ export default function Datenschutz() {
           Transaktionsmetadaten werden gemäß § 147 AO für 10 Jahre aufbewahrt.
         </p>
 
-        <h2 className="text-xl font-semibold mt-8 mb-4">8. Cookies</h2>
+        <h2 className="text-xl font-semibold mt-8 mb-4">8. Elektronischer Geschäftsverkehr</h2>
+        <p>
+          Die Bestellplattform stellt eine elektronische Geschäftsverkehrs-Plattform im Sinne des § 312i BGB dar. Die Anforderungen der Button-Lösung gemäß § 312j Abs. 3 BGB werden im Bestellprozess umgesetzt.
+        </p>
+
+        <h2 className="text-xl font-semibold mt-8 mb-4">9. Cookies</h2>
         <p>
           Diese Website verwendet ausschließlich technisch notwendige Cookies, insbesondere zur Speicherung Ihrer Cookie-Einwilligung. Es werden keine Tracking-, Analyse- oder Marketing-Cookies eingesetzt. Details finden Sie in unserer{" "}
           <a href="/#/cookie-richtlinie" className="text-primary hover:underline">Cookie-Richtlinie</a>.
@@ -99,17 +104,17 @@ export default function Datenschutz() {
           Rechtsgrundlage für den Zugriff auf Ihr Endgerät: § 25 Abs. 2 Nr. 2 TTDSG i.V.m. Art. 6 Abs. 1 lit. f DSGVO.
         </p>
 
-        <h2 className="text-xl font-semibold mt-8 mb-4">9. Server-Logfiles</h2>
+        <h2 className="text-xl font-semibold mt-8 mb-4">10. Server-Logfiles</h2>
         <p>
           Bei jedem Aufruf der Website werden technische Zugriffsdaten (Server-Logfiles) automatisiert durch den Hosting-Anbieter (GitHub Pages) bzw. unseren Plattform-Hosting-Anbieter erfasst. Dazu zählen IP-Adresse, Datum und Uhrzeit, aufgerufene URL, übertragene Datenmenge, Referrer-URL, User-Agent. Diese Daten werden ausschließlich zur Sicherstellung des fehlerfreien Betriebs und zur Abwehr von Missbrauch verarbeitet und nach spätestens 90 Tagen gelöscht. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO.
         </p>
 
-        <h2 className="text-xl font-semibold mt-8 mb-4">10. Datensicherheit</h2>
+        <h2 className="text-xl font-semibold mt-8 mb-4">11. Datensicherheit</h2>
         <p>
           Wir setzen technische und organisatorische Maßnahmen ein, um Ihre Daten gegen Verlust, Manipulation und unbefugten Zugriff zu schützen. Die Verbindung zur Website ist SSL/TLS-verschlüsselt. Zugriffe auf die Plattform sind passwortgeschützt und protokolliert.
         </p>
 
-        <h2 className="text-xl font-semibold mt-8 mb-4">11. Ihre Rechte</h2>
+        <h2 className="text-xl font-semibold mt-8 mb-4">12. Ihre Rechte</h2>
         <p>
           Sie haben gegenüber uns folgende Rechte hinsichtlich Ihrer personenbezogenen Daten:
         </p>
@@ -125,7 +130,7 @@ export default function Datenschutz() {
           Zur Ausübung Ihrer Rechte wenden Sie sich bitte per E-Mail an <a href="mailto:kontakt@gastrohub.dev">kontakt@gastrohub.dev</a>.
         </p>
 
-        <h2 className="text-xl font-semibold mt-8 mb-4">12. Beschwerderecht bei der Aufsichtsbehörde</h2>
+        <h2 className="text-xl font-semibold mt-8 mb-4">13. Beschwerderecht bei der Aufsichtsbehörde</h2>
         <p>
           Sie haben das Recht, sich bei einer Datenschutz-Aufsichtsbehörde über die Verarbeitung Ihrer personenbezogenen Daten zu beschweren. Die für GastroHub zuständige Aufsichtsbehörde ist:
         </p>
@@ -136,7 +141,7 @@ export default function Datenschutz() {
           <a href="https://www.baden-wuerttemberg.datenschutz.de" target="_blank" rel="noopener noreferrer">https://www.baden-wuerttemberg.datenschutz.de</a>
         </p>
 
-        <h2 className="text-xl font-semibold mt-8 mb-4">13. Änderung dieser Datenschutzerklärung</h2>
+        <h2 className="text-xl font-semibold mt-8 mb-4">14. Änderung dieser Datenschutzerklärung</h2>
         <p>
           Wir behalten uns vor, diese Datenschutzerklärung anzupassen, sofern dies rechtliche Änderungen oder Anpassungen unserer Dienste erforderlich machen. Die jeweils aktuelle Fassung finden Sie stets auf dieser Seite.
         </p>
