@@ -48,6 +48,17 @@ export default function Impressum() {
         <p>
           Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich. Alle auf dieser Website angezeigten Preise und Produktinformationen werden von Drittanbietern bereitgestellt und können Änderungen unterliegen. Bitte überprüfen Sie die Informationen direkt beim Anbieter.
         </p>
+
+        <h2 className="text-xl font-semibold mt-8 mb-4">EU-Streitschlichtung</h2>
+        <p>
+          Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung bereit:{" "}
+          <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener noreferrer">https://ec.europa.eu/consumers/odr/</a>
+        </p>
+
+        <h2 className="text-xl font-semibold mt-8 mb-4">Verbraucherstreitbeilegung</h2>
+        <p>
+          Wir sind nicht bereit und nicht verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen (§ 36 VSBG).
+        </p>
       </div>
     </div>
   );

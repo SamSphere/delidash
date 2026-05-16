@@ -40,7 +40,7 @@ export default function Datenschutz() {
           Diese Website wird über GitHub Pages (GitHub, Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA) gehostet. Beim Aufruf der Website übermittelt Ihr Browser automatisch technische Daten (z.B. IP-Adresse, Browsertyp, Uhrzeit des Zugriffs) an die Server von GitHub. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer technisch fehlerfreien Bereitstellung). Übermittlung in die USA erfolgt auf Grundlage des EU-US Data Privacy Frameworks.
         </p>
         <p>
-          Die Bestellplattform für Restaurants wird auf Servern in Deutschland (Frankfurt) betrieben. Es werden keine Daten an Dienstleister außerhalb der EU übertragen, sofern in dieser Erklärung nichts Gegenteiliges angegeben ist.
+          Die Bestellplattform für Restaurants wird auf Servern in Deutschland (Frankfurt) betrieben. Es werden keine Daten an Dienstleister außerhalb der EU übertragen, sofern in dieser Erklärung nichts Gegenteiliges angegeben ist. Diese Aussage bezieht sich ausschließlich auf die Bestellplattform. Für die Marketing-Website gilt §3 Absatz 1 (GitHub Pages, USA).
         </p>
 
         <h2 className="text-xl font-semibold mt-8 mb-4">4. Kontaktaufnahme</h2>
@@ -48,7 +48,7 @@ export default function Datenschutz() {
           Wenn Sie uns per E-Mail oder über den auf der Website angebotenen Mailto-Link kontaktieren, verarbeiten wir Ihre Angaben (Name, E-Mail-Adresse, Inhalt der Nachricht) ausschließlich zur Bearbeitung Ihrer Anfrage. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (Vertragsanbahnung) oder Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Beantwortung von Anfragen).
         </p>
         <p>
-          Anfragen werden gelöscht, sobald sie abschließend bearbeitet sind und keine gesetzlichen Aufbewahrungspflichten entgegenstehen.
+          Anfragen werden gelöscht, sobald sie abschließend bearbeitet sind und keine gesetzlichen Aufbewahrungspflichten entgegenstehen. Kontaktanfragen werden spätestens nach 12 Monaten gelöscht, soweit keine gesetzlichen Aufbewahrungspflichten entgegenstehen.
         </p>
 
         <h2 className="text-xl font-semibold mt-8 mb-4">5. Restaurantbetreiber als Kunden</h2>
@@ -70,7 +70,7 @@ export default function Datenschutz() {
           Endkunden, die über die von GastroHub bereitgestellte Plattform bei einem Restaurant bestellen, geben dabei personenbezogene Daten ein (Name, Lieferadresse, E-Mail, Telefonnummer, Bestelldetails). Verantwortlicher für diese Daten ist primär der Restaurantbetreiber. GastroHub verarbeitet diese Daten als Auftragsverarbeiter im Sinne von Art. 28 DSGVO ausschließlich im Auftrag und nach Weisung des Restaurantbetreibers.
         </p>
         <p>
-          Mit jedem Restaurantbetreiber wird eine Auftragsverarbeitungsvereinbarung (AVV) gemäß Art. 28 DSGVO abgeschlossen, in der die Pflichten und Garantien festgelegt sind. Die Daten werden ausschließlich auf europäischen Servern verarbeitet und nicht an Dritte weitergegeben, mit Ausnahme der unter Abschnitt 7 genannten Zahlungsdienstleister.
+          Mit jedem Restaurantbetreiber wird eine Auftragsverarbeitungsvereinbarung (AVV) gemäß Art. 28 DSGVO abgeschlossen, in der die Pflichten und Garantien festgelegt sind. Der AVV wird vor Beginn der ersten Verarbeitung personenbezogener Daten von Endkunden abgeschlossen. Die Daten werden ausschließlich auf europäischen Servern verarbeitet und nicht an Dritte weitergegeben, mit Ausnahme der unter Abschnitt 7 genannten Zahlungsdienstleister.
         </p>
 
         <h2 className="text-xl font-semibold mt-8 mb-4">7. Zahlungsabwicklung über Stripe Connect</h2>
@@ -83,11 +83,20 @@ export default function Datenschutz() {
         <p>
           Im Provisionsmodell behält Stripe automatisiert eine Plattformgebühr von 5 % je Transaktion ein und leitet diese an GastroHub weiter. Hierbei werden uns Transaktions-Metadaten (Bestellzeitpunkt, Betrag, Restaurant-Identifikator) übermittelt, jedoch keine Zahlungsmittel und keine vollständigen Endkundendaten. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO.
         </p>
+        <p>
+          Stripe behält sich Transfers an verbundene Unternehmen außerhalb der EU vor, abgesichert durch SCCs und das EU-US Data Privacy Framework (Stripe ist DPF-zertifiziert).
+        </p>
+        <p>
+          Transaktionsmetadaten werden gemäß § 147 AO für 10 Jahre aufbewahrt.
+        </p>
 
         <h2 className="text-xl font-semibold mt-8 mb-4">8. Cookies</h2>
         <p>
           Diese Website verwendet ausschließlich technisch notwendige Cookies, insbesondere zur Speicherung Ihrer Cookie-Einwilligung. Es werden keine Tracking-, Analyse- oder Marketing-Cookies eingesetzt. Details finden Sie in unserer{" "}
           <a href="/#/cookie-richtlinie" className="text-primary hover:underline">Cookie-Richtlinie</a>.
+        </p>
+        <p>
+          Rechtsgrundlage für den Zugriff auf Ihr Endgerät: § 25 Abs. 2 Nr. 2 TTDSG i.V.m. Art. 6 Abs. 1 lit. f DSGVO.
         </p>
 
         <h2 className="text-xl font-semibold mt-8 mb-4">9. Server-Logfiles</h2>
