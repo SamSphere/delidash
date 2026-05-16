@@ -40,7 +40,7 @@ export default function Datenschutz() {
           Diese Website wird über GitHub Pages (GitHub, Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA) gehostet. Beim Aufruf der Website übermittelt Ihr Browser automatisch technische Daten (z.B. IP-Adresse, Browsertyp, Uhrzeit des Zugriffs) an die Server von GitHub. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer technisch fehlerfreien Bereitstellung). Übermittlung in die USA erfolgt auf Grundlage des EU-US Data Privacy Frameworks.
         </p>
         <p>
-          Die Bestellplattform für Restaurants wird auf Servern in Deutschland (Frankfurt) betrieben. Es werden keine Daten an Dienstleister außerhalb der EU übertragen, sofern in dieser Erklärung nichts Gegenteiliges angegeben ist. Diese Aussage bezieht sich ausschließlich auf die Bestellplattform. Für die Marketing-Website gilt §3 Absatz 1 (GitHub Pages, USA).
+          Die Bestellplattform-Anwendungsdaten werden ausschließlich auf Servern in Deutschland (Frankfurt) verarbeitet. Für die Marketing-Website erfolgt ein USA-Transfer an GitHub Pages (siehe Abs. 1).
         </p>
 
         <h2 className="text-xl font-semibold mt-8 mb-4">4. Kontaktaufnahme</h2>
@@ -101,7 +101,7 @@ export default function Datenschutz() {
           <a href="/#/cookie-richtlinie" className="text-primary hover:underline">Cookie-Richtlinie</a>.
         </p>
         <p>
-          Rechtsgrundlage für den Zugriff auf Ihr Endgerät: § 25 Abs. 2 Nr. 2 TTDSG i.V.m. Art. 6 Abs. 1 lit. f DSGVO.
+          Rechtsgrundlage für technisch notwendige Cookies: § 25 Abs. 2 Nr. 2 TTDSG i.V.m. Art. 6 Abs. 1 lit. f DSGVO.
         </p>
 
         <h2 className="text-xl font-semibold mt-8 mb-4">10. Server-Logfiles</h2>

@@ -25,6 +25,9 @@ export default function AGB() {
         <p>
           Optional richtet GastroHub für den Kunden die Plattform ein, übernimmt die initiale Pflege der Speisekarte aus vorhandenen Quellen und richtet eine Subdomain oder verknüpft eine vom Kunden gestellte Domain. Diese Leistungen sind, sofern nicht ausdrücklich anders vereinbart, im Einrichtungspreis enthalten.
         </p>
+        <p>
+          Das Vertragsverhältnis zwischen Restaurantbetreiber und Endkunde wird unmittelbar zwischen diesen begründet. GastroHub stellt die Plattform im Sinne des § 312i BGB bereit und implementiert die Button-Lösung gemäß § 312j Abs. 3 BGB. Für die Erfüllung der Informations- und Belehrungspflichten gegenüber Endkunden ist der Restaurantbetreiber verantwortlich.
+        </p>
 
         <h2 className="text-xl font-semibold mt-8 mb-4">§ 3 Vertragsschluss</h2>
         <p>
@@ -81,7 +84,7 @@ export default function AGB() {
 
         <h2 className="text-xl font-semibold mt-8 mb-4">§ 10 Haftung</h2>
         <p>
-          GastroHub haftet unbeschränkt für Schäden, die auf einer vorsätzlichen oder grob fahrlässigen Pflichtverletzung beruhen, sowie für Schäden aus der Verletzung des Lebens, des Körpers oder der Gesundheit. Bei der leicht fahrlässigen Verletzung einer wesentlichen Vertragspflicht (Kardinalpflicht), deren Erfüllung die ordnungsgemäße Durchführung des Vertrages überhaupt erst ermöglicht und auf deren Einhaltung der Kunde regelmäßig vertrauen darf, ist die Haftung auf den vertragstypischen, vorhersehbaren Schaden begrenzt. Bei einfacher Fahrlässigkeit und Verletzung nicht-wesentlicher Pflichten ist die Haftung ausgeschlossen, soweit gesetzlich zulässig.
+          GastroHub haftet unbeschränkt für Schäden, die auf einer vorsätzlichen oder grob fahrlässigen Pflichtverletzung beruhen, sowie für Schäden aus der Verletzung des Lebens, des Körpers oder der Gesundheit. Bei leicht fahrlässiger Verletzung einer wesentlichen Vertragspflicht (Kardinalpflicht), deren Erfüllung die ordnungsgemäße Durchführung des Vertrages überhaupt erst ermöglicht und auf deren Einhaltung der Kunde regelmäßig vertrauen darf, ist die Haftung auf den vertragstypischen, vorhersehbaren Schaden begrenzt. Bei leicht fahrlässiger Verletzung nicht wesentlicher Vertragspflichten ist die Haftung soweit gesetzlich zulässig ausgeschlossen.
         </p>
         <p>
           Für Inhalte, die der Kunde über die Plattform veröffentlicht (insbesondere Speisekarte, Bilder, Texte), ist ausschließlich der Kunde verantwortlich. Der Kunde stellt GastroHub von Ansprüchen Dritter im Zusammenhang mit solchen Inhalten frei.
