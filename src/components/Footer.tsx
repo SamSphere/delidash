@@ -28,7 +28,7 @@ export function Footer() {
           <Link href="/kontakt" className="hover:text-white transition-colors">Kontakt</Link>
         </div>
         <div className="w-full border-t border-slate-800 pt-6 mt-2 flex justify-center md:justify-end">
-          <p className="text-sm text-slate-400">© 2025 GastroHub. Alle Rechte vorbehalten.</p>
+          <p className="text-sm text-slate-400">© 2026 GastroHub. Alle Rechte vorbehalten.</p>
         </div>
       </div>
     </footer>

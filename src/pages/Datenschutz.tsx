@@ -71,7 +71,7 @@ export default function Datenschutz() {
           Sie haben das Recht, sich bei einer Datenschutz-Aufsichtsbehörde über die Verarbeitung Ihrer personenbezogenen Daten zu beschweren. Die zuständige Aufsichtsbehörde für Bayern ist der Bayerische Landesbeauftragte für den Datenschutz (BayLfD), Wagmüllerstraße 18, 80538 München.
         </p>
 
-        <p className="text-sm text-slate-400 mt-12">Stand: Mai 2025</p>
+        <p className="text-sm text-slate-400 mt-12">Stand: Mai 2026</p>
       </div>
     </div>
   );

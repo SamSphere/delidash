@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import { motion, type Variants } from "framer-motion";
-import { ArrowRight, CheckCircle2, TrendingUp, ShieldCheck, Clock, Check, PackageOpen, Globe, Cookie, UserRound, Settings, ShoppingCart, Languages, LayoutDashboard, Sparkles } from "lucide-react";
+import { ArrowRight, CheckCircle2, TrendingUp, ShieldCheck, Clock, Check, PackageOpen, Globe, UserRound, Settings, ShoppingCart, Languages, LayoutDashboard, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { useEffect } from "react";
@@ -62,7 +62,7 @@ export default function Home() {
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-hover">Für immer Ihr Restaurant behalten.</span>
               </motion.h1>
               <motion.p variants={itemVariants} className="text-lg md:text-xl text-slate-700 mb-8 max-w-xl leading-relaxed">
-                GastroHub ist Ihr größtes Verkaufsargument: einmal zahlen, für immer nutzen, keine monatlichen Kosten, keine Umsatzbeteiligung und kein Sharing mit Liefer-Apps.
+                GastroHub ist Ihre eigene Bestellplattform. Sie behalten Ihre Gäste, Ihre Marke und einen viel größeren Teil jedes Umsatzes, ohne Abhängigkeit von Liefer-Apps.
               </motion.p>
               <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4">
                 <Button asChild size="lg" className="h-14 px-8 text-base font-semibold">
@@ -123,7 +123,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-3">Mehr Direktbestellungen</h3>
                 <p className="text-slate-600 leading-relaxed">
-                  Einmal zahlen, dauerhaft nutzen, unser größter Vorteil für Restaurants.
+                  Ihre Gäste bestellen direkt bei Ihnen, ohne den Umweg über Liefer-Apps und ohne deren hohe Provisionen.
                 </p>
               </Card>
             </motion.div>
@@ -164,20 +164,16 @@ export default function Home() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               { icon: Sparkles, title: "KI-Lieferantenbestellung", text: "Ein Klick aus dem Admin-Dashboard: Die KI verfasst die komplette Bestellung an Ihren Lieferanten als E-Mail oder WhatsApp, in der gewünschten Sprache. Spart täglich Minuten und verhindert Tippfehler." },
-              { icon: Globe, title: "Landing/Marketing", text: "Starke Startseite, die GastroHub erklärt und Anfragen erzeugt." },
-              { icon: LayoutDashboard, title: "Live Demo & Menü", text: "Klickbare Demo mit Speisekarte, Kategorien und Restaurantnamen." },
-              { icon: ShoppingCart, title: "Cart Flow", text: "Artikel hinzufügen, Mengen ändern, entfernen und Zwischensumme sehen." },
-              { icon: PackageOpen, title: "Checkout", text: "Bestellungen nach Prüfung des Warenkorbs sauber abschließen." },
-              { icon: UserRound, title: "Kunden-Login", text: "Login, Registrierung und Kontobereich für wiederkehrende Gäste." },
-              { icon: Settings, title: "Admin auf dem Handy", text: "Bestellungen annehmen, Lieferzeiten setzen, Artikel offline nehmen, neue Gerichte mit Fotos anlegen und alles direkt am Telefon steuern." },
-              { icon: Cookie, title: "Cookie Banner", text: "Banner anzeigen und Einwilligung bequem akzeptieren." },
-              { icon: Languages, title: "Sprachwechsel", text: "Verfügbar auf Deutsch, Englisch, Arabisch und Türkisch, weitere Sprachen auf Anfrage." },
-              { icon: CheckCircle2, title: "FAQ & Recht", text: "FAQ, AGB, Impressum und Datenschutz sind direkt eingebunden." },
-              { icon: ArrowRight, title: "Kontaktwege", text: "E-Mail, Telefon und Demo-Kontaktwege für direkte Anfragen." },
-              { icon: TrendingUp, title: "Mobile-optimiert", text: "Vollständig mobile-optimierte Web-App für Menü, Warenkorb, Checkout und Kundenkonto, ohne App-Installation." },
-              { icon: ShieldCheck, title: "Konto & Einstellungen", text: "Bestellhistorie, Wunschliste, Adressen, Zahlungsarten und Profileinstellungen." },
-              { icon: Clock, title: "Admin-Funktionen", text: "Grocery List, Settings, Customer-Infos, Order Queue, Drafts, Coupons, Zonen, Staff und Reviews." },
-              { icon: Check, title: "Backend/API", text: "Menü, Orders, Checkout Sessions, Uploads, Telegram-Test und Webhook-Integration für Stripe-Zahlungen." },
+              { icon: Globe, title: "Eigene Restaurant-Website", text: "Eigene Bestellseite mit Ihrer Marke, Speisekarte und direktem Bestellweg, ohne Umweg über Drittplattformen." },
+              { icon: LayoutDashboard, title: "Menüverwaltung", text: "Kategorien, Varianten, Allergene, Fotos und Tagesangebote pflegen Sie komplett selbst, ohne technische Kenntnisse." },
+              { icon: ShoppingCart, title: "Bestellprozess", text: "Vom Warenkorb über Lieferung oder Abholung bis zur Bestätigung läuft alles aus einer Hand und mobil-optimiert." },
+              { icon: UserRound, title: "Kundenkonto", text: "Login, Bestellhistorie, gespeicherte Adressen, Zahlungsarten und Wunschliste für wiederkehrende Gäste." },
+              { icon: Settings, title: "Admin auf dem Handy", text: "Bestellungen annehmen, Menü pflegen, Lieferzonen, Öffnungszeiten, Gutscheine und Personal, alles direkt am Telefon." },
+              { icon: Languages, title: "Mehrsprachig", text: "Verfügbar auf Deutsch, Englisch, Arabisch und Türkisch, weitere Sprachen auf Anfrage." },
+              { icon: TrendingUp, title: "Mobile-optimiert für Gäste", text: "Ihre Gäste bestellen auf Smartphone, Tablet oder Desktop, ganz ohne App-Installation." },
+              { icon: Check, title: "Zahlungen", text: "Online-Zahlungen über Stripe (Kreditkarte, PayPal) und optional Barzahlung bei Lieferung oder Abholung." },
+              { icon: CheckCircle2, title: "Recht & DSGVO", text: "Impressum, AGB, Datenschutz und DSGVO-konformer Cookie-Hinweis sind direkt eingebunden." },
+              { icon: ArrowRight, title: "Kontaktwege", text: "E-Mail, Telefon und Demo-Buchung, für direkte Anfragen ohne Umwege." },
             ].map((feature) => (
               <Card key={feature.title} className="p-6 border-slate-200 shadow-sm hover:shadow-md transition-shadow bg-slate-50/80">
                 <feature.icon className="h-6 w-6 text-primary mb-4" />
@@ -204,7 +200,7 @@ export default function Home() {
               <div className="text-center text-primary">GastroHub</div>
             </div>
             {[
-              { label: "Provision", lieferando: "15–30 %", ubereats: "15–30 %", gastrohub: "5 % oder Einmal" },
+              { label: "Provision", lieferando: "15 bis 30 %", ubereats: "15 bis 30 %", gastrohub: "0 % oder 5 %" },
               { label: "Monatl. Gebühr", lieferando: "Ab €99/Mo.", ubereats: "Ab €0 (höhere %)", gastrohub: "Kein Abo" },
               { label: "Kundendaten", lieferando: "Plattform", ubereats: "Plattform", gastrohub: "Ihnen" },
               { label: "Eigenes Branding", lieferando: "Nein", ubereats: "Nein", gastrohub: "Vollständig" },
@@ -265,7 +261,7 @@ export default function Home() {
                   {[
                     "5 % Provision, Grundpaket",
                     "7 % Provision, inkl. Wartung & Support",
-                    "Weit unter Lieferando (15–30 %)",
+                    "Weit unter Lieferando (15 bis 30 %)",
                     "Vollständiges Bestellsystem",
                   ].map((t, i) => (
                     <li key={i} className="flex items-start gap-2"><Check className="w-4 h-4 text-emerald-500 mt-0.5 shrink-0" />{t}</li>
@@ -295,8 +291,8 @@ export default function Home() {
                 <div className="flex gap-4">
                   <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold text-lg">1</div>
                   <div>
-                    <h4 className="text-xl font-bold text-slate-900 mb-2">Registrieren</h4>
-                    <p className="text-slate-600">Melden Sie sich an und wählen Sie das passende Preismodell für Ihr Restaurant.</p>
+                    <h4 className="text-xl font-bold text-slate-900 mb-2">Anfragen</h4>
+                    <p className="text-slate-600">Schreiben Sie uns kurz. Wir besprechen Ihr Setup und das passende Preismodell, unverbindlich und kostenlos.</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
@@ -337,7 +333,7 @@ export default function Home() {
         <div className="container mx-auto px-4 max-w-4xl">
           <h2 className="text-3xl md:text-5xl font-bold mb-6 leading-tight">Ihr Restaurant. Ihre Bestellungen.</h2>
             <p className="text-xl text-slate-600 mb-10 max-w-2xl mx-auto">
-            Wählen Sie das Modell, das zu Ihnen passt, deutlich günstig als Lieferando, ohne Abhängigkeit von fremden Plattformen.
+            Wählen Sie das Modell, das zu Ihnen passt, deutlich günstiger als Lieferando, ohne Abhängigkeit von fremden Plattformen.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Button asChild size="lg" className="h-14 px-8 text-lg font-semibold bg-sky-600 text-white hover:bg-sky-700">
@@ -348,7 +344,7 @@ export default function Home() {
             </Button>
           </div>
           <div className="mt-8 text-slate-500 text-sm flex items-center justify-center gap-4">
-            <span className="flex items-center"><Check className="w-4 h-4 mr-1 text-emerald-500" /> Keine Kreditkarte nötig</span>
+            <span className="flex items-center"><Check className="w-4 h-4 mr-1 text-emerald-500" /> Unverbindliches Erstgespräch</span>
             <span className="flex items-center"><Check className="w-4 h-4 mr-1 text-emerald-500" /> Weit unter Lieferando-Konditionen</span>
           </div>
         </div>
