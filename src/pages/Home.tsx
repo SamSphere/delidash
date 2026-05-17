@@ -157,7 +157,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-3">Schnell im Restaurantalltag</h3>
                 <p className="text-slate-600 leading-relaxed">
-                  Schnell live gehen. Menü, Fotos und Bestellungen sind in wenigen Tagen eingerichtet und sofort nutzbar.
+                  Menü, Fotos und Bestellungen sind in zwei bis vier Wochen eingerichtet und danach sofort nutzbar.
                 </p>
               </Card>
             </motion.div>
