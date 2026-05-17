@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Link } from "wouter";
 
 export default function Datenschutz() {
   useEffect(() => {
@@ -101,7 +102,7 @@ export default function Datenschutz() {
         <h2 className="text-xl font-semibold mt-8 mb-4">9. Cookies</h2>
         <p>
           Diese Website verwendet ausschließlich technisch notwendige Cookies, insbesondere zur Speicherung Ihrer Cookie-Einwilligung. Es werden keine Tracking-, Analyse- oder Marketing-Cookies eingesetzt. Details finden Sie in unserer{" "}
-          <a href="/#/cookie-richtlinie" className="text-primary hover:underline">Cookie-Richtlinie</a>.
+          <Link href="/cookie-richtlinie" className="text-primary hover:underline">Cookie-Richtlinie</Link>.
         </p>
         <p>
           Rechtsgrundlage für technisch notwendige Cookies: § 25 Abs. 2 Nr. 2 TTDSG i.V.m. Art. 6 Abs. 1 lit. f DSGVO.

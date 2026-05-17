@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Link } from "wouter";
 
 export default function CookieRichtlinie() {
   useEffect(() => {
@@ -50,7 +51,7 @@ export default function CookieRichtlinie() {
         <h2 className="text-xl font-semibold mt-8 mb-4">5. Weitere Informationen</h2>
         <p>
           Weitere Informationen zur Verarbeitung Ihrer personenbezogenen Daten finden Sie in unserer{" "}
-          <a href="/#/datenschutz" className="text-primary hover:underline">Datenschutzerklärung</a>.
+          <Link href="/datenschutz" className="text-primary hover:underline">Datenschutzerklärung</Link>.
         </p>
 
         <p className="text-sm text-slate-400 mt-12">Stand: Mai 2026</p>

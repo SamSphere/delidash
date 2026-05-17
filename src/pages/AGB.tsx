@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Link } from "wouter";
 
 export default function AGB() {
   useEffect(() => {
@@ -74,7 +75,7 @@ export default function AGB() {
         <h2 className="text-xl font-semibold mt-8 mb-4">§ 8 Datenschutz und Auftragsverarbeitung</h2>
         <p>
           Soweit GastroHub im Auftrag des Kunden personenbezogene Daten von Endkunden des Restaurants verarbeitet, schließen die Parteien eine separate Auftragsverarbeitungsvereinbarung (AVV) gemäß Art. 28 DSGVO ab. Der AVV wird vor Beginn der ersten Verarbeitung personenbezogener Daten von Endkunden des Restaurantbetreibers abgeschlossen. Weitere Informationen zur Datenverarbeitung finden Sie in der{" "}
-          <a href="/#/datenschutz" className="text-primary hover:underline">Datenschutzerklärung</a>.
+          <Link href="/datenschutz" className="text-primary hover:underline">Datenschutzerklärung</Link>.
         </p>
 
         <h2 className="text-xl font-semibold mt-8 mb-4">§ 9 Verfügbarkeit</h2>
