@@ -17,12 +17,12 @@
         {
           "slug": "unterschied-zu-webseite",
           "q": "Was unterscheidet GastroHub von einer normalen Webseite?",
-          "a": "Eine Webseite zeigt, wer Sie sind, wo Sie sind und was Sie kochen. Mehr nicht. GastroHub macht zusätzlich folgendes: nimmt Bestellungen entgegen, prüft die Lieferzone per Postleitzahl, kassiert sicher mit Kreditkarte oder PayPal, schickt die Bestellung sofort auf Ihr Telefon und gibt Ihnen ein Dashboard für Speisekarte, Öffnungszeiten und Statistik. Das ist der Unterschied zwischen einer Visitenkarte und einer Kasse."
+          "a": "Eine Webseite zeigt, wer Sie sind, wo Sie sind und was Sie kochen. Mehr nicht. GastroHub macht zusätzlich folgendes: nimmt Bestellungen entgegen, prüft die Lieferzone, kassiert sicher mit Kreditkarte, PayPal, Überweisung, Wero und allen gängigen Online-Zahlungsmethoden, schickt die Bestellung sofort auf Ihr Telefon oder Ihr Kassensystem und gibt Ihnen ein Dashboard für Speisekarte, Öffnungszeiten und Statistik. Das ist der Unterschied zwischen einer Visitenkarte und einer Kasse."
         },
         {
           "slug": "unterschied-zu-liefer-apps",
           "q": "Was unterscheidet GastroHub von den großen Liefer-Apps?",
-          "a": "Drei Dinge. Erstens: Die Bestellung läuft direkt bei Ihnen ein, nicht über ein fremdes System, das Ihre Marke verdeckt. Zweitens: Ihre Kunden sind Ihre Kunden. Sie sehen Namen, E-Mail-Adressen und Bestellhistorie und können diese Gäste für Wiederbestellungen oder Aktionen anschreiben. Drittens: Sie zahlen 0 % oder 5 % Provision statt 15 bis 30 %. Auf 100 Euro Umsatz bedeutet das 95 oder 100 Euro für Sie statt 70 bis 85 Euro."
+          "a": "Drei Dinge. Erstens: Die Bestellung läuft direkt bei Ihnen ein, nicht über ein fremdes System, das Ihre Marke verdeckt. Zweitens: Ihre Kunden sind Ihre Kunden. Sie sehen Namen, E-Mail-Adressen und Bestellhistorie und können diese Gäste für Wiederbestellungen oder Aktionen anschreiben. Drittens: Sie zahlen 0 % bei Einmalzahlung (Hosting separat berechnet), 5 % ohne Support (Wartung separat berechnet) oder 7 % alles inklusive."
         }
       ]
     },
@@ -64,7 +64,7 @@
         {
           "slug": "habe-schon-webseite",
           "q": "Ich habe schon eine Webseite von einem Baukasten-Anbieter. Reicht die nicht?",
-          "a": "Eine Baukasten-Webseite zeigt das Restaurant, aber sie nimmt selten echte Bestellungen entgegen. Die meisten Baukästen haben kein integriertes Bestellsystem mit Stripe-Anbindung, keine Lieferzonen-Logik per Postleitzahl, keinen direkten Bon-Druck in der Küche, keine automatischen Benachrichtigungen. Am Ende zahlen viele Restaurants ihren Baukasten und zusätzlich eine teure Liefer-App, weil die Webseite allein keine Kasse ist. Bei GastroHub ist beides eins."
+          "a": "Eine Baukasten-Webseite zeigt das Restaurant, aber sie nimmt selten echte Bestellungen entgegen. Die meisten Baukästen haben kein integriertes Bestellsystem mit Stripe-Anbindung, keine Lieferzonen-Logik, keinen direkten Bon-Druck in der Küche, keine automatischen Benachrichtigungen. Am Ende zahlen viele Restaurants ihren Baukasten und zusätzlich eine teure Liefer-App, weil die Webseite allein keine Kasse ist. Bei GastroHub ist beides eins."
         },
         {
           "slug": "stammkunden-was-passiert",
@@ -95,7 +95,7 @@
         {
           "slug": "was-kann-ich-mit-daten",
           "q": "Was kann ich konkret mit meinen Kundendaten machen?",
-          "a": "Sie können wiederkehrende Gäste erkennen, ihnen einmal im Quartal einen Newsletter mit neuen Gerichten schicken, gezielte Rabatte an inaktive Gäste senden, ihre Lieblingsgerichte analysieren und Ihre Speisekarte entsprechend weiterentwickeln. Sie können die Daten auch jederzeit als CSV-Datei exportieren — sie bleiben Ihre, auch wenn Sie GastroHub eines Tages verlassen."
+          "a": "Sie können wiederkehrende Gäste erkennen, ihnen einmal im Quartal einen Newsletter mit neuen Gerichten schicken, gezielte Rabatte an inaktive Gäste senden, ihre Lieblingsgerichte analysieren und Ihre Speisekarte entsprechend weiterentwickeln. Sie können die Daten auch jederzeit als CSV-Datei exportieren. Sie bleiben Ihre, auch wenn Sie GastroHub eines Tages verlassen."
         },
         {
           "slug": "sehe-ich-bestellhistorie",
@@ -111,7 +111,7 @@
         {
           "slug": "wie-lange-einrichtung",
           "q": "Wie lange dauert die Einrichtung?",
-          "a": "In der Regel wenige Tage, nachdem Sie uns Ihre Speisekarte und Fotos zur Verfügung gestellt haben. Wir setzen Speisekarte, Kategorien, Allergene, Lieferzonen, Öffnungszeiten und Stripe-Konto auf, prüfen alles mit Ihnen gemeinsam, und nach einer kurzen Test-Bestellung gehen Sie live."
+          "a": "In der Regel zwei bis vier Wochen, nachdem Sie uns Ihre Speisekarte und Fotos zur Verfügung gestellt haben. Wir setzen Speisekarte, Kategorien, Allergene, Lieferzonen, Öffnungszeiten und Stripe-Konto auf, prüfen alles mit Ihnen gemeinsam, und nach einer kurzen Test-Bestellung gehen Sie live."
         },
         {
           "slug": "was-muss-ich-liefern",
@@ -132,12 +132,12 @@
         {
           "slug": "neue-bestellung-benachrichtigung",
           "q": "Wie erfahre ich von einer neuen Bestellung?",
-          "a": "Sofort. Eine neue Bestellung erscheint als Benachrichtigung auf Ihrem Telefon (per Telegram-Nachricht und E-Mail, beides parallel), zusätzlich blinkt sie im Dashboard. Sie tippen einmal, um anzunehmen, und der Kunde bekommt automatisch eine Bestätigung mit der voraussichtlichen Lieferzeit. Sie können die Bestellung später auf Statuswechsel \"In Zubereitung\" oder \"Unterwegs\" setzen, alles aus dem Dashboard heraus."
+          "a": "Sofort, ohne dass Sie zusätzliche Hardware auf dem Tresen brauchen. Eine neue Bestellung erscheint als Benachrichtigung auf Ihrem Handy (per Telegram und E-Mail, beides parallel) sowie auf Laptop oder PC. Sie tippen einmal, um anzunehmen, und der Kunde bekommt automatisch eine Bestätigung mit der voraussichtlichen Lieferzeit. Wenn Ihr Kassensystem eine API unterstützt, drucken wir die Bestellung zusätzlich direkt bei Ihnen aus. Wir wollen Ihnen den besten Preis anbieten, nicht teure Zusatz-Geräte verkaufen. Falls Sie trotzdem ein eigenes Gerät bevorzugen, richten wir das gerne für Sie ein."
         },
         {
           "slug": "wie-wird-bezahlt",
           "q": "Wie wird bezahlt?",
-          "a": "Online über Stripe Connect (Kreditkarte, PayPal, je nach Ihren Stripe-Einstellungen auch Sofort, Klarna, Apple Pay, Google Pay). Optional können Sie zusätzlich Barzahlung bei Lieferung oder Abholung aktivieren. Das Geld geht direkt auf Ihr Stripe-Konto, in der Regel innerhalb von zwei Werktagen auf Ihr Bank-Konto. Wir sehen Ihre Einnahmen nicht im Detail, nur die Bestelldaten."
+          "a": "Online über Stripe Connect (Kreditkarte, PayPal, je nach Ihren Stripe-Einstellungen auch Sofort, Klarna, Apple Pay, Google Pay). Optional können Sie zusätzlich Barzahlung bei Lieferung oder Abholung aktivieren. Das Geld geht direkt auf Ihr Stripe-Konto, in der Regel innerhalb von zwei Werktagen auf Ihr Bank-Konto."
         },
         {
           "slug": "bestellung-ablehnen",
@@ -158,12 +158,12 @@
         {
           "slug": "ist-dsgvo-konform",
           "q": "Ist GastroHub DSGVO-konform?",
-          "a": "Ja. Die Bestellplattform ist nach DSGVO aufgebaut. Sie schließen mit uns einen Auftragsverarbeitungsvertrag (AVV) gemäß Art. 28 DSGVO ab, bevor der erste Endkunde bei Ihnen bestellt. Wir verwenden technisch notwendige Cookies, kein Tracking, keine Werbe-Cookies. Endkunden-Daten werden ausschließlich auf Servern in Deutschland (Frankfurt, Hetzner) verarbeitet. Details stehen in unserer Datenschutzerklärung."
+          "a": "Ja. Die Bestellplattform ist nach DSGVO aufgebaut. Sie schließen mit uns einen Auftragsverarbeitungsvertrag (AVV) gemäß Art. 28 DSGVO ab, bevor der erste Endkunde bei Ihnen bestellt. Wir verwenden technisch notwendige Cookies, kein Tracking, keine Werbe-Cookies. Endkunden-Daten werden ausschließlich auf Servern in Deutschland verarbeitet. Details stehen in unserer Datenschutzerklärung."
         },
         {
           "slug": "wo-werden-daten-gespeichert",
           "q": "Wo werden meine Daten und die meiner Gäste gespeichert?",
-          "a": "Anwendungsdaten (Speisekarte, Bestellungen, Kundeninformationen) laufen ausschließlich auf Servern in Deutschland, bei Hetzner in Frankfurt. Es gibt keine Datenübertragung in die USA oder andere Drittländer. Lediglich die Marketing-Webseite gastrohub.dev läuft über GitHub Pages — getrennt von der Bestellplattform. Zahlungen über Stripe können nach DSGVO-konformen Standardvertragsklauseln in die USA übermittelt werden; Stripe ist dafür DPF-zertifiziert."
+          "a": "Anwendungsdaten (Speisekarte, Bestellungen, Kundeninformationen) laufen ausschließlich auf Servern in Deutschland. Es gibt keine Datenübertragung in die USA oder andere Drittländer. Lediglich die Marketing-Webseite gastrohub.dev läuft über GitHub Pages, getrennt von der Bestellplattform. Zahlungen über Stripe können nach DSGVO-konformen Standardvertragsklauseln in die USA übermittelt werden; Stripe ist dafür DPF-zertifiziert."
         },
         {
           "slug": "allergene-und-pflichten",
@@ -199,12 +199,12 @@
         {
           "slug": "mehrere-sprachen",
           "q": "Kann ich meine Speisekarte mehrsprachig anbieten?",
-          "a": "Ja. Die Plattform unterstützt aktuell Deutsch, Englisch, Arabisch und Türkisch — gleichzeitig, im selben System. Ihr Gast wählt die Sprache, Sie pflegen einmal pro Sprache die Texte. Weitere Sprachen können auf Anfrage ergänzt werden. Sinnvoll für Stadtteile mit gemischter Kundschaft, Touristen-Lagen oder Caterer mit internationalen Firmenkunden."
+          "a": "Ja. Die Plattform unterstützt aktuell Deutsch, Englisch, Arabisch und Türkisch, gleichzeitig im selben System. Ihr Gast wählt die Sprache, Sie pflegen einmal pro Sprache die Texte. Weitere Sprachen können auf Anfrage ergänzt werden. Sinnvoll für Stadtteile mit gemischter Kundschaft, Touristen-Lagen oder Caterer mit internationalen Firmenkunden."
         },
         {
           "slug": "server-ausfall",
           "q": "Was passiert, wenn die Plattform mal ausfällt?",
-          "a": "Wir bemühen uns um sehr hohe Verfügbarkeit (Server-Standort Frankfurt, gespiegelte Datenhaltung, regelmäßige Backups). Garantiert ist eine bestimmte Verfügbarkeit nicht, das wäre unseriös. Bei einem Ausfall sind wir schnellstmöglich für Sie erreichbar. Wartungsarbeiten legen wir, soweit möglich, außerhalb typischer Bestellzeiten (frühmorgens). Im Fall der Fälle können Sie Bestellungen weiter telefonisch annehmen, Ihre Daten gehen nicht verloren."
+          "a": "Wir bemühen uns um sehr hohe Verfügbarkeit (Server-Standort Deutschland,gespiegelte Datenhaltung, regelmäßige Backups). Garantiert ist eine bestimmte Verfügbarkeit nicht, das wäre unseriös. Bei einem Ausfall sind wir schnellstmöglich für Sie erreichbar. Wartungsarbeiten legen wir, soweit möglich, außerhalb typischer Bestellzeiten (frühmorgens). Im Fall der Fälle können Sie Bestellungen weiter telefonisch annehmen, Ihre Daten gehen nicht verloren."
         }
       ]
     }
