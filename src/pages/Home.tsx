@@ -94,11 +94,23 @@ export default function Home() {
               className="relative mx-auto w-full max-w-[600px] lg:ml-auto"
             >
               <div className="rounded-2xl border border-slate-200 bg-white shadow-2xl overflow-hidden">
-                <img
-                  src="/images/delivery-banner-evening.png"
-                  alt="GastroHub Statistikvorschau"
-                  className="w-full h-auto object-cover"
-                />
+                <picture>
+                  <source type="image/avif" srcSet="/images/hero-1280.avif" />
+                  <source
+                    type="image/webp"
+                    srcSet="/images/hero-640.webp 640w, /images/hero-1280.webp 1280w, /images/hero-1920.webp 1920w"
+                    sizes="(max-width: 768px) 100vw, 600px"
+                  />
+                  <img
+                    src="/images/hero-1280.webp"
+                    alt=""
+                    role="presentation"
+                    width={1280}
+                    height={698}
+                    fetchPriority="high"
+                    className="w-full h-auto object-cover"
+                  />
+                </picture>
               </div>
             </motion.div>
           </div>
