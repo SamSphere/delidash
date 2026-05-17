@@ -1,5 +1,6 @@
 // Post-build prerender: emits dist/<route>/index.html per route with route-specific
 // <title>, meta description, og:title/description, twitter:title/description, and canonical.
+// /faq additionally gets FAQPage JSON-LD injected for rich-result eligibility.
 // React hydrates over the same body; only <head> differs. Wins crawlers and social previews.
 
 import { readFile, writeFile, mkdir } from "node:fs/promises";
@@ -9,6 +10,8 @@ import { fileURLToPath } from "node:url";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const distDir = join(__dirname, "..", "dist");
 const ORIGIN = "https://gastrohub.dev";
+
+const faqData = JSON.parse(await readFile(join(__dirname, "..", "src", "data", "faq.json"), "utf8"));
 
 const ROUTES = [
   // Home is the default index.html — skip (don't overwrite the SPA shell with itself).
@@ -20,7 +23,8 @@ const ROUTES = [
   {
     path: "/faq",
     title: "FAQ | GastroHub",
-    description: "Häufig gestellte Fragen zu GastroHub: Preismodelle, Einrichtung, Funktionen und Datenschutz. Alles, was Restaurantbesitzer über ihr eigenes Bestellsystem wissen müssen.",
+    description: "Häufig gestellte Fragen zu GastroHub: Preismodelle, Wechsel von Liefer-Apps, Datenschutz, Stripe-Zahlungen und Einrichtung. Antworten in Klartext.",
+    extraHead: faqJsonLdScript(),
   },
   {
     path: "/kontakt",
@@ -53,10 +57,25 @@ function escapeHtmlAttr(s) {
   return s.replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 }
 
-function rewriteHead(html, { title, description, canonical }) {
+function faqJsonLdScript() {
+  const ld = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqData.sections.flatMap((section) =>
+      section.items.map((item) => ({
+        "@type": "Question",
+        name: item.q,
+        acceptedAnswer: { "@type": "Answer", text: item.a },
+      })),
+    ),
+  };
+  return `<script type="application/ld+json">${JSON.stringify(ld).replace(/</g, "\\u003c")}</script>`;
+}
+
+function rewriteHead(html, { title, description, canonical, extraHead }) {
   const t = escapeHtmlAttr(title);
   const d = escapeHtmlAttr(description);
-  return html
+  let out = html
     .replace(/<title>[\s\S]*?<\/title>/, `<title>${t}</title>`)
     .replace(/<meta name="description" content="[^"]*"\s*\/>/, `<meta name="description" content="${d}" />`)
     .replace(/<link rel="canonical" href="[^"]*"\s*\/>/, `<link rel="canonical" href="${canonical}" />`)
@@ -65,6 +84,10 @@ function rewriteHead(html, { title, description, canonical }) {
     .replace(/<meta property="og:url" content="[^"]*"\s*\/>/, `<meta property="og:url" content="${canonical}" />`)
     .replace(/<meta name="twitter:title" content="[^"]*"\s*\/>/, `<meta name="twitter:title" content="${t}" />`)
     .replace(/<meta name="twitter:description" content="[^"]*"\s*\/>/, `<meta name="twitter:description" content="${d}" />`);
+  if (extraHead) {
+    out = out.replace(/<\/head>/, `${extraHead}\n  </head>`);
+  }
+  return out;
 }
 
 const indexHtml = await readFile(join(distDir, "index.html"), "utf8");

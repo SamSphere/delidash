@@ -1,0 +1,212 @@
+{
+  "sections": [
+    {
+      "id": "was-ist-das",
+      "title": "Was ist GastroHub eigentlich?",
+      "items": [
+        {
+          "slug": "was-ist-gastrohub",
+          "q": "Was ist GastroHub überhaupt?",
+          "a": "GastroHub ist Ihr eigenes Bestellsystem im Internet. Eine Webseite mit Ihrer Speisekarte, einem Warenkorb und einer Kasse, auf der Ihre Gäste direkt bei Ihnen bestellen. Sie sehen jede Bestellung sofort auf dem Handy, kassieren direkt über Ihr eigenes Konto und behalten alle Kundendaten. Kein Mittelsmann. Kein Aggregator zwischen Ihnen und Ihrem Gast."
+        },
+        {
+          "slug": "fuer-wen-ist-das",
+          "q": "Ist das nur für Lieferdienste?",
+          "a": "Nein. GastroHub passt für jeden gastronomischen Betrieb, der Bestellungen entgegennimmt: Pizzerien, Imbisse, Bistros, Restaurants, Catering, Bäckereien mit Vorbestellung, auch Foodtrucks mit fester Route. Sie können Lieferung anbieten, Abholung, oder beides. Wenn Ihre Gäste bei Ihnen bestellen wollen, statt durch ein anonymes Plattform-Menü zu scrollen, ist GastroHub für Sie."
+        },
+        {
+          "slug": "unterschied-zu-webseite",
+          "q": "Was unterscheidet GastroHub von einer normalen Webseite?",
+          "a": "Eine Webseite zeigt, wer Sie sind, wo Sie sind und was Sie kochen. Mehr nicht. GastroHub macht zusätzlich folgendes: nimmt Bestellungen entgegen, prüft die Lieferzone per Postleitzahl, kassiert sicher mit Kreditkarte oder PayPal, schickt die Bestellung sofort auf Ihr Telefon und gibt Ihnen ein Dashboard für Speisekarte, Öffnungszeiten und Statistik. Das ist der Unterschied zwischen einer Visitenkarte und einer Kasse."
+        },
+        {
+          "slug": "unterschied-zu-liefer-apps",
+          "q": "Was unterscheidet GastroHub von den großen Liefer-Apps?",
+          "a": "Drei Dinge. Erstens: Die Bestellung läuft direkt bei Ihnen ein, nicht über ein fremdes System, das Ihre Marke verdeckt. Zweitens: Ihre Kunden sind Ihre Kunden. Sie sehen Namen, E-Mail-Adressen und Bestellhistorie und können diese Gäste für Wiederbestellungen oder Aktionen anschreiben. Drittens: Sie zahlen 0 % oder 5 % Provision statt 15 bis 30 %. Auf 100 Euro Umsatz bedeutet das 95 oder 100 Euro für Sie statt 70 bis 85 Euro."
+        }
+      ]
+    },
+    {
+      "id": "preise",
+      "title": "Was kostet mich das wirklich?",
+      "items": [
+        {
+          "slug": "was-kostet-gastrohub",
+          "q": "Was kostet GastroHub?",
+          "a": "Es gibt zwei Modelle. Im Einmalzahlungsmodell zahlen Sie einen festen Betrag für die Einrichtung, danach 0 % Provision, kein Abo. Im Provisionsmodell zahlen Sie keine Einrichtung, sondern 5 % pro Bestellung (Grundpaket) oder 7 % pro Bestellung inklusive Wartung und Support. Den Einrichtungspreis nennen wir nach einem kurzen Gespräch, weil er von Speisekarten-Größe, Lieferzonen und Ihrer aktuellen Daten-Lage abhängt."
+        },
+        {
+          "slug": "was-bedeuten-15-30-prozent",
+          "q": "Was bedeuten 15 bis 30 % Provision in echtem Geld?",
+          "a": "Rechnen Sie es durch: Bei 10.000 Euro Monatsumsatz nimmt eine Plattform mit 20 % Provision 2.000 Euro pro Monat. Das sind 24.000 Euro im Jahr. Bei 25 % sind es 30.000 Euro. Restaurants arbeiten typischerweise mit 5 bis 8 % Nettomarge. Die Plattform nimmt also oft mehr von der einzelnen Bestellung weg, als am Ende für Sie übrig bleibt. Bei GastroHub bleibt der gleiche Umsatz bei Ihnen, minus einer einmaligen Gebühr oder 5 %."
+        },
+        {
+          "slug": "welches-modell-besser",
+          "q": "Welches Modell ist für mich besser?",
+          "a": "Einmalzahlung lohnt sich, wenn Sie langfristig denken und nach einem Jahr keine laufenden Kosten mehr haben wollen. Sie zahlen einmal, danach nichts mehr. Provision (5 % oder 7 %) lohnt sich, wenn Sie klein starten wollen, ohne in Vorkasse zu gehen. Sie zahlen nur, wenn Sie verdienen. Beides ist deutlich günstiger als die großen Aggregatoren. Im Erstgespräch rechnen wir mit Ihren echten Zahlen durch, welches Modell sich für Sie rechnet."
+        },
+        {
+          "slug": "versteckte-kosten",
+          "q": "Gibt es versteckte Kosten?",
+          "a": "Nein. Was im Angebot steht, ist der vollständige Preis von uns. Zusätzlich fallen Stripe-Gebühren an (etwa 1,5 % plus 25 Cent pro erfolgreicher Kartentransaktion). Diese gehen direkt an Stripe und sind in jedem Online-Bezahlsystem üblich. Sie sehen jede einzelne Gebühr in Ihrem Stripe-Dashboard. Es gibt keine Sponsored-Listings, keinen Premium-Platzierung-Aufpreis, keine verpflichtenden Werbebudgets."
+        }
+      ]
+    },
+    {
+      "id": "warum-wechseln",
+      "title": "Ich bin zufrieden mit dem, was ich habe. Warum überhaupt etwas ändern?",
+      "items": [
+        {
+          "slug": "warum-wechseln-bin-zufrieden",
+          "q": "Ich bin doch zufrieden mit meiner aktuellen Liefer-App. Warum etwas ändern?",
+          "a": "Drei Fragen, die viele Restaurantbesitzer am Monatsende stellen. Wer hat heute mehr verdient, ich oder die App? Welche meiner Stammkunden hat heute bestellt, und weiß ich, wer sie sind? Was wäre, wenn die App morgen ihre Konditionen ändert oder mich für zwei Wochen aussetzt? Wenn nur eine dieser Antworten Sie unruhig macht, lohnt sich ein 10-Minuten-Gespräch. Mehr verlangen wir nicht."
+        },
+        {
+          "slug": "habe-schon-webseite",
+          "q": "Ich habe schon eine Webseite von einem Baukasten-Anbieter. Reicht die nicht?",
+          "a": "Eine Baukasten-Webseite zeigt das Restaurant, aber sie nimmt selten echte Bestellungen entgegen. Die meisten Baukästen haben kein integriertes Bestellsystem mit Stripe-Anbindung, keine Lieferzonen-Logik per Postleitzahl, keinen direkten Bon-Druck in der Küche, keine automatischen Benachrichtigungen. Am Ende zahlen viele Restaurants ihren Baukasten und zusätzlich eine teure Liefer-App, weil die Webseite allein keine Kasse ist. Bei GastroHub ist beides eins."
+        },
+        {
+          "slug": "stammkunden-was-passiert",
+          "q": "Was passiert mit meinen aktuellen Stammkunden, wenn ich wechsle?",
+          "a": "Stammkunden, die schon bei Ihnen direkt bestellen (E-Mail, Anruf, vor Ort), behalten Sie sofort. Stammkunden, die heute über eine Liefer-App bei Ihnen bestellen, kennen Sie technisch nicht, weil die Plattform Ihnen Namen und Kontakt nicht weitergibt. Diese gewinnen Sie nach und nach zurück, in dem Sie Ihre eigene Bestellseite über Visitenkarten, Flyer in der Tüte, einen QR-Code an der Tür oder auf der Speisekarte sichtbar machen. Wir zeigen Ihnen den Übergang, Sie müssen ihn nicht im Alleingang planen."
+        },
+        {
+          "slug": "zu-kompliziert",
+          "q": "Ist das nicht zu kompliziert für mich? Ich kenne mich mit Technik nicht aus.",
+          "a": "Sie brauchen keine technischen Kenntnisse. Wir richten die Plattform für Sie ein, importieren Ihre Speisekarte, konfigurieren Lieferzonen und Öffnungszeiten. Im Alltag bedienen Sie nur ein Dashboard auf dem Smartphone, ähnlich wie eine WhatsApp- oder Banking-App. Bestellungen annehmen funktioniert mit einem Klick. Wenn Sie ein Smartphone bedienen können, können Sie GastroHub bedienen."
+        },
+        {
+          "slug": "muss-ich-sofort-kuendigen",
+          "q": "Muss ich meine aktuelle Plattform sofort kündigen?",
+          "a": "Nein. Viele Restaurants laufen am Anfang parallel: Sie sammeln über die alte Plattform weiterhin Bestellungen und bauen gleichzeitig Ihre eigene Bestellseite auf. Sobald Ihre eigene Seite mehr direkte Bestellungen bringt, können Sie die Plattform kündigen oder weiter mitlaufen lassen. Diese Entscheidung gehört Ihnen. Wir drängen Sie zu nichts."
+        }
+      ]
+    },
+    {
+      "id": "daten",
+      "title": "Wem gehören meine Daten?",
+      "items": [
+        {
+          "slug": "wem-gehoeren-kundendaten",
+          "q": "Wem gehören die Kundendaten?",
+          "a": "Ihnen. Alle Daten Ihrer Endkunden (Namen, Adressen, Bestellungen, bevorzugte Gerichte) gehören ausschließlich Ihrem Restaurant. Wir verarbeiten diese Daten als Auftragsverarbeiter für Sie, nach DSGVO Art. 28, und geben sie niemals an Dritte weiter, an niemanden, auch nicht an andere Restaurants. Bei den großen Liefer-Apps ist das umgekehrt: die Plattform sammelt die Daten, Sie bekommen sie nicht zu sehen."
+        },
+        {
+          "slug": "was-kann-ich-mit-daten",
+          "q": "Was kann ich konkret mit meinen Kundendaten machen?",
+          "a": "Sie können wiederkehrende Gäste erkennen, ihnen einmal im Quartal einen Newsletter mit neuen Gerichten schicken, gezielte Rabatte an inaktive Gäste senden, ihre Lieblingsgerichte analysieren und Ihre Speisekarte entsprechend weiterentwickeln. Sie können die Daten auch jederzeit als CSV-Datei exportieren — sie bleiben Ihre, auch wenn Sie GastroHub eines Tages verlassen."
+        },
+        {
+          "slug": "sehe-ich-bestellhistorie",
+          "q": "Sehe ich, wer wann was bei mir bestellt hat?",
+          "a": "Ja. Im Dashboard sehen Sie die Bestellhistorie nach Gast, nach Tag, nach Gericht oder nach Lieferzone. Sie sehen, welche Gerichte besonders gut laufen, welche Tage Ihre stärksten sind, welche Stammgäste in den letzten Wochen nicht mehr bestellt haben. Diese Informationen helfen Ihnen, gezielt Entscheidungen zu treffen. Heute fliegen diese Daten vielleicht ungenutzt durch die Server einer App, die sie für Sie verbirgt."
+        }
+      ]
+    },
+    {
+      "id": "einrichtung",
+      "title": "Wie schnell bin ich online?",
+      "items": [
+        {
+          "slug": "wie-lange-einrichtung",
+          "q": "Wie lange dauert die Einrichtung?",
+          "a": "In der Regel wenige Tage, nachdem Sie uns Ihre Speisekarte und Fotos zur Verfügung gestellt haben. Wir setzen Speisekarte, Kategorien, Allergene, Lieferzonen, Öffnungszeiten und Stripe-Konto auf, prüfen alles mit Ihnen gemeinsam, und nach einer kurzen Test-Bestellung gehen Sie live."
+        },
+        {
+          "slug": "was-muss-ich-liefern",
+          "q": "Was muss ich Ihnen liefern, damit Sie starten können?",
+          "a": "Ihre aktuelle Speisekarte (PDF, Excel, oder eine bestehende Webseite genügt), Fotos der wichtigsten Gerichte (auch Handy-Fotos reichen, falls keine Profi-Bilder vorhanden sind), Ihre Öffnungszeiten, die Postleitzahlen, in die Sie liefern, Ihre Logo-Datei und die Rechtsangaben (Impressum-Daten). Wenn Ihnen einzelne Punkte fehlen, helfen wir."
+        },
+        {
+          "slug": "technische-kenntnisse",
+          "q": "Brauche ich für den laufenden Betrieb technische Kenntnisse?",
+          "a": "Nein. Im Dashboard bearbeiten Sie Gerichte, Preise und Öffnungszeiten so einfach wie in einer Notiz-App. Bestellungen nehmen Sie mit einem Klick an oder ab. Status-Updates für den Kunden gehen automatisch raus. Wenn etwas Komplexeres nötig ist (neue Lieferzone, Kategorie umbenennen), erledigen wir das auf Zuruf, ohne Aufpreis im Wartungs-Modell."
+        }
+      ]
+    },
+    {
+      "id": "bestellungen",
+      "title": "Wie funktionieren Bestellungen?",
+      "items": [
+        {
+          "slug": "neue-bestellung-benachrichtigung",
+          "q": "Wie erfahre ich von einer neuen Bestellung?",
+          "a": "Sofort. Eine neue Bestellung erscheint als Benachrichtigung auf Ihrem Telefon (per Telegram-Nachricht und E-Mail, beides parallel), zusätzlich blinkt sie im Dashboard. Sie tippen einmal, um anzunehmen, und der Kunde bekommt automatisch eine Bestätigung mit der voraussichtlichen Lieferzeit. Sie können die Bestellung später auf Statuswechsel \"In Zubereitung\" oder \"Unterwegs\" setzen, alles aus dem Dashboard heraus."
+        },
+        {
+          "slug": "wie-wird-bezahlt",
+          "q": "Wie wird bezahlt?",
+          "a": "Online über Stripe Connect (Kreditkarte, PayPal, je nach Ihren Stripe-Einstellungen auch Sofort, Klarna, Apple Pay, Google Pay). Optional können Sie zusätzlich Barzahlung bei Lieferung oder Abholung aktivieren. Das Geld geht direkt auf Ihr Stripe-Konto, in der Regel innerhalb von zwei Werktagen auf Ihr Bank-Konto. Wir sehen Ihre Einnahmen nicht im Detail, nur die Bestelldaten."
+        },
+        {
+          "slug": "bestellung-ablehnen",
+          "q": "Was passiert, wenn ich eine Bestellung ablehnen muss (Küche voll, zu spät, weit weg)?",
+          "a": "Sie können jede Bestellung mit einem Klick ablehnen und einen kurzen Grund angeben (\"Küche ausgelastet\", \"außerhalb der Lieferzeit\", \"Zutat nicht vorrätig\"). Der Kunde wird informiert und bei Online-Zahlung automatisch komplett zurückerstattet. Keine Gebühren von uns, keine Bearbeitung durch Sie."
+        },
+        {
+          "slug": "wer-liefert",
+          "q": "Wer liefert eigentlich das Essen?",
+          "a": "Sie selbst, mit eigenem Fahrer oder einem von Ihnen beauftragten Kurierdienst. GastroHub übernimmt nicht die Lieferung selbst. Wir liefern nur das Bestellsystem und halten Ihre Gäste in Echtzeit über den Status auf dem Laufenden. Die Logistik bleibt bei Ihnen, so wie heute auch."
+        }
+      ]
+    },
+    {
+      "id": "recht",
+      "title": "Recht & Sicherheit",
+      "items": [
+        {
+          "slug": "ist-dsgvo-konform",
+          "q": "Ist GastroHub DSGVO-konform?",
+          "a": "Ja. Die Bestellplattform ist nach DSGVO aufgebaut. Sie schließen mit uns einen Auftragsverarbeitungsvertrag (AVV) gemäß Art. 28 DSGVO ab, bevor der erste Endkunde bei Ihnen bestellt. Wir verwenden technisch notwendige Cookies, kein Tracking, keine Werbe-Cookies. Endkunden-Daten werden ausschließlich auf Servern in Deutschland (Frankfurt, Hetzner) verarbeitet. Details stehen in unserer Datenschutzerklärung."
+        },
+        {
+          "slug": "wo-werden-daten-gespeichert",
+          "q": "Wo werden meine Daten und die meiner Gäste gespeichert?",
+          "a": "Anwendungsdaten (Speisekarte, Bestellungen, Kundeninformationen) laufen ausschließlich auf Servern in Deutschland, bei Hetzner in Frankfurt. Es gibt keine Datenübertragung in die USA oder andere Drittländer. Lediglich die Marketing-Webseite gastrohub.dev läuft über GitHub Pages — getrennt von der Bestellplattform. Zahlungen über Stripe können nach DSGVO-konformen Standardvertragsklauseln in die USA übermittelt werden; Stripe ist dafür DPF-zertifiziert."
+        },
+        {
+          "slug": "allergene-und-pflichten",
+          "q": "Was ist mit Allergenen und gesetzlichen Pflichten?",
+          "a": "Sie pflegen Allergene und Zusatzstoffe pro Gericht direkt im Dashboard, und der Kunde sieht sie vor der Bestellung. Das System ist auf die deutschen und EU-Vorgaben zur Lebensmittelinformationsverordnung (LMIV) ausgelegt. Die Verantwortung für die inhaltliche Richtigkeit liegt bei Ihnen als Restaurantbetreiber, das System macht Ihnen die Pflege so leicht wie möglich."
+        },
+        {
+          "slug": "vertragsbeziehung-stripe",
+          "q": "Habe ich mit Stripe einen separaten Vertrag?",
+          "a": "Ja. Für die Online-Zahlungsabwicklung richten Sie einen eigenen Stripe Connect Account ein, mit Ihren Bank-Daten und Ihrem Gewerbe-Nachweis. Stripe ist Ihr Zahlungs-Dienstleister, GastroHub ist nur die Plattform, die das einbindet. Das ist der gesetzliche Standard und schützt Sie: Sie haben die volle Kontrolle über Ihre Einnahmen und können bei Bedarf auch ohne GastroHub mit Stripe weiterarbeiten."
+        },
+        {
+          "slug": "button-loesung-widerruf",
+          "q": "Was ist mit der Button-Lösung und Widerrufsrecht?",
+          "a": "Die Button-Lösung (§ 312j Abs. 3 BGB) ist in den Bestellprozess integriert: der Endkunde bestätigt vor dem Klick auf \"Zahlungspflichtig bestellen\", was er kauft, zu welchem Preis und mit welcher Lieferkosten. Für Lebensmittel-Bestellungen gilt das gesetzliche Widerrufsrecht nach § 312g BGB Abs. 2 Nr. 2 und 4 nicht (verderbliche Waren und vor Ort zubereitete Speisen). Das ist in den Plattform-AGB sauber abgebildet."
+        }
+      ]
+    },
+    {
+      "id": "support-vertrag",
+      "title": "Support, Vertrag & Sonstiges",
+      "items": [
+        {
+          "slug": "wie-erreiche-ich-support",
+          "q": "Wie erreiche ich den Support?",
+          "a": "Per E-Mail an kontakt@gastrohub.dev. Werktags antworten wir in der Regel am selben oder nächsten Tag. Im 7%-Provisionsmodell ist der Support unbegrenzt inbegriffen. Im 5%-Modell und im Einmalzahlungsmodell wird Wartung separat berechnet, zu fairen Stundensätzen, immer transparent angekündigt."
+        },
+        {
+          "slug": "vertragslaufzeit",
+          "q": "Wie lange bin ich an einen Vertrag gebunden?",
+          "a": "Im Einmalzahlungsmodell gibt es keine Vertragslaufzeit. Sie zahlen einmal, danach steht die Plattform Ihnen zur Verfügung. Im Provisionsmodell läuft der Vertrag unbestimmt und kann von beiden Seiten mit 30 Tagen Frist zum Monatsende gekündigt werden. Keine Mindestlaufzeit, keine Strafgebühren bei Ausstieg."
+        },
+        {
+          "slug": "mehrere-sprachen",
+          "q": "Kann ich meine Speisekarte mehrsprachig anbieten?",
+          "a": "Ja. Die Plattform unterstützt aktuell Deutsch, Englisch, Arabisch und Türkisch — gleichzeitig, im selben System. Ihr Gast wählt die Sprache, Sie pflegen einmal pro Sprache die Texte. Weitere Sprachen können auf Anfrage ergänzt werden. Sinnvoll für Stadtteile mit gemischter Kundschaft, Touristen-Lagen oder Caterer mit internationalen Firmenkunden."
+        },
+        {
+          "slug": "server-ausfall",
+          "q": "Was passiert, wenn die Plattform mal ausfällt?",
+          "a": "Wir bemühen uns um sehr hohe Verfügbarkeit (Server-Standort Frankfurt, gespiegelte Datenhaltung, regelmäßige Backups). Garantiert ist eine bestimmte Verfügbarkeit nicht, das wäre unseriös. Bei einem Ausfall sind wir schnellstmöglich für Sie erreichbar. Wartungsarbeiten legen wir, soweit möglich, außerhalb typischer Bestellzeiten (frühmorgens). Im Fall der Fälle können Sie Bestellungen weiter telefonisch annehmen, Ihre Daten gehen nicht verloren."
+        }
+      ]
+    }
+  ]
+}
