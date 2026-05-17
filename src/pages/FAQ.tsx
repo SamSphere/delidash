@@ -91,16 +91,7 @@ export default function FAQ() {
                           {item.q}
                         </AccordionTrigger>
                         <AccordionContent className="text-slate-600 text-base leading-relaxed">
-                          <p>{item.a}</p>
-                          <p className="mt-3 text-xs text-slate-400">
-                            <a
-                              href={`#${item.slug}`}
-                              className="hover:text-slate-600"
-                              aria-label={`Direktlink zu Frage: ${item.q}`}
-                            >
-                              Direktlink zu dieser Frage
-                            </a>
-                          </p>
+                          {item.a}
                         </AccordionContent>
                       </AccordionItem>
                     ))}
