@@ -22,7 +22,7 @@ const faqSections = [
       },
       {
         q: "Kann ich von Lieferando oder Uber Eats zu GastroHub wechseln?",
-        a: "Ja, und viele unserer Kunden kommen genau daher. Wir übernehmen Ihr bestehendes Menü, richten Ihr eigenes Bestellsystem ein und begleiten Sie beim Übergang. Sie behalten alle Ihre Kundendaten und zahlen keine Provision mehr an Drittplattformen.",
+        a: "Ja. Wir übernehmen Ihr bestehendes Menü, richten Ihr eigenes Bestellsystem ein und begleiten Sie beim Übergang.",
       },
       {
         q: "Gibt es eine Mindestvertragslaufzeit?",
@@ -105,7 +105,7 @@ const faqSections = [
       },
       {
         q: "Ist GastroHub DSGVO-konform?",
-        a: "Ja. Das System ist auf den europäischen Markt ausgerichtet und DSGVO-konform aufgebaut. Alle Daten werden auf europäischen Servern verarbeitet.",
+        a: "Ja. Anwendungsdaten der Bestellplattform werden ausschließlich auf Servern in Deutschland (Frankfurt) verarbeitet. Die Marketing-Website gastrohub.dev wird über GitHub Pages (USA) ausgeliefert, abgesichert über das EU-US Data Privacy Framework. Details siehe Datenschutzerklärung §3.",
       },
     ],
   },

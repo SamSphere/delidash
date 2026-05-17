@@ -158,7 +158,7 @@ export default function Home() {
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Alle wichtigen Funktionen an einem Ort</h2>
             <p className="text-lg text-slate-600">
-              Vom ersten Kontakt bis zur laufenden Bestellung deckt GastroHub den gesamten Ablauf ab, komplett ohne laufende Kosten.
+              Vom ersten Kontakt bis zur laufenden Bestellung deckt GastroHub den gesamten Ablauf ab. Im Einmalzahlungsmodell ohne laufende Kosten, im Provisionsmodell mit niedriger Beteiligung.
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -259,7 +259,7 @@ export default function Home() {
                   {[
                     "5 % Provision, Grundpaket",
                     "7 % Provision, inkl. Wartung & Support",
-                    "Weit unter Lieferando (15 bis 30 %)",
+                    "Weit unter branchenüblichen Provisionsmodellen",
                     "Vollständiges Bestellsystem",
                   ].map((t, i) => (
                     <li key={i} className="flex items-start gap-2"><Check className="w-4 h-4 text-emerald-500 mt-0.5 shrink-0" />{t}</li>
