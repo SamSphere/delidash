@@ -18,10 +18,8 @@ export default function Impressum() {
       <div className="container mx-auto px-4 max-w-3xl prose prose-slate">
         <h1 className="text-3xl font-bold text-slate-900 mb-8">{tk("title")}</h1>
 
-        {isEn && (
-          <div className="not-prose mb-8 rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-900">
-            {t("translation_disclaimer")}
-          </div>
+        {isEn && tk("disclaimer_inline") && (
+          <p className="text-slate-500 italic">{tk("disclaimer_inline")}</p>
         )}
 
         <h2 className="text-xl font-semibold mt-8 mb-4">{tk("diensteanbieter_h")}</h2>
@@ -33,9 +31,8 @@ export default function Impressum() {
           {tk("diensteanbieter_city")}<br />
           {tk("diensteanbieter_country")}
         </p>
-        <p className="text-sm text-slate-500">
-          {tk("diensteanbieter_note")}
-        </p>
+        <p>{tk("business_location")}</p>
+        <p className="text-sm text-slate-500">{tk("diensteanbieter_note")}</p>
 
         <h2 className="text-xl font-semibold mt-8 mb-4">{tk("kontakt_h")}</h2>
         <p>
@@ -50,17 +47,26 @@ export default function Impressum() {
         <p>
           {tk("diensteanbieter_name")}<br />
           {tk("diensteanbieter_co")}<br />
-          {tk("diensteanbieter_city")}
+          {tk("diensteanbieter_street")}<br />
+          {tk("diensteanbieter_city")}<br />
+          {tk("diensteanbieter_country")}
         </p>
 
-        <h2 className="text-xl font-semibold mt-8 mb-4">{tk("hinweise_h")}</h2>
-        <p>{tk("hinweise_body")}</p>
+        <h2 className="text-xl font-semibold mt-8 mb-4">{tk("haftung_content_h")}</h2>
+        <p>{tk("haftung_content_body")}</p>
+
+        <h2 className="text-xl font-semibold mt-8 mb-4">{tk("haftung_links_h")}</h2>
+        <p>{tk("haftung_links_body")}</p>
+
+        <h2 className="text-xl font-semibold mt-8 mb-4">{tk("urheberrecht_h")}</h2>
+        <p>{tk("urheberrecht_body")}</p>
 
         <h2 className="text-xl font-semibold mt-8 mb-4">{tk("odr_h")}</h2>
         <p>
           {tk("odr_intro")}{" "}
           <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener noreferrer">https://ec.europa.eu/consumers/odr/</a>
         </p>
+        <p>{tk("odr_outro")}</p>
 
         <h2 className="text-xl font-semibold mt-8 mb-4">{tk("vsbg_h")}</h2>
         <p>{tk("vsbg_body")}</p>
