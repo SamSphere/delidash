@@ -1,4 +1,5 @@
 import { Link } from "wouter";
+import { useTranslation } from "react-i18next";
 import { ArrowUpRight, Check, RefreshCw, LayoutDashboard, ShoppingBag, UserRound } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect } from "react";
@@ -6,12 +7,14 @@ import { useEffect } from "react";
 const DEMO_URL = "https://demo.gastrohub.dev/?t=hubbistro-launch-2026";
 
 export default function Demo() {
+  const { t } = useTranslation("demo");
+
   useEffect(() => {
     document.title = "Demo | GastroHub";
     const meta = document.querySelector('meta[name="description"]') ?? Object.assign(document.createElement("meta"), { name: "description" });
-    (meta as HTMLMetaElement).content = "Live-Demo der GastroHub Restaurantplattform. Hub Bistro, sandboxed-live, ohne Registrierung. Sehen Sie Admin-Dashboard und Kundensicht in einem echten Bestellsystem.";
+    (meta as HTMLMetaElement).content = t("meta_description");
     if (!meta.parentNode) document.head.appendChild(meta);
-  }, []);
+  }, [t]);
 
   return (
     <div className="min-h-[100dvh] flex flex-col bg-slate-50">
@@ -19,23 +22,23 @@ export default function Demo() {
         <div className="container mx-auto px-4 max-w-3xl text-center">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary text-primary-hover font-medium text-sm mb-6 border border-primary/20">
             <span className="flex h-2 w-2 rounded-full bg-primary animate-pulse"></span>
-            Live-Demo, kein Login nötig
+            {t("badge")}
           </div>
           <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight leading-tight mb-6 text-slate-900">
-            Probieren Sie <span className="text-primary">Hub Bistro</span>, unser Demo-Restaurant
+            {t("headline_pre")} <span className="text-primary">{t("headline_brand")}</span>{t("headline_post")}
           </h1>
           <p className="text-lg md:text-xl text-slate-700 mb-10 max-w-2xl mx-auto leading-relaxed">
-            Sie sehen das vollständige System wie ein echter Restaurantbesitzer. Speisekarte, Warenkorb, Kasse, Bestellannahme im Admin-Dashboard. Alles funktioniert. Niemand wird belastet, niemand wird benachrichtigt.
+            {t("subline")}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button asChild size="lg" className="h-14 px-8 text-base font-semibold">
               <a href={DEMO_URL} target="_blank" rel="noopener noreferrer" data-testid="button-live-demo">
-                Live-Demo öffnen
+                {t("cta_primary")}
                 <ArrowUpRight className="ml-2 h-5 w-5" />
               </a>
             </Button>
             <Button asChild variant="outline" size="lg" className="h-14 px-8 text-base font-semibold bg-white border-slate-200 text-slate-900 hover:bg-slate-50 hover:text-slate-900">
-              <Link href="/kontakt" data-testid="button-demo-contact">Angebot anfragen</Link>
+              <Link href="/kontakt" data-testid="button-demo-contact">{t("cta_secondary")}</Link>
             </Button>
           </div>
         </div>
@@ -43,35 +46,21 @@ export default function Demo() {
 
       <section className="py-16 lg:py-20 bg-white">
         <div className="container mx-auto px-4 max-w-4xl">
-          <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-10 text-center">Was Sie in der Demo testen können</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-10 text-center">{t("what_title")}</h2>
           <div className="grid md:grid-cols-3 gap-6">
-            <div className="p-6 rounded-2xl border border-slate-200 bg-slate-50">
-              <div className="h-12 w-12 bg-secondary rounded-xl flex items-center justify-center text-primary mb-4">
-                <ShoppingBag className="h-6 w-6" />
+            {[
+              { icon: ShoppingBag, title: t("card_customer_title"), body: t("card_customer_body") },
+              { icon: LayoutDashboard, title: t("card_admin_title"), body: t("card_admin_body") },
+              { icon: UserRound, title: t("card_account_title"), body: t("card_account_body") },
+            ].map((card, i) => (
+              <div key={i} className="p-6 rounded-2xl border border-slate-200 bg-slate-50">
+                <div className="h-12 w-12 bg-secondary rounded-xl flex items-center justify-center text-primary mb-4">
+                  <card.icon className="h-6 w-6" />
+                </div>
+                <h3 className="text-lg font-bold text-slate-900 mb-2">{card.title}</h3>
+                <p className="text-slate-600 leading-relaxed">{card.body}</p>
               </div>
-              <h3 className="text-lg font-bold text-slate-900 mb-2">Kundensicht</h3>
-              <p className="text-slate-600 leading-relaxed">
-                Speisekarte durchblättern, Gerichte in den Warenkorb, Lieferadresse eingeben, zur Kasse. Genau das, was Ihre Gäste am Ende sehen.
-              </p>
-            </div>
-            <div className="p-6 rounded-2xl border border-slate-200 bg-slate-50">
-              <div className="h-12 w-12 bg-secondary rounded-xl flex items-center justify-center text-primary mb-4">
-                <LayoutDashboard className="h-6 w-6" />
-              </div>
-              <h3 className="text-lg font-bold text-slate-900 mb-2">Admin-Dashboard</h3>
-              <p className="text-slate-600 leading-relaxed">
-                Bestellungen annehmen, Speisekarte pflegen, Lieferzonen verwalten, Öffnungszeiten setzen. Kein Login, ein Klick auf „Demo-Admin betreten" reicht.
-              </p>
-            </div>
-            <div className="p-6 rounded-2xl border border-slate-200 bg-slate-50">
-              <div className="h-12 w-12 bg-secondary rounded-xl flex items-center justify-center text-primary mb-4">
-                <UserRound className="h-6 w-6" />
-              </div>
-              <h3 className="text-lg font-bold text-slate-900 mb-2">Kundenkonto</h3>
-              <p className="text-slate-600 leading-relaxed">
-                Anlegen, einloggen, Bestellhistorie sehen, Adressen speichern. Funktioniert mit beliebigen Testdaten, niemand bekommt eine echte E-Mail.
-              </p>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -83,20 +72,14 @@ export default function Demo() {
               <RefreshCw className="h-6 w-6" />
             </div>
             <div className="flex-1">
-              <h3 className="text-lg font-bold text-slate-900 mb-2">Sicher und ohne Folgen</h3>
+              <h3 className="text-lg font-bold text-slate-900 mb-2">{t("safety_title")}</h3>
               <ul className="space-y-2 text-slate-600">
-                <li className="flex items-start gap-2">
-                  <Check className="h-5 w-5 text-emerald-600 shrink-0 mt-0.5" />
-                  <span>Keine echten Zahlungen. Stripe ist deaktiviert.</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <Check className="h-5 w-5 text-emerald-600 shrink-0 mt-0.5" />
-                  <span>Keine echten Benachrichtigungen. Niemand wird per E-Mail, SMS oder Telegram informiert.</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <Check className="h-5 w-5 text-emerald-600 shrink-0 mt-0.5" />
-                  <span>Die Demo wird nachts zurückgesetzt. Alles, was Sie eingeben, ist temporär.</span>
-                </li>
+                {["safety_b1", "safety_b2", "safety_b3"].map((k) => (
+                  <li key={k} className="flex items-start gap-2">
+                    <Check className="h-5 w-5 text-emerald-600 shrink-0 mt-0.5" />
+                    <span>{t(k)}</span>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
@@ -105,16 +88,14 @@ export default function Demo() {
 
       <section className="py-16 lg:py-20 bg-white">
         <div className="container mx-auto px-4 max-w-2xl text-center">
-          <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">Fragen, die nicht in der Demo stehen?</h2>
-          <p className="text-slate-600 mb-8">
-            Was kostet die Einrichtung in Ihrem Fall? Welches Preismodell passt? Wie lange dauert der Wechsel von Ihrem aktuellen System? In 10 Minuten am Telefon meistens geklärt.
-          </p>
+          <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">{t("questions_title")}</h2>
+          <p className="text-slate-600 mb-8">{t("questions_body")}</p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Button asChild size="lg">
-              <Link href="/kontakt">Kontakt aufnehmen</Link>
+              <Link href="/kontakt">{t("questions_contact")}</Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="bg-white">
-              <Link href="/faq">Häufige Fragen</Link>
+              <Link href="/faq">{t("questions_faq")}</Link>
             </Button>
           </div>
         </div>

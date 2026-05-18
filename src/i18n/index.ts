@@ -4,23 +4,40 @@ import LanguageDetector from "i18next-browser-languagedetector";
 
 import deCommon from "@/locales/de/common.json";
 import enCommon from "@/locales/en/common.json";
+import deHome from "@/locales/de/home.json";
+import enHome from "@/locales/en/home.json";
+import deDemo from "@/locales/de/demo.json";
+import enDemo from "@/locales/en/demo.json";
+import deContact from "@/locales/de/contact.json";
+import enContact from "@/locales/en/contact.json";
 
 export const SUPPORTED_LANGS = ["de", "en"] as const;
 export type SupportedLang = (typeof SUPPORTED_LANGS)[number];
 export const DEFAULT_LANG: SupportedLang = "de";
+
+// URL-prefix detection runs first: /en/* paths force English regardless of localStorage.
+function langFromUrl(): SupportedLang | null {
+  if (typeof window === "undefined") return null;
+  return window.location.pathname.startsWith("/en/") || window.location.pathname === "/en"
+    ? "en"
+    : null;
+}
+
+const urlLang = langFromUrl();
 
 void i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
     resources: {
-      de: { common: deCommon },
-      en: { common: enCommon },
+      de: { common: deCommon, home: deHome, demo: deDemo, contact: deContact },
+      en: { common: enCommon, home: enHome, demo: enDemo, contact: enContact },
     },
+    lng: urlLang ?? undefined,
     fallbackLng: DEFAULT_LANG,
     supportedLngs: SUPPORTED_LANGS as unknown as string[],
     defaultNS: "common",
-    ns: ["common"],
+    ns: ["common", "home", "demo", "contact"],
     interpolation: { escapeValue: false },
     detection: {
       order: ["localStorage", "navigator"],

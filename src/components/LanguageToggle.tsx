@@ -14,7 +14,15 @@ export function LanguageToggle({ className = "" }: { className?: string }) {
 
   function setLang(next: SupportedLang) {
     if (next === current) return;
-    void i18n.changeLanguage(next);
+    // Switch language via real navigation so prerendered EN HTML loads and URL reflects state.
+    const path = window.location.pathname;
+    const onEn = path.startsWith("/en/") || path === "/en";
+    const stripped = onEn ? (path.replace(/^\/en/, "") || "/") : path;
+    const target = next === "en"
+      ? (stripped === "/" ? "/en" : `/en${stripped}`)
+      : stripped;
+    if (typeof localStorage !== "undefined") localStorage.setItem("gastrohub_lang", next);
+    window.location.assign(target + window.location.hash);
   }
 
   return (

@@ -1,13 +1,16 @@
 import { Link } from "wouter";
 import { motion, type Variants } from "framer-motion";
 import { ArrowRight, CheckCircle2, TrendingUp, ShieldCheck, Clock, Check, PackageOpen, Globe, UserRound, Settings, ShoppingCart, Languages, LayoutDashboard, Sparkles } from "lucide-react";
+import { useTranslation, Trans } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { useEffect } from "react";
 
 export default function Home() {
+  const { t } = useTranslation("home");
+
   useEffect(() => {
-    document.title = "GastroHub | Restaurant Bestell-App, Admin & Website";
+    document.title = t("meta.title");
     const updateMeta = (name: string, content: string, attr: "name" | "property" = "name") => {
       let tag = document.head.querySelector(`meta[${attr}="${name}"]`);
       if (!tag) {
@@ -17,76 +20,86 @@ export default function Home() {
       }
       tag.setAttribute("content", content);
     };
-    updateMeta("description", "GastroHub ist die moderne Restaurantplattform für Bestellungen, Menüverwaltung, Kundenkonto und mobiles Owner-Dashboard.");
+    updateMeta("description", t("meta.description"));
     updateMeta("robots", "index, follow");
-    updateMeta("og:title", "GastroHub | Restaurant Bestell-App, Admin & Website", "property");
-    updateMeta("og:description", "Moderne Restaurantplattform mit Landingpage, Kunden-App und mobilem Owner-Dashboard.", "property");
-    updateMeta("twitter:title", "GastroHub | Restaurant Bestell-App, Admin & Website");
-    updateMeta("twitter:description", "Restaurantplattform mit Website, App und Owner-Dashboard.");
-  }, []);
+    updateMeta("og:title", t("meta.title"), "property");
+    updateMeta("og:description", t("meta.description"), "property");
+    updateMeta("twitter:title", t("meta.title"));
+    updateMeta("twitter:description", t("meta.description"));
+  }, [t]);
 
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
+    visible: { opacity: 1, transition: { staggerChildren: 0.1 } },
   };
-
   const itemVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
   };
 
+  const featureItems = [
+    { icon: Sparkles, k: "ki" },
+    { icon: Globe, k: "website" },
+    { icon: LayoutDashboard, k: "menu" },
+    { icon: ShoppingCart, k: "order" },
+    { icon: UserRound, k: "account" },
+    { icon: Settings, k: "admin" },
+    { icon: Languages, k: "lang" },
+    { icon: TrendingUp, k: "mobile" },
+    { icon: Check, k: "pay" },
+    { icon: CheckCircle2, k: "law" },
+    { icon: ArrowRight, k: "contact" },
+  ] as const;
+
+  const comparisonRows: Array<{ labelKey: string; lieferando: string; ubereats: string; gastrohub: string }> = [
+    { labelKey: "row_provision", lieferando: t("comparison.competitor_high_commission"), ubereats: t("comparison.competitor_high_commission"), gastrohub: t("comparison.gh_commission") },
+    { labelKey: "row_monthly", lieferando: t("comparison.lf_monthly"), ubereats: t("comparison.uber_monthly"), gastrohub: t("comparison.gh_monthly") },
+    { labelKey: "row_customers", lieferando: t("comparison.platform"), ubereats: t("comparison.platform"), gastrohub: t("comparison.yours") },
+    { labelKey: "row_branding", lieferando: t("comparison.no"), ubereats: t("comparison.no"), gastrohub: t("comparison.full") },
+    { labelKey: "row_payment", lieferando: t("comparison.platform"), ubereats: t("comparison.platform"), gastrohub: t("comparison.direct_stripe") },
+  ];
+
   return (
     <div className="flex flex-col min-h-[100dvh]">
-      {/* Hero Section */}
+      {/* Hero */}
       <section className="relative overflow-hidden bg-gradient-to-b from-secondary/40 via-background to-background pt-24 pb-32 lg:pt-36 lg:pb-40 text-foreground">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#cbd5e11a_1px,transparent_1px),linear-gradient(to_bottom,#cbd5e11a_1px,transparent_1px)] bg-[size:18px_28px]"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <motion.div 
-              initial="hidden"
-              animate="visible"
-              variants={containerVariants}
-              className="max-w-2xl"
-            >
+            <motion.div initial="hidden" animate="visible" variants={containerVariants} className="max-w-2xl">
               <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary text-primary-hover font-medium text-sm mb-6 border border-primary/20">
                 <span className="flex h-2 w-2 rounded-full bg-primary animate-pulse"></span>
-                Für Restaurants und Gastronomie
+                {t("hero.badge")}
               </motion.div>
               <motion.h1 variants={itemVariants} className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] mb-6">
-                Einmal zahlen.<br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-hover">Für immer Ihr Restaurant behalten.</span>
+                {t("hero.headline_line1")}<br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-hover">{t("hero.headline_line2")}</span>
               </motion.h1>
               <motion.p variants={itemVariants} className="text-lg md:text-xl text-slate-700 mb-8 max-w-xl leading-relaxed">
-                GastroHub ist Ihre eigene Bestellplattform. Sie behalten Ihre Gäste, Ihre Marke und einen viel größeren Teil jedes Umsatzes, ohne Abhängigkeit von Liefer-Apps.
+                {t("hero.subline")}
               </motion.p>
               <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4">
                 <Button asChild size="lg" className="h-14 px-8 text-base font-semibold">
                   <Link href="/demo" data-testid="button-hero-demo">
-                    Demo ansehen <ArrowRight className="ml-2 h-5 w-5" />
+                    {t("hero.cta_primary")} <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
                 </Button>
                 <Button asChild variant="outline" size="lg" className="h-14 px-8 text-base font-semibold bg-white border-slate-200 text-slate-900 hover:bg-slate-50 hover:text-slate-900">
-                  <Link href="/kontakt" data-testid="button-hero-contact">Jetzt kontaktieren</Link>
+                  <Link href="/kontakt" data-testid="button-hero-contact">{t("hero.cta_secondary")}</Link>
                 </Button>
               </motion.div>
               <motion.div variants={itemVariants} className="mt-8 flex items-center gap-6 text-sm text-slate-600">
                 <div className="flex items-center gap-1.5">
                   <CheckCircle2 className="h-4 w-4 text-emerald-500" />
-                  <span>Für Restaurantbetrieb gebaut</span>
+                  <span>{t("hero.check1")}</span>
                 </div>
                 <div className="flex items-center gap-1.5">
                   <CheckCircle2 className="h-4 w-4 text-emerald-500" />
-                  <span>Alles vom Handy steuerbar</span>
+                  <span>{t("hero.check2")}</span>
                 </div>
               </motion.div>
             </motion.div>
 
-            {/* Dashboard Illustration */}
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -117,122 +130,86 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Value Propositions */}
+      {/* Value props */}
       <section className="py-20 lg:py-32 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Warum GastroHub für Restaurants?</h2>
-            <p className="text-lg text-slate-600">
-              Eine zentrale Plattform für Restaurant-Website, App-Version, Menüpflege und Owner-Dashboard.
-            </p>
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">{t("valueprop.title")}</h2>
+            <p className="text-lg text-slate-600">{t("valueprop.subtitle")}</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0 }}>
-              <Card className="p-8 h-full border-none shadow-md hover:shadow-lg transition-shadow bg-white">
-                <div className="h-12 w-12 bg-sky-100 rounded-xl flex items-center justify-center text-sky-600 mb-6">
-                  <TrendingUp className="h-6 w-6" />
-                </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-3">Mehr Direktbestellungen</h3>
-                <p className="text-slate-600 leading-relaxed">
-                  Ihre Gäste bestellen direkt bei Ihnen, ohne den Umweg über Liefer-Apps und ohne deren hohe Provisionen.
-                </p>
-              </Card>
-            </motion.div>
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.1 }}>
-              <Card className="p-8 h-full border-none shadow-md hover:shadow-lg transition-shadow bg-white">
-                <div className="h-12 w-12 bg-sky-100 rounded-xl flex items-center justify-center text-sky-600 mb-6">
-                  <ShieldCheck className="h-6 w-6" />
-                </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-3">Volle Kontrolle für den Betrieb</h3>
-                <p className="text-slate-600 leading-relaxed">
-                  Eigene Preise, eigene Regeln, eigene Kundendaten. Ideal für Restaurants, die unabhängig und professionell verkaufen wollen.
-                </p>
-              </Card>
-            </motion.div>
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.2 }}>
-              <Card className="p-8 h-full border-none shadow-md hover:shadow-lg transition-shadow bg-white">
-                <div className="h-12 w-12 bg-sky-100 rounded-xl flex items-center justify-center text-sky-600 mb-6">
-                  <Clock className="h-6 w-6" />
-                </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-3">Schnell im Restaurantalltag</h3>
-                <p className="text-slate-600 leading-relaxed">
-                  Menü, Fotos und Bestellungen sind in zwei bis vier Wochen eingerichtet und danach sofort nutzbar.
-                </p>
-              </Card>
-            </motion.div>
+            {[
+              { icon: TrendingUp, title: t("valueprop.card1_title"), body: t("valueprop.card1_body") },
+              { icon: ShieldCheck, title: t("valueprop.card2_title"), body: t("valueprop.card2_body") },
+              { icon: Clock, title: t("valueprop.card3_title"), body: t("valueprop.card3_body") },
+            ].map((card, idx) => (
+              <motion.div key={idx} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: idx * 0.1 }}>
+                <Card className="p-8 h-full border-none shadow-md hover:shadow-lg transition-shadow bg-white">
+                  <div className="h-12 w-12 bg-sky-100 rounded-xl flex items-center justify-center text-sky-600 mb-6">
+                    <card.icon className="h-6 w-6" />
+                  </div>
+                  <h3 className="text-xl font-bold text-slate-900 mb-3">{card.title}</h3>
+                  <p className="text-slate-600 leading-relaxed">{card.body}</p>
+                </Card>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
+      {/* Features grid */}
       <section className="py-20 lg:py-32 bg-slate-50">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Alle wichtigen Funktionen an einem Ort</h2>
-            <p className="text-lg text-slate-600">
-              Vom ersten Kontakt bis zur laufenden Bestellung deckt GastroHub den gesamten Ablauf ab. Drei Preismodelle, Sie wählen das passende für Ihr Restaurant.
-            </p>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">{t("features.title")}</h2>
+            <p className="text-lg text-slate-600">{t("features.subtitle")}</p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              { icon: Sparkles, title: "KI-Lieferantenbestellung", text: "Ein Klick aus dem Admin-Dashboard: Die KI verfasst die komplette Bestellung an Ihren Lieferanten als E-Mail oder WhatsApp, in der gewünschten Sprache. Spart täglich Minuten und verhindert Tippfehler." },
-              { icon: Globe, title: "Eigene Restaurant-Website", text: "Eigene Bestellseite mit Ihrer Marke, Speisekarte und direktem Bestellweg, ohne Umweg über Drittplattformen." },
-              { icon: LayoutDashboard, title: "Menüverwaltung", text: "Kategorien, Varianten, Allergene, Fotos und Tagesangebote pflegen Sie komplett selbst, ohne technische Kenntnisse." },
-              { icon: ShoppingCart, title: "Bestellprozess", text: "Vom Warenkorb über Lieferung oder Abholung bis zur Bestätigung läuft alles aus einer Hand und mobil-optimiert." },
-              { icon: UserRound, title: "Kundenkonto", text: "Login, Bestellhistorie, gespeicherte Adressen, Zahlungsarten und Wunschliste für wiederkehrende Gäste." },
-              { icon: Settings, title: "Admin auf dem Handy", text: "Bestellungen annehmen, Menü pflegen, Lieferzonen, Öffnungszeiten, Gutscheine und Personal, alles direkt am Telefon." },
-              { icon: Languages, title: "Mehrsprachig", text: "Verfügbar auf Deutsch, Englisch, Arabisch und Türkisch, weitere Sprachen auf Anfrage." },
-              { icon: TrendingUp, title: "Mobile-optimiert für Gäste", text: "Ihre Gäste bestellen auf Smartphone, Tablet oder Desktop, ganz ohne App-Installation." },
-              { icon: Check, title: "Zahlungen", text: "Online-Zahlungen über Stripe (Kreditkarte, PayPal) und optional Barzahlung bei Lieferung oder Abholung." },
-              { icon: CheckCircle2, title: "Recht & DSGVO", text: "Impressum, AGB, Datenschutz und DSGVO-konformer Cookie-Hinweis sind direkt eingebunden." },
-              { icon: ArrowRight, title: "Kontaktwege", text: "E-Mail, Telefon und Demo-Buchung, für direkte Anfragen ohne Umwege." },
-            ].map((feature) => (
-              <Card key={feature.title} className="p-6 border-slate-200 shadow-sm hover:shadow-md transition-shadow bg-slate-50/80">
+            {featureItems.map((feature) => (
+              <Card key={feature.k} className="p-6 border-slate-200 shadow-sm hover:shadow-md transition-shadow bg-slate-50/80">
                 <feature.icon className="h-6 w-6 text-primary mb-4" />
-                <h3 className="text-lg font-semibold text-slate-900 mb-2">{feature.title}</h3>
-                <p className="text-slate-600 leading-relaxed">{feature.text}</p>
+                <h3 className="text-lg font-semibold text-slate-900 mb-2">{t(`features.${feature.k}_title`)}</h3>
+                <p className="text-slate-600 leading-relaxed">{t(`features.${feature.k}_text`)}</p>
               </Card>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Comparison: GastroHub vs. Lieferando */}
+      {/* Comparison */}
       <section className="py-20 lg:py-28 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Plattformgebühren im Vergleich</h2>
-            <p className="text-lg text-slate-600">Vergleichen Sie selbst, und rechnen Sie nach, was Sie jährlich sparen.</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">{t("comparison.title")}</h2>
+            <p className="text-lg text-slate-600">{t("comparison.subtitle")}</p>
           </div>
           <div className="max-w-3xl mx-auto overflow-x-auto">
             <div className="grid grid-cols-4 text-xs font-semibold text-slate-500 uppercase tracking-wide mb-3 px-4 min-w-[560px]">
               <div></div>
-              <div className="text-center">Lieferando</div>
-              <div className="text-center">Uber Eats</div>
-              <div className="text-center text-primary">GastroHub</div>
+              <div className="text-center">{t("comparison.col_lieferando")}</div>
+              <div className="text-center">{t("comparison.col_ubereats")}</div>
+              <div className="text-center text-primary">{t("comparison.col_gastrohub")}</div>
             </div>
-            {[
-              { label: "Provision", lieferando: "Branchenüblich deutlich höhere Provisionen", ubereats: "Branchenüblich deutlich höhere Provisionen", gastrohub: "0 %, 5 % oder 7 %" },
-              { label: "Monatl. Gebühr", lieferando: "Ab €99/Mo.", ubereats: "Ab €0 (höhere %)", gastrohub: "Ab 149 €" },
-              { label: "Kundendaten", lieferando: "Plattform", ubereats: "Plattform", gastrohub: "Ihnen" },
-              { label: "Eigenes Branding", lieferando: "Nein", ubereats: "Nein", gastrohub: "Vollständig" },
-              { label: "Zahlung", lieferando: "Plattform", ubereats: "Plattform", gastrohub: "Direkt (Stripe)" },
-            ].map((row, i) => (
+            {comparisonRows.map((row, i) => (
               <div key={i} className={`grid grid-cols-4 px-4 py-4 rounded-xl mb-2 items-center min-w-[560px] ${i % 2 === 0 ? "bg-slate-50" : "bg-white"}`}>
-                <div className="text-sm font-medium text-slate-700">{row.label}</div>
+                <div className="text-sm font-medium text-slate-700">{t(`comparison.${row.labelKey}`)}</div>
                 <div className="text-center text-sm text-red-500 font-medium">{row.lieferando}</div>
                 <div className="text-center text-sm text-red-400 font-medium">{row.ubereats}</div>
                 <div className="text-center text-sm text-emerald-600 font-semibold">{row.gastrohub}</div>
               </div>
             ))}
             <div className="mt-6 bg-secondary/40 border border-primary/15 rounded-2xl p-6 text-center">
-              <p className="text-slate-700 text-base">
-                Bei branchenüblichen Plattformprovisionen können bei monatlichen Umsätzen im fünfstelligen Bereich erhebliche Kosten anfallen, die mit GastroHub deutlich reduziert werden.
-              </p>
+              <p className="text-slate-700 text-base">{t("comparison.savings_text")}</p>
               <p className="text-slate-700 text-base mt-2">
-                Mit GastroHub zahlen Sie <span className="font-bold text-emerald-600">deutlich weniger</span>, und behalten den Rest.
+                <Trans
+                  i18nKey="comparison.savings_text2"
+                  ns="home"
+                  components={{ strong: <span className="font-bold text-emerald-600" /> }}
+                  values={{ strong: t("comparison.savings_strong") }}
+                />
               </p>
-              <p className="text-xs text-slate-400 mt-4">* Angaben basieren auf veröffentlichten Standardkonditionen. Tatsächliche Provisionsraten können je nach individuellem Vertrag abweichen. Lieferando und Uber Eats sind eingetragene Marken ihrer jeweiligen Inhaber. Diese Darstellung dient dem sachlichen Preisvergleich gemäß § 6 UWG.</p>
+              <p className="text-xs text-slate-400 mt-4">{t("comparison.disclaimer")}</p>
             </div>
           </div>
         </div>
@@ -242,73 +219,56 @@ export default function Home() {
       <section className="py-20 lg:py-28 bg-slate-50">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Flexible Preismodelle</h2>
-            <p className="text-lg text-slate-600 mb-10">
-              Drei Modelle, alle mit 12 Monaten Mindestlaufzeit. Sie wählen, was zu Ihrem Restaurant passt.
-            </p>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">{t("pricing.title")}</h2>
+            <p className="text-lg text-slate-600 mb-10">{t("pricing.subtitle")}</p>
             <div className="grid md:grid-cols-3 gap-6 mb-8">
               {/* Einmalzahlung */}
               <div className="bg-white rounded-2xl shadow-md border border-slate-200 p-7 text-left flex flex-col">
-                <div className="text-xl font-extrabold text-slate-900 mb-1">Einmalzahlung</div>
-                <div className="text-3xl font-extrabold text-primary mt-2 mb-1">ab 2.500&thinsp;€</div>
-                <div className="text-slate-500 text-sm mb-5">Einrichtungsgebühr</div>
+                <div className="text-xl font-extrabold text-slate-900 mb-1">{t("pricing.einmal_label")}</div>
+                <div className="text-3xl font-extrabold text-primary mt-2 mb-1">{t("pricing.einmal_price")}</div>
+                <div className="text-slate-500 text-sm mb-5">{t("pricing.einmal_suffix")}</div>
                 <ul className="space-y-2.5 text-sm text-slate-700 flex-1">
-                  {[
-                    "149&thinsp;€/Monat (Hosting, Domain, E-Mail, Basis-Wartung)",
-                    "0 % Provision pro Bestellung",
-                    "Support separat (90&thinsp;€/Stunde)",
-                    "12 Monate Mindestlaufzeit",
-                  ].map((t, i) => (
-                    <li key={i} className="flex items-start gap-2">
+                  {["einmal_b1", "einmal_b2", "einmal_b3", "einmal_b4"].map((k) => (
+                    <li key={k} className="flex items-start gap-2">
                       <Check className="w-4 h-4 text-emerald-500 mt-0.5 shrink-0" />
-                      <span dangerouslySetInnerHTML={{ __html: t }} />
+                      <span>{t(`pricing.${k}`)}</span>
                     </li>
                   ))}
                 </ul>
               </div>
               {/* 5% Provision */}
               <div className="bg-white rounded-2xl shadow-md border border-slate-200 p-7 text-left flex flex-col">
-                <div className="text-xl font-extrabold text-slate-900 mb-1">5 % Provision</div>
-                <div className="text-3xl font-extrabold text-primary mt-2 mb-1">ab 499&thinsp;€</div>
-                <div className="text-slate-500 text-sm mb-5">Einrichtungsgebühr</div>
+                <div className="text-xl font-extrabold text-slate-900 mb-1">{t("pricing.p5_label")}</div>
+                <div className="text-3xl font-extrabold text-primary mt-2 mb-1">{t("pricing.p5_price")}</div>
+                <div className="text-slate-500 text-sm mb-5">{t("pricing.p5_suffix")}</div>
                 <ul className="space-y-2.5 text-sm text-slate-700 flex-1">
-                  {[
-                    "5 % pro Bestellung",
-                    "Mindestens 149&thinsp;€/Monat",
-                    "Support separat (90&thinsp;€/Stunde)",
-                    "12 Monate Mindestlaufzeit",
-                  ].map((t, i) => (
-                    <li key={i} className="flex items-start gap-2">
+                  {["p5_b1", "p5_b2", "p5_b3", "p5_b4"].map((k) => (
+                    <li key={k} className="flex items-start gap-2">
                       <Check className="w-4 h-4 text-emerald-500 mt-0.5 shrink-0" />
-                      <span dangerouslySetInnerHTML={{ __html: t }} />
+                      <span>{t(`pricing.${k}`)}</span>
                     </li>
                   ))}
                 </ul>
               </div>
               {/* 7% All-Inclusive (recommended) */}
               <div className="bg-white rounded-2xl shadow-md border-2 border-primary p-7 text-left flex flex-col relative">
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full">Empfohlen</div>
-                <div className="text-xl font-extrabold text-slate-900 mb-1">7 % All-Inclusive</div>
-                <div className="text-3xl font-extrabold text-primary mt-2 mb-1">ab 499&thinsp;€</div>
-                <div className="text-slate-500 text-sm mb-5">Einrichtungsgebühr</div>
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full">{t("pricing.recommended")}</div>
+                <div className="text-xl font-extrabold text-slate-900 mb-1">{t("pricing.p7_label")}</div>
+                <div className="text-3xl font-extrabold text-primary mt-2 mb-1">{t("pricing.p7_price")}</div>
+                <div className="text-slate-500 text-sm mb-5">{t("pricing.p7_suffix")}</div>
                 <ul className="space-y-2.5 text-sm text-slate-700 flex-1">
-                  {[
-                    "7 % pro Bestellung",
-                    "Mindestens 249&thinsp;€/Monat",
-                    "Support und Wartung komplett inklusive",
-                    "12 Monate Mindestlaufzeit",
-                  ].map((t, i) => (
-                    <li key={i} className="flex items-start gap-2">
+                  {["p7_b1", "p7_b2", "p7_b3", "p7_b4"].map((k) => (
+                    <li key={k} className="flex items-start gap-2">
                       <Check className="w-4 h-4 text-emerald-500 mt-0.5 shrink-0" />
-                      <span dangerouslySetInnerHTML={{ __html: t }} />
+                      <span>{t(`pricing.${k}`)}</span>
                     </li>
                   ))}
                 </ul>
               </div>
             </div>
-            <p className="text-slate-500 text-sm mb-6">Alle Preise abhängig von Restaurantgröße und Anforderungen, sprechen Sie uns an.</p>
+            <p className="text-slate-500 text-sm mb-6">{t("pricing.footnote")}</p>
             <Button asChild size="lg" className="h-14 px-10 text-base font-semibold">
-              <Link href="/kontakt">Angebot anfragen</Link>
+              <Link href="/kontakt">{t("pricing.cta")}</Link>
             </Button>
           </div>
         </div>
@@ -319,45 +279,30 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">So einfach funktioniert es</h2>
-              <p className="text-lg text-slate-600 mb-8 leading-relaxed">
-                Wir haben den Prozess so unkompliziert wie möglich gestaltet. Sie konzentrieren sich auf das Kochen, wir auf die Technik.
-              </p>
-              
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">{t("how.title")}</h2>
+              <p className="text-lg text-slate-600 mb-8 leading-relaxed">{t("how.subtitle")}</p>
+
               <div className="space-y-8">
-                <div className="flex gap-4">
-                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold text-lg">1</div>
-                  <div>
-                    <h4 className="text-xl font-bold text-slate-900 mb-2">Anfragen</h4>
-                    <p className="text-slate-600">Schreiben Sie uns kurz. Wir besprechen Ihr Setup und das passende Preismodell, unverbindlich und kostenlos.</p>
+                {[1, 2, 3].map((n) => (
+                  <div key={n} className="flex gap-4">
+                    <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold text-lg">{n}</div>
+                    <div>
+                      <h4 className="text-xl font-bold text-slate-900 mb-2">{t(`how.step${n}_title`)}</h4>
+                      <p className="text-slate-600">{t(`how.step${n}_body`)}</p>
+                    </div>
                   </div>
-                </div>
-                <div className="flex gap-4">
-                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold text-lg">2</div>
-                  <div>
-                    <h4 className="text-xl font-bold text-slate-900 mb-2">Menü einrichten</h4>
-                    <p className="text-slate-600">Wir importieren Ihr bestehendes Menü oder helfen Ihnen beim Anlegen Ihrer Gerichte.</p>
-                  </div>
-                </div>
-                <div className="flex gap-4">
-                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold text-lg">3</div>
-                  <div>
-                    <h4 className="text-xl font-bold text-slate-900 mb-2">Bestellungen empfangen</h4>
-                    <p className="text-slate-600">Starten Sie den Verkauf über Ihre eigene Website und verwalten Sie Bestellungen im Dashboard.</p>
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
-            
+
             <div className="relative">
               <div className="aspect-square max-w-md mx-auto bg-slate-100 rounded-full flex items-center justify-center relative shadow-inner">
-                {/* Abstract shape representing the platform */}
                 <div className="absolute inset-4 rounded-full border-4 border-dashed border-primary/20 animate-[spin_60s_linear_infinite]"></div>
                 <div className="absolute inset-12 rounded-full border-4 border-primary/30 animate-[spin_40s_linear_infinite_reverse]"></div>
                 <div className="w-48 h-48 bg-white shadow-xl rounded-2xl z-10 flex flex-col items-center justify-center p-6 text-center rotate-3 hover:rotate-0 transition-transform">
                   <PackageOpen className="w-16 h-16 text-primary mb-4" />
-                  <div className="font-bold text-slate-900">Schnell startklar</div>
-                  <div className="text-sm text-slate-500">Wir begleiten Sie beim Setup</div>
+                  <div className="font-bold text-slate-900">{t("how.illustration_title")}</div>
+                  <div className="text-sm text-slate-500">{t("how.illustration_subtitle")}</div>
                 </div>
               </div>
             </div>
@@ -368,21 +313,19 @@ export default function Home() {
       {/* Final CTA */}
       <section className="py-24 bg-white text-center text-slate-900">
         <div className="container mx-auto px-4 max-w-4xl">
-          <h2 className="text-3xl md:text-5xl font-bold mb-6 leading-tight">Ihr Restaurant. Ihre Bestellungen.</h2>
-            <p className="text-xl text-slate-600 mb-10 max-w-2xl mx-auto">
-            Wählen Sie das Modell, das zu Ihnen passt, deutlich günstiger als Lieferando, ohne Abhängigkeit von fremden Plattformen.
-          </p>
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 leading-tight">{t("final_cta.title")}</h2>
+          <p className="text-xl text-slate-600 mb-10 max-w-2xl mx-auto">{t("final_cta.subline")}</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Button asChild size="lg" className="h-14 px-8 text-lg font-semibold bg-sky-600 text-white hover:bg-sky-700">
-              <Link href="/demo" data-testid="button-cta-demo">Demo ansehen</Link>
+              <Link href="/demo" data-testid="button-cta-demo">{t("final_cta.primary")}</Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="h-14 px-8 text-lg font-semibold bg-white border-slate-200 text-slate-900 hover:bg-slate-50 hover:text-slate-900">
-              <Link href="/kontakt" data-testid="button-cta-contact">Fragen? Kontaktieren Sie uns</Link>
+              <Link href="/kontakt" data-testid="button-cta-contact">{t("final_cta.secondary")}</Link>
             </Button>
           </div>
           <div className="mt-8 text-slate-500 text-sm flex items-center justify-center gap-4">
-            <span className="flex items-center"><Check className="w-4 h-4 mr-1 text-emerald-500" /> Unverbindliches Erstgespräch</span>
-            <span className="flex items-center"><Check className="w-4 h-4 mr-1 text-emerald-500" /> Weit unter Lieferando-Konditionen</span>
+            <span className="flex items-center"><Check className="w-4 h-4 mr-1 text-emerald-500" /> {t("final_cta.check1")}</span>
+            <span className="flex items-center"><Check className="w-4 h-4 mr-1 text-emerald-500" /> {t("final_cta.check2")}</span>
           </div>
         </div>
       </section>
