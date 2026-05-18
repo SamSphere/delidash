@@ -1,15 +1,8 @@
 {
   "meta_description": "Kontaktieren Sie GastroHub. Wir helfen Ihnen beim Aufbau Ihres eigenen Restaurant-Bestellsystems ohne Provision. Antwort werktags am selben oder nächsten Tag.",
   "title": "Kontakt aufnehmen",
-  "subtitle": "Haben Sie Fragen? Schreiben Sie uns. Wir antworten werktags in der Regel am selben oder nächsten Tag.",
-  "form_name": "Name",
-  "form_email": "E-Mail",
-  "form_restaurant": "Restaurantname",
-  "form_phone": "Telefon",
-  "form_message": "Nachricht",
-  "form_required_suffix": "*",
-  "submit": "Anfrage senden",
-  "success_title": "Vielen Dank für Ihre Nachricht!",
-  "success_body": "Wir haben Ihre Anfrage erhalten und melden uns werktags am selben oder nächsten Tag bei Ihnen zurück.",
-  "fallback": "Oder direkt per E-Mail an"
+  "subtitle": "Haben Sie Fragen? Schreiben Sie uns oder rufen Sie an. Wir antworten werktags in der Regel am selben oder nächsten Tag.",
+  "email_label": "E-Mail",
+  "phone_label": "Telefon",
+  "response_note": "Wir antworten werktags am selben oder nächsten Tag."
 }

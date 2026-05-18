@@ -1,15 +1,8 @@
 {
   "meta_description": "Contact GastroHub. We help you build your own restaurant ordering system without commissions. We reply on working days, same or next day.",
   "title": "Get in touch",
-  "subtitle": "Got questions? Drop us a message. We reply on working days, usually same or next day.",
-  "form_name": "Name",
-  "form_email": "Email",
-  "form_restaurant": "Restaurant name",
-  "form_phone": "Phone",
-  "form_message": "Message",
-  "form_required_suffix": "*",
-  "submit": "Send enquiry",
-  "success_title": "Thanks for your message!",
-  "success_body": "We've received your enquiry and will reply on working days, same or next day.",
-  "fallback": "Or email us directly at"
+  "subtitle": "Got questions? Send us an email or give us a call. We reply on working days, usually same or next day.",
+  "email_label": "Email",
+  "phone_label": "Phone",
+  "response_note": "We reply on working days, same or next day."
 }
