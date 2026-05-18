@@ -36,21 +36,14 @@ function Router() {
 }
 
 function Layout({ children }: { children: React.ReactNode }) {
-  // We check if it's the demo page, if so we don't show the standard navbar/footer
-  // since the demo is a full-screen dashboard UI
   return (
-    <Switch>
-      <Route path="/demo">{children}</Route>
-      <Route>
-        <div className="flex flex-col min-h-screen font-sans">
-          <Navbar />
-          <main className="flex-1">
-            {children}
-          </main>
-          <Footer />
-        </div>
-      </Route>
-    </Switch>
+    <div className="flex flex-col min-h-screen font-sans">
+      <Navbar />
+      <main className="flex-1">
+        {children}
+      </main>
+      <Footer />
+    </div>
   );
 }
 
