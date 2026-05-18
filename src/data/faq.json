@@ -2,209 +2,425 @@
   "sections": [
     {
       "id": "was-ist-das",
-      "title": "Was ist GastroHub eigentlich?",
+      "title": {
+        "de": "Was ist GastroHub eigentlich?",
+        "en": "What is GastroHub, exactly?"
+      },
       "items": [
         {
           "slug": "was-ist-gastrohub",
-          "q": "Was ist GastroHub überhaupt?",
-          "a": "GastroHub ist Ihr eigenes Bestellsystem im Internet. Eine Webseite mit Ihrer Speisekarte, einem Warenkorb und einer Kasse, auf der Ihre Gäste direkt bei Ihnen bestellen. Sie sehen jede Bestellung sofort auf dem Handy, kassieren direkt über Ihr eigenes Konto und behalten alle Kundendaten. Kein Mittelsmann. Kein Aggregator zwischen Ihnen und Ihrem Gast."
+          "q": {
+            "de": "Was ist GastroHub überhaupt?",
+            "en": "What is GastroHub, in short?"
+          },
+          "a": {
+            "de": "GastroHub ist Ihr eigenes Bestellsystem im Internet. Eine Webseite mit Ihrer Speisekarte, einem Warenkorb und einer Kasse, auf der Ihre Gäste direkt bei Ihnen bestellen. Sie sehen jede Bestellung sofort auf dem Handy, kassieren direkt über Ihr eigenes Konto und behalten alle Kundendaten. Kein Mittelsmann. Kein Aggregator zwischen Ihnen und Ihrem Gast.",
+            "en": "GastroHub is your own ordering system on the web. A website with your menu, a cart and a checkout, where your guests order directly with you. You see every order instantly on your phone, you collect payments through your own account, and you keep all the customer data. No middleman. No aggregator between you and your guest."
+          }
         },
         {
           "slug": "fuer-wen-ist-das",
-          "q": "Ist das nur für Lieferdienste?",
-          "a": "Nein. GastroHub passt für jeden gastronomischen Betrieb, der Bestellungen entgegennimmt: Pizzerien, Imbisse, Bistros, Restaurants, Catering, Bäckereien mit Vorbestellung, auch Foodtrucks mit fester Route. Sie können Lieferung anbieten, Abholung, oder beides. Wenn Ihre Gäste bei Ihnen bestellen wollen, statt durch ein anonymes Plattform-Menü zu scrollen, ist GastroHub für Sie."
+          "q": {
+            "de": "Ist das nur für Lieferdienste?",
+            "en": "Is it only for delivery operations?"
+          },
+          "a": {
+            "de": "Nein. GastroHub passt für jeden gastronomischen Betrieb, der Bestellungen entgegennimmt: Pizzerien, Imbisse, Bistros, Restaurants, Catering, Bäckereien mit Vorbestellung, auch Foodtrucks mit fester Route. Sie können Lieferung anbieten, Abholung, oder beides. Wenn Ihre Gäste bei Ihnen bestellen wollen, statt durch ein anonymes Plattform-Menü zu scrollen, ist GastroHub für Sie.",
+            "en": "No. GastroHub fits any food business that takes orders: pizzerias, snack bars, bistros, restaurants, caterers, bakeries with pre-orders, even food trucks with fixed routes. You can offer delivery, pickup, or both. If your guests want to order with you rather than scroll through an anonymous platform menu, GastroHub is for you."
+          }
         },
         {
           "slug": "unterschied-zu-webseite",
-          "q": "Was unterscheidet GastroHub von einer normalen Webseite?",
-          "a": "Eine Webseite zeigt, wer Sie sind, wo Sie sind und was Sie kochen. Mehr nicht. GastroHub macht zusätzlich folgendes: nimmt Bestellungen entgegen, prüft die Lieferzone, kassiert sicher mit Kreditkarte, PayPal, Überweisung, Wero und allen gängigen Online-Zahlungsmethoden, schickt die Bestellung sofort auf Ihr Telefon oder Ihr Kassensystem und gibt Ihnen ein Dashboard für Speisekarte, Öffnungszeiten und Statistik. Das ist der Unterschied zwischen einer Visitenkarte und einer Kasse."
+          "q": {
+            "de": "Was unterscheidet GastroHub von einer normalen Webseite?",
+            "en": "How is GastroHub different from a regular website?"
+          },
+          "a": {
+            "de": "Eine Webseite zeigt, wer Sie sind, wo Sie sind und was Sie kochen. Mehr nicht. GastroHub macht zusätzlich folgendes: nimmt Bestellungen entgegen, prüft die Lieferzone, kassiert sicher mit Kreditkarte, PayPal, Überweisung, Wero und allen gängigen Online-Zahlungsmethoden, schickt die Bestellung sofort auf Ihr Telefon oder Ihr Kassensystem und gibt Ihnen ein Dashboard für Speisekarte, Öffnungszeiten und Statistik. Das ist der Unterschied zwischen einer Visitenkarte und einer Kasse.",
+            "en": "A website shows who you are, where you are and what you cook. That's it. GastroHub additionally: takes orders, checks the delivery zone, charges securely via credit card, PayPal, bank transfer, Wero and all common online payment methods, sends the order instantly to your phone or POS system, and gives you a dashboard for menu, opening hours and statistics. That's the difference between a business card and a cash register."
+          }
         },
         {
           "slug": "unterschied-zu-liefer-apps",
-          "q": "Was unterscheidet GastroHub von den großen Liefer-Apps?",
-          "a": "Drei Dinge. Erstens: Die Bestellung läuft direkt bei Ihnen ein, nicht über ein fremdes System, das Ihre Marke verdeckt. Zweitens: Ihre Kunden sind Ihre Kunden. Sie sehen Namen, E-Mail-Adressen und Bestellhistorie und können diese Gäste für Wiederbestellungen oder Aktionen anschreiben. Drittens: Sie zahlen 0 %, 5 % oder 7 % je Bestellung statt 15 bis 30 % bei den großen Aggregatoren."
+          "q": {
+            "de": "Was unterscheidet GastroHub von den großen Liefer-Apps?",
+            "en": "How is GastroHub different from the big delivery apps?"
+          },
+          "a": {
+            "de": "Drei Dinge. Erstens: Die Bestellung läuft direkt bei Ihnen ein, nicht über ein fremdes System, das Ihre Marke verdeckt. Zweitens: Ihre Kunden sind Ihre Kunden. Sie sehen Namen, E-Mail-Adressen und Bestellhistorie und können diese Gäste für Wiederbestellungen oder Aktionen anschreiben. Drittens: Sie zahlen 0 %, 5 % oder 7 % je Bestellung statt 15 bis 30 % bei den großen Aggregatoren.",
+            "en": "Three things. First: the order lands directly with you, not through a foreign system that hides your brand. Second: your customers are your customers. You see names, email addresses and order history, and you can reach those guests for repeat orders or promotions. Third: you pay 0%, 5% or 7% per order instead of 15 to 30% at the big aggregators."
+          }
         }
       ]
     },
     {
       "id": "preise",
-      "title": "Was kostet mich das wirklich?",
+      "title": {
+        "de": "Was kostet mich das wirklich?",
+        "en": "What does it really cost me?"
+      },
       "items": [
         {
           "slug": "was-kostet-gastrohub",
-          "q": "Was kostet GastroHub?",
-          "a": "Es gibt drei Modelle. Im Einmalzahlungsmodell zahlen Sie eine Einrichtungsgebühr ab 2.500€ einmalig sowie 149€ pro Monat für Hosting, Domain und E-Mail. Keine Provision auf Umsätze. Im 5%-Provisionsmodell zahlen Sie eine Einrichtungsgebühr ab 499€ und danach 5% pro Bestellung, mindestens jedoch 149€ pro Monat. Im 7%-All-Inclusive-Modell zahlen Sie eine Einrichtungsgebühr ab 499€ und danach 7% pro Bestellung, mindestens jedoch 249€ pro Monat, mit komplett inklusivem Support und Wartung. Alle Modelle haben eine Mindestlaufzeit von 12 Monaten. Den genauen Einrichtungspreis nennen wir nach einem kurzen Gespräch, weil er von Speisekarten-Größe, Lieferzonen und Ihrer aktuellen Daten-Lage abhängt."
+          "q": {
+            "de": "Was kostet GastroHub?",
+            "en": "What does GastroHub cost?"
+          },
+          "a": {
+            "de": "Es gibt drei Modelle. Im Einmalzahlungsmodell zahlen Sie eine Einrichtungsgebühr ab 2.500€ einmalig sowie 149€ pro Monat für Hosting, Domain und E-Mail. Keine Provision auf Umsätze. Im 5%-Provisionsmodell zahlen Sie eine Einrichtungsgebühr ab 499€ und danach 5% pro Bestellung, mindestens jedoch 149€ pro Monat. Im 7%-All-Inclusive-Modell zahlen Sie eine Einrichtungsgebühr ab 499€ und danach 7% pro Bestellung, mindestens jedoch 249€ pro Monat, mit komplett inklusivem Support und Wartung. Alle Modelle haben eine Mindestlaufzeit von 12 Monaten. Den genauen Einrichtungspreis nennen wir nach einem kurzen Gespräch, weil er von Speisekarten-Größe, Lieferzonen und Ihrer aktuellen Daten-Lage abhängt.",
+            "en": "There are three models. In the one-time payment model you pay a setup fee from €2,500 once plus €149 per month for hosting, domain and email. No commission on revenue. In the 5% commission model you pay a setup fee from €499 and then 5% per order, with a minimum of €149 per month. In the 7% all-inclusive model you pay a setup fee from €499 and then 7% per order, with a minimum of €249 per month, with support and maintenance fully included. All models have a minimum term of 12 months. We give you the exact setup price after a short call, because it depends on menu size, delivery zones and your current data setup."
+          }
         },
         {
           "slug": "was-bedeuten-15-30-prozent",
-          "q": "Was bedeuten 15 bis 30% Provision in echtem Geld?",
-          "a": "Rechnen Sie es durch. Bei 10.000 Euro Monatsumsatz nimmt eine Plattform mit 20% Provision 2.000 Euro pro Monat. Das sind 24.000 Euro im Jahr. Bei 25% sind es 30.000 Euro. Restaurants arbeiten typischerweise mit 5 bis 8% Nettomarge. Die Plattform nimmt also oft mehr von der einzelnen Bestellung weg, als am Ende für Sie übrig bleibt. Bei GastroHub bleibt der gleiche Umsatz bei Ihnen, minus einer transparenten Einrichtungsgebühr oder 5 bis 7% Provision."
+          "q": {
+            "de": "Was bedeuten 15 bis 30% Provision in echtem Geld?",
+            "en": "What does 15 to 30% commission actually mean in money?"
+          },
+          "a": {
+            "de": "Rechnen Sie es durch. Bei 10.000 Euro Monatsumsatz nimmt eine Plattform mit 20% Provision 2.000 Euro pro Monat. Das sind 24.000 Euro im Jahr. Bei 25% sind es 30.000 Euro. Restaurants arbeiten typischerweise mit 5 bis 8% Nettomarge. Die Plattform nimmt also oft mehr von der einzelnen Bestellung weg, als am Ende für Sie übrig bleibt. Bei GastroHub bleibt der gleiche Umsatz bei Ihnen, minus einer transparenten Einrichtungsgebühr oder 5 bis 7% Provision.",
+            "en": "Work it out. With €10,000 in monthly revenue, a platform taking 20% commission takes €2,000 per month. That's €24,000 per year. At 25% it's €30,000. Restaurants typically work on a 5 to 8% net margin. So the platform often takes more from each order than what's left for you. With GastroHub, the same revenue stays with you, minus a transparent setup fee or 5 to 7% commission."
+          }
         },
         {
           "slug": "welches-modell-besser",
-          "q": "Welches Modell ist für mich besser?",
-          "a": "Einmalzahlung lohnt sich, wenn Sie langfristig denken und planbare monatliche Kosten ohne umsatzabhängige Provision wollen. Sie zahlen einmal für die Einrichtung und danach nur 149€ pro Monat für Infrastruktur. 5%-Provision lohnt sich, wenn Sie klein starten wollen, ohne in Vorkasse zu gehen. Sie zahlen nur, wenn Sie verdienen, mit einer Untergrenze von 149€ pro Monat, die Hosting, Domain und E-Mail abdeckt. 7%-All-Inclusive lohnt sich, wenn Sie keinen Aufwand mit Support oder Wartung haben wollen. Alle Modelle sind deutlich günstiger als die großen Aggregatoren. Im Erstgespräch rechnen wir mit Ihren echten Zahlen durch, welches Modell sich für Sie rechnet."
+          "q": {
+            "de": "Welches Modell ist für mich besser?",
+            "en": "Which model is better for me?"
+          },
+          "a": {
+            "de": "Einmalzahlung lohnt sich, wenn Sie langfristig denken und planbare monatliche Kosten ohne umsatzabhängige Provision wollen. Sie zahlen einmal für die Einrichtung und danach nur 149€ pro Monat für Infrastruktur. 5%-Provision lohnt sich, wenn Sie klein starten wollen, ohne in Vorkasse zu gehen. Sie zahlen nur, wenn Sie verdienen, mit einer Untergrenze von 149€ pro Monat, die Hosting, Domain und E-Mail abdeckt. 7%-All-Inclusive lohnt sich, wenn Sie keinen Aufwand mit Support oder Wartung haben wollen. Alle Modelle sind deutlich günstiger als die großen Aggregatoren. Im Erstgespräch rechnen wir mit Ihren echten Zahlen durch, welches Modell sich für Sie rechnet.",
+            "en": "One-time payment pays off if you think long-term and want predictable monthly costs without revenue-based commission. You pay once for setup and then only €149 per month for infrastructure. 5% commission pays off if you want to start small without paying up front. You only pay when you earn, with a floor of €149 per month covering hosting, domain and email. 7% all-inclusive pays off if you don't want the hassle of support or maintenance. All models are significantly cheaper than the big aggregators. In the first call we work through your real numbers to see which model works best for you."
+          }
         },
         {
           "slug": "versteckte-kosten",
-          "q": "Gibt es versteckte Kosten?",
-          "a": "Nein. Was im Angebot steht, ist der vollständige Preis von uns. Zusätzlich fallen Stripe-Gebühren an, etwa 1,5% plus 25 Cent pro erfolgreicher Kartentransaktion. Diese gehen direkt an Stripe und sind in jedem Online-Bezahlsystem üblich. Sie sehen jede einzelne Gebühr in Ihrem Stripe-Dashboard. Es gibt keine Sponsored-Listings, keine Premium-Platzierung-Aufpreise, keine verpflichtenden Werbebudgets. Bei Modell 1 und Modell 2 wird technischer Support separat zu 90€ pro Stunde abgerechnet, bei Modell 3 ist Support komplett inklusive."
+          "q": {
+            "de": "Gibt es versteckte Kosten?",
+            "en": "Are there any hidden costs?"
+          },
+          "a": {
+            "de": "Nein. Was im Angebot steht, ist der vollständige Preis von uns. Zusätzlich fallen Stripe-Gebühren an, etwa 1,5% plus 25 Cent pro erfolgreicher Kartentransaktion. Diese gehen direkt an Stripe und sind in jedem Online-Bezahlsystem üblich. Sie sehen jede einzelne Gebühr in Ihrem Stripe-Dashboard. Es gibt keine Sponsored-Listings, keine Premium-Platzierung-Aufpreise, keine verpflichtenden Werbebudgets. Bei Modell 1 und Modell 2 wird technischer Support separat zu 90€ pro Stunde abgerechnet, bei Modell 3 ist Support komplett inklusive.",
+            "en": "No. What's in the offer is our full price. On top, Stripe fees apply, roughly 1.5% plus 25 cents per successful card transaction. Those go directly to Stripe and are standard in any online payment system. You see every single fee in your Stripe dashboard. There are no sponsored listings, no premium-placement surcharges, no mandatory ad budgets. In Model 1 and Model 2, technical support is billed separately at €90 per hour. In Model 3, support is fully included."
+          }
         }
       ]
     },
     {
       "id": "warum-wechseln",
-      "title": "Ich bin zufrieden mit dem, was ich habe. Warum überhaupt etwas ändern?",
+      "title": {
+        "de": "Ich bin zufrieden mit dem, was ich habe. Warum überhaupt etwas ändern?",
+        "en": "I'm happy with what I have. Why change anything at all?"
+      },
       "items": [
         {
           "slug": "warum-wechseln-bin-zufrieden",
-          "q": "Ich bin doch zufrieden mit meiner aktuellen Liefer-App. Warum etwas ändern?",
-          "a": "Drei Fragen, die viele Restaurantbesitzer am Monatsende stellen. Wer hat heute mehr verdient, ich oder die App? Welche meiner Stammkunden hat heute bestellt, und weiß ich, wer sie sind? Was wäre, wenn die App morgen ihre Konditionen ändert oder mich für zwei Wochen aussetzt? Wenn nur eine dieser Antworten Sie unruhig macht, lohnt sich ein 10-Minuten-Gespräch. Mehr verlangen wir nicht."
+          "q": {
+            "de": "Ich bin doch zufrieden mit meiner aktuellen Liefer-App. Warum etwas ändern?",
+            "en": "But I'm happy with my current delivery app. Why change?"
+          },
+          "a": {
+            "de": "Drei Fragen, die viele Restaurantbesitzer am Monatsende stellen. Wer hat heute mehr verdient, ich oder die App? Welche meiner Stammkunden hat heute bestellt, und weiß ich, wer sie sind? Was wäre, wenn die App morgen ihre Konditionen ändert oder mich für zwei Wochen aussetzt? Wenn nur eine dieser Antworten Sie unruhig macht, lohnt sich ein 10-Minuten-Gespräch. Mehr verlangen wir nicht.",
+            "en": "Three questions many restaurant owners ask themselves at the end of the month. Who earned more today, me or the app? Which of my regulars ordered today, and do I know who they are? What if the app changes its terms tomorrow or suspends me for two weeks? If even one of those answers makes you uneasy, a 10-minute call is worth it. We're not asking for more than that."
+          }
         },
         {
           "slug": "habe-schon-webseite",
-          "q": "Ich habe schon eine Webseite von einem Baukasten-Anbieter. Reicht die nicht?",
-          "a": "Eine Baukasten-Webseite zeigt das Restaurant, aber sie nimmt selten echte Bestellungen entgegen. Die meisten Baukästen haben kein integriertes Bestellsystem mit Stripe-Anbindung, keine Lieferzonen-Logik, keinen direkten Bon-Druck in der Küche, keine automatischen Benachrichtigungen. Am Ende zahlen viele Restaurants ihren Baukasten und zusätzlich eine teure Liefer-App, weil die Webseite allein keine Kasse ist. Bei GastroHub ist beides eins."
+          "q": {
+            "de": "Ich habe schon eine Webseite von einem Baukasten-Anbieter. Reicht die nicht?",
+            "en": "I already have a website from a website builder. Isn't that enough?"
+          },
+          "a": {
+            "de": "Eine Baukasten-Webseite zeigt das Restaurant, aber sie nimmt selten echte Bestellungen entgegen. Die meisten Baukästen haben kein integriertes Bestellsystem mit Stripe-Anbindung, keine Lieferzonen-Logik, keinen direkten Bon-Druck in der Küche, keine automatischen Benachrichtigungen. Am Ende zahlen viele Restaurants ihren Baukasten und zusätzlich eine teure Liefer-App, weil die Webseite allein keine Kasse ist. Bei GastroHub ist beides eins.",
+            "en": "A website-builder site shows the restaurant, but it rarely actually takes orders. Most builders have no integrated ordering system with Stripe, no delivery-zone logic, no direct receipt printing in the kitchen, no automatic notifications. In the end, many restaurants pay for their builder and on top for an expensive delivery app, because the website alone is not a cash register. With GastroHub, both are one."
+          }
         },
         {
           "slug": "stammkunden-was-passiert",
-          "q": "Was passiert mit meinen aktuellen Stammkunden, wenn ich wechsle?",
-          "a": "Stammkunden, die schon bei Ihnen direkt bestellen (E-Mail, Anruf, vor Ort), behalten Sie sofort. Stammkunden, die heute über eine Liefer-App bei Ihnen bestellen, kennen Sie technisch nicht, weil die Plattform Ihnen Namen und Kontakt nicht weitergibt. Diese gewinnen Sie nach und nach zurück, in dem Sie Ihre eigene Bestellseite über Visitenkarten, Flyer in der Tüte, einen QR-Code an der Tür oder auf der Speisekarte sichtbar machen. Wir zeigen Ihnen den Übergang, Sie müssen ihn nicht im Alleingang planen."
+          "q": {
+            "de": "Was passiert mit meinen aktuellen Stammkunden, wenn ich wechsle?",
+            "en": "What happens to my current regulars when I switch?"
+          },
+          "a": {
+            "de": "Stammkunden, die schon bei Ihnen direkt bestellen (E-Mail, Anruf, vor Ort), behalten Sie sofort. Stammkunden, die heute über eine Liefer-App bei Ihnen bestellen, kennen Sie technisch nicht, weil die Plattform Ihnen Namen und Kontakt nicht weitergibt. Diese gewinnen Sie nach und nach zurück, in dem Sie Ihre eigene Bestellseite über Visitenkarten, Flyer in der Tüte, einen QR-Code an der Tür oder auf der Speisekarte sichtbar machen. Wir zeigen Ihnen den Übergang, Sie müssen ihn nicht im Alleingang planen.",
+            "en": "Regulars who already order with you directly (email, phone, in person) you keep right away. Regulars who currently order through a delivery app are technically unknown to you, because the platform doesn't pass on names or contact details. You win them back gradually by making your own ordering page visible on business cards, a flyer in the bag, a QR code on the door or on the menu. We walk you through the transition, you don't have to plan it alone."
+          }
         },
         {
           "slug": "zu-kompliziert",
-          "q": "Ist das nicht zu kompliziert für mich? Ich kenne mich mit Technik nicht aus.",
-          "a": "Sie brauchen keine technischen Kenntnisse. Wir richten die Plattform für Sie ein, importieren Ihre Speisekarte, konfigurieren Lieferzonen und Öffnungszeiten. Im Alltag bedienen Sie nur ein Dashboard auf dem Smartphone, ähnlich wie eine WhatsApp- oder Banking-App. Bestellungen annehmen funktioniert mit einem Klick. Wenn Sie ein Smartphone bedienen können, können Sie GastroHub bedienen."
+          "q": {
+            "de": "Ist das nicht zu kompliziert für mich? Ich kenne mich mit Technik nicht aus.",
+            "en": "Isn't this too complicated for me? I'm not technical."
+          },
+          "a": {
+            "de": "Sie brauchen keine technischen Kenntnisse. Wir richten die Plattform für Sie ein, importieren Ihre Speisekarte, konfigurieren Lieferzonen und Öffnungszeiten. Im Alltag bedienen Sie nur ein Dashboard auf dem Smartphone, ähnlich wie eine WhatsApp- oder Banking-App. Bestellungen annehmen funktioniert mit einem Klick. Wenn Sie ein Smartphone bedienen können, können Sie GastroHub bedienen.",
+            "en": "You don't need any technical skills. We set the platform up for you, import your menu, configure delivery zones and opening hours. Day to day you just use a dashboard on your smartphone, similar to a WhatsApp or banking app. Accepting orders takes one click. If you can use a smartphone, you can use GastroHub."
+          }
         },
         {
           "slug": "muss-ich-sofort-kuendigen",
-          "q": "Muss ich meine aktuelle Plattform sofort kündigen?",
-          "a": "Nein. Viele Restaurants laufen am Anfang parallel: Sie sammeln über die alte Plattform weiterhin Bestellungen und bauen gleichzeitig Ihre eigene Bestellseite auf. Sobald Ihre eigene Seite mehr direkte Bestellungen bringt, können Sie die Plattform kündigen oder weiter mitlaufen lassen. Diese Entscheidung gehört Ihnen. Wir drängen Sie zu nichts."
+          "q": {
+            "de": "Muss ich meine aktuelle Plattform sofort kündigen?",
+            "en": "Do I have to cancel my current platform immediately?"
+          },
+          "a": {
+            "de": "Nein. Viele Restaurants laufen am Anfang parallel: Sie sammeln über die alte Plattform weiterhin Bestellungen und bauen gleichzeitig Ihre eigene Bestellseite auf. Sobald Ihre eigene Seite mehr direkte Bestellungen bringt, können Sie die Plattform kündigen oder weiter mitlaufen lassen. Diese Entscheidung gehört Ihnen. Wir drängen Sie zu nichts.",
+            "en": "No. Many restaurants run both in parallel at the start: they keep collecting orders through the old platform while building their own ordering page. Once your own page brings in more direct orders, you can cancel the platform or keep it running alongside. The decision is yours. We don't pressure you."
+          }
         }
       ]
     },
     {
       "id": "daten",
-      "title": "Wem gehören meine Daten?",
+      "title": {
+        "de": "Wem gehören meine Daten?",
+        "en": "Who owns my data?"
+      },
       "items": [
         {
           "slug": "wem-gehoeren-kundendaten",
-          "q": "Wem gehören die Kundendaten?",
-          "a": "Ihnen. Alle Daten Ihrer Endkunden (Namen, Adressen, Bestellungen, bevorzugte Gerichte) gehören ausschließlich Ihrem Restaurant. Wir verarbeiten diese Daten als Auftragsverarbeiter für Sie, nach DSGVO Art. 28, und geben sie niemals an Dritte weiter, an niemanden, auch nicht an andere Restaurants. Bei den großen Liefer-Apps ist das umgekehrt: die Plattform sammelt die Daten, Sie bekommen sie nicht zu sehen."
+          "q": {
+            "de": "Wem gehören die Kundendaten?",
+            "en": "Who owns the customer data?"
+          },
+          "a": {
+            "de": "Ihnen. Alle Daten Ihrer Endkunden (Namen, Adressen, Bestellungen, bevorzugte Gerichte) gehören ausschließlich Ihrem Restaurant. Wir verarbeiten diese Daten als Auftragsverarbeiter für Sie, nach DSGVO Art. 28, und geben sie niemals an Dritte weiter, an niemanden, auch nicht an andere Restaurants. Bei den großen Liefer-Apps ist das umgekehrt: die Plattform sammelt die Daten, Sie bekommen sie nicht zu sehen.",
+            "en": "You do. All data from your end customers (names, addresses, orders, favourite dishes) belongs exclusively to your restaurant. We process this data as your processor under GDPR Art. 28, and we never pass it on to third parties, to anyone, not even to other restaurants. With the big delivery apps it's the other way round: the platform collects the data, you don't get to see it."
+          }
         },
         {
           "slug": "was-kann-ich-mit-daten",
-          "q": "Was kann ich konkret mit meinen Kundendaten machen?",
-          "a": "Sie können wiederkehrende Gäste erkennen, ihnen einmal im Quartal einen Newsletter mit neuen Gerichten schicken, gezielte Rabatte an inaktive Gäste senden, ihre Lieblingsgerichte analysieren und Ihre Speisekarte entsprechend weiterentwickeln. Sie können die Daten auch jederzeit als CSV-Datei exportieren. Sie bleiben Ihre, auch wenn Sie GastroHub eines Tages verlassen."
+          "q": {
+            "de": "Was kann ich konkret mit meinen Kundendaten machen?",
+            "en": "What can I actually do with my customer data?"
+          },
+          "a": {
+            "de": "Sie können wiederkehrende Gäste erkennen, ihnen einmal im Quartal einen Newsletter mit neuen Gerichten schicken, gezielte Rabatte an inaktive Gäste senden, ihre Lieblingsgerichte analysieren und Ihre Speisekarte entsprechend weiterentwickeln. Sie können die Daten auch jederzeit als CSV-Datei exportieren. Sie bleiben Ihre, auch wenn Sie GastroHub eines Tages verlassen.",
+            "en": "You can recognise returning guests, send them a quarterly newsletter with new dishes, send targeted discounts to inactive guests, analyse their favourite dishes and refine your menu accordingly. You can also export the data as a CSV file any time. It stays yours, even if one day you leave GastroHub."
+          }
         },
         {
           "slug": "sehe-ich-bestellhistorie",
-          "q": "Sehe ich, wer wann was bei mir bestellt hat?",
-          "a": "Ja. Im Dashboard sehen Sie die Bestellhistorie nach Gast, nach Tag, nach Gericht oder nach Lieferzone. Sie sehen, welche Gerichte besonders gut laufen, welche Tage Ihre stärksten sind, welche Stammgäste in den letzten Wochen nicht mehr bestellt haben. Diese Informationen helfen Ihnen, gezielt Entscheidungen zu treffen. Heute fliegen diese Daten vielleicht ungenutzt durch die Server einer App, die sie für Sie verbirgt."
+          "q": {
+            "de": "Sehe ich, wer wann was bei mir bestellt hat?",
+            "en": "Can I see who ordered what and when?"
+          },
+          "a": {
+            "de": "Ja. Im Dashboard sehen Sie die Bestellhistorie nach Gast, nach Tag, nach Gericht oder nach Lieferzone. Sie sehen, welche Gerichte besonders gut laufen, welche Tage Ihre stärksten sind, welche Stammgäste in den letzten Wochen nicht mehr bestellt haben. Diese Informationen helfen Ihnen, gezielt Entscheidungen zu treffen. Heute fliegen diese Daten vielleicht ungenutzt durch die Server einer App, die sie für Sie verbirgt.",
+            "en": "Yes. In the dashboard you see the order history by guest, by day, by dish or by delivery zone. You see which dishes sell particularly well, which days are your strongest, which regulars haven't ordered in the last few weeks. This information helps you make targeted decisions. Today this data may be flying through the servers of an app that hides it from you."
+          }
         }
       ]
     },
     {
       "id": "einrichtung",
-      "title": "Wie schnell bin ich online?",
+      "title": {
+        "de": "Wie schnell bin ich online?",
+        "en": "How fast can I go live?"
+      },
       "items": [
         {
           "slug": "wie-lange-einrichtung",
-          "q": "Wie lange dauert die Einrichtung?",
-          "a": "In der Regel zwei bis vier Wochen, nachdem Sie uns Ihre Speisekarte und Fotos zur Verfügung gestellt haben. Wir setzen Speisekarte, Kategorien, Allergene, Lieferzonen, Öffnungszeiten und Stripe-Konto auf, prüfen alles mit Ihnen gemeinsam, und nach einer kurzen Test-Bestellung gehen Sie live."
+          "q": {
+            "de": "Wie lange dauert die Einrichtung?",
+            "en": "How long does setup take?"
+          },
+          "a": {
+            "de": "In der Regel zwei bis vier Wochen, nachdem Sie uns Ihre Speisekarte und Fotos zur Verfügung gestellt haben. Wir setzen Speisekarte, Kategorien, Allergene, Lieferzonen, Öffnungszeiten und Stripe-Konto auf, prüfen alles mit Ihnen gemeinsam, und nach einer kurzen Test-Bestellung gehen Sie live.",
+            "en": "Usually two to four weeks after you've given us your menu and photos. We set up menu, categories, allergens, delivery zones, opening hours and the Stripe account, review everything with you, and after a short test order you go live."
+          }
         },
         {
           "slug": "was-muss-ich-liefern",
-          "q": "Was muss ich Ihnen liefern, damit Sie starten können?",
-          "a": "Ihre aktuelle Speisekarte (PDF, Excel, oder eine bestehende Webseite genügt), Fotos der wichtigsten Gerichte (auch Handy-Fotos reichen, falls keine Profi-Bilder vorhanden sind), Ihre Öffnungszeiten, die Postleitzahlen, in die Sie liefern, Ihre Logo-Datei und die Rechtsangaben (Impressum-Daten). Wenn Ihnen einzelne Punkte fehlen, helfen wir."
+          "q": {
+            "de": "Was muss ich Ihnen liefern, damit Sie starten können?",
+            "en": "What do I need to provide so you can get started?"
+          },
+          "a": {
+            "de": "Ihre aktuelle Speisekarte (PDF, Excel, oder eine bestehende Webseite genügt), Fotos der wichtigsten Gerichte (auch Handy-Fotos reichen, falls keine Profi-Bilder vorhanden sind), Ihre Öffnungszeiten, die Postleitzahlen, in die Sie liefern, Ihre Logo-Datei und die Rechtsangaben (Impressum-Daten). Wenn Ihnen einzelne Punkte fehlen, helfen wir.",
+            "en": "Your current menu (PDF, Excel or an existing website is fine), photos of your main dishes (phone photos are fine if you don't have professional shots), your opening hours, the postcodes you deliver to, your logo file and your legal details (imprint information). If any pieces are missing, we help."
+          }
         },
         {
           "slug": "technische-kenntnisse",
-          "q": "Brauche ich für den laufenden Betrieb technische Kenntnisse?",
-          "a": "Nein. Im Dashboard bearbeiten Sie Gerichte, Preise und Öffnungszeiten so einfach wie in einer Notiz-App. Bestellungen nehmen Sie mit einem Klick an oder ab. Status-Updates für den Kunden gehen automatisch raus. Wenn etwas Komplexeres nötig ist (neue Lieferzone, Kategorie umbenennen), erledigen wir das auf Zuruf, ohne Aufpreis im Wartungs-Modell."
+          "q": {
+            "de": "Brauche ich für den laufenden Betrieb technische Kenntnisse?",
+            "en": "Do I need any technical skills for day-to-day operation?"
+          },
+          "a": {
+            "de": "Nein. Im Dashboard bearbeiten Sie Gerichte, Preise und Öffnungszeiten so einfach wie in einer Notiz-App. Bestellungen nehmen Sie mit einem Klick an oder ab. Status-Updates für den Kunden gehen automatisch raus. Wenn etwas Komplexeres nötig ist (neue Lieferzone, Kategorie umbenennen), erledigen wir das auf Zuruf, ohne Aufpreis im Wartungs-Modell.",
+            "en": "No. In the dashboard you edit dishes, prices and opening hours as easily as in a notes app. You accept or decline orders with one click. Status updates to the customer go out automatically. If something more complex is needed (new delivery zone, rename a category), we handle it on request, no extra charge in the maintenance model."
+          }
         }
       ]
     },
     {
       "id": "bestellungen",
-      "title": "Wie funktionieren Bestellungen?",
+      "title": {
+        "de": "Wie funktionieren Bestellungen?",
+        "en": "How do orders work?"
+      },
       "items": [
         {
           "slug": "neue-bestellung-benachrichtigung",
-          "q": "Wie erfahre ich von einer neuen Bestellung?",
-          "a": "Sofort, ohne dass Sie zusätzliche Hardware auf dem Tresen brauchen. Eine neue Bestellung erscheint als Benachrichtigung auf Ihrem Handy (per Telegram und E-Mail, beides parallel) sowie auf Laptop oder PC. Sie tippen einmal, um anzunehmen, und der Kunde bekommt automatisch eine Bestätigung mit der voraussichtlichen Lieferzeit. Wenn Ihr Kassensystem eine API unterstützt, drucken wir die Bestellung zusätzlich direkt bei Ihnen aus. Wir wollen Ihnen den besten Preis anbieten, nicht teure Zusatz-Geräte verkaufen. Falls Sie trotzdem ein eigenes Gerät bevorzugen, richten wir das gerne für Sie ein."
+          "q": {
+            "de": "Wie erfahre ich von einer neuen Bestellung?",
+            "en": "How do I find out about a new order?"
+          },
+          "a": {
+            "de": "Sofort, ohne dass Sie zusätzliche Hardware auf dem Tresen brauchen. Eine neue Bestellung erscheint als Benachrichtigung auf Ihrem Handy (per Telegram und E-Mail, beides parallel) sowie auf Laptop oder PC. Sie tippen einmal, um anzunehmen, und der Kunde bekommt automatisch eine Bestätigung mit der voraussichtlichen Lieferzeit. Wenn Ihr Kassensystem eine API unterstützt, drucken wir die Bestellung zusätzlich direkt bei Ihnen aus. Wir wollen Ihnen den besten Preis anbieten, nicht teure Zusatz-Geräte verkaufen. Falls Sie trotzdem ein eigenes Gerät bevorzugen, richten wir das gerne für Sie ein.",
+            "en": "Instantly, without needing any extra hardware on the counter. A new order appears as a notification on your phone (via Telegram and email, both in parallel) and on your laptop or PC. You tap once to accept, and the customer automatically gets a confirmation with the estimated delivery time. If your POS system supports an API, we additionally print the order directly at your end. Our goal is to offer you the best price, not to sell expensive add-on devices. If you'd still prefer your own device, we'll happily set it up for you."
+          }
         },
         {
           "slug": "wie-wird-bezahlt",
-          "q": "Wie wird bezahlt?",
-          "a": "Online über Stripe Connect (Kreditkarte, PayPal, je nach Ihren Stripe-Einstellungen auch Sofort, Klarna, Apple Pay, Google Pay). Optional können Sie zusätzlich Barzahlung bei Lieferung oder Abholung aktivieren. Das Geld geht direkt auf Ihr Stripe-Konto, in der Regel innerhalb von zwei Werktagen auf Ihr Bank-Konto."
+          "q": {
+            "de": "Wie wird bezahlt?",
+            "en": "How are payments handled?"
+          },
+          "a": {
+            "de": "Online über Stripe Connect (Kreditkarte, PayPal, je nach Ihren Stripe-Einstellungen auch Sofort, Klarna, Apple Pay, Google Pay). Optional können Sie zusätzlich Barzahlung bei Lieferung oder Abholung aktivieren. Das Geld geht direkt auf Ihr Stripe-Konto, in der Regel innerhalb von zwei Werktagen auf Ihr Bank-Konto.",
+            "en": "Online via Stripe Connect (credit card, PayPal, and depending on your Stripe settings also Sofort, Klarna, Apple Pay, Google Pay). Optionally you can also enable cash on delivery or pickup. The money goes directly into your Stripe account, usually onto your bank account within two business days."
+          }
         },
         {
           "slug": "bestellung-ablehnen",
-          "q": "Was passiert, wenn ich eine Bestellung ablehnen muss (Küche voll, zu spät, weit weg)?",
-          "a": "Sie können jede Bestellung mit einem Klick ablehnen und einen kurzen Grund angeben (\"Küche ausgelastet\", \"außerhalb der Lieferzeit\", \"Zutat nicht vorrätig\"). Der Kunde wird informiert und bei Online-Zahlung automatisch komplett zurückerstattet. Keine Gebühren von uns, keine Bearbeitung durch Sie."
+          "q": {
+            "de": "Was passiert, wenn ich eine Bestellung ablehnen muss (Küche voll, zu spät, weit weg)?",
+            "en": "What happens if I have to decline an order (kitchen full, too late, too far)?"
+          },
+          "a": {
+            "de": "Sie können jede Bestellung mit einem Klick ablehnen und einen kurzen Grund angeben (\"Küche ausgelastet\", \"außerhalb der Lieferzeit\", \"Zutat nicht vorrätig\"). Der Kunde wird informiert und bei Online-Zahlung automatisch komplett zurückerstattet. Keine Gebühren von uns, keine Bearbeitung durch Sie.",
+            "en": "You can decline any order with one click and give a short reason (\"kitchen at capacity\", \"outside delivery hours\", \"ingredient unavailable\"). The customer is notified and, for online payments, automatically refunded in full. No fees from us, no manual handling for you."
+          }
         },
         {
           "slug": "wer-liefert",
-          "q": "Wer liefert eigentlich das Essen?",
-          "a": "Sie selbst, mit eigenem Fahrer oder einem von Ihnen beauftragten Kurierdienst. GastroHub übernimmt nicht die Lieferung selbst. Wir liefern nur das Bestellsystem und halten Ihre Gäste in Echtzeit über den Status auf dem Laufenden. Die Logistik bleibt bei Ihnen, so wie heute auch."
+          "q": {
+            "de": "Wer liefert eigentlich das Essen?",
+            "en": "Who actually delivers the food?"
+          },
+          "a": {
+            "de": "Sie selbst, mit eigenem Fahrer oder einem von Ihnen beauftragten Kurierdienst. GastroHub übernimmt nicht die Lieferung selbst. Wir liefern nur das Bestellsystem und halten Ihre Gäste in Echtzeit über den Status auf dem Laufenden. Die Logistik bleibt bei Ihnen, so wie heute auch.",
+            "en": "You do, with your own driver or a courier service of your choice. GastroHub does not handle delivery itself. We only provide the ordering system and keep your guests up to date on the status in real time. Logistics stays with you, the same as today."
+          }
         }
       ]
     },
     {
       "id": "recht",
-      "title": "Recht & Sicherheit",
+      "title": {
+        "de": "Recht & Sicherheit",
+        "en": "Legal & Security"
+      },
       "items": [
         {
           "slug": "ist-dsgvo-konform",
-          "q": "Ist GastroHub DSGVO-konform?",
-          "a": "Ja. Die Bestellplattform ist nach DSGVO aufgebaut. Sie schließen mit uns einen Auftragsverarbeitungsvertrag (AVV) gemäß Art. 28 DSGVO ab, bevor der erste Endkunde bei Ihnen bestellt. Wir verwenden technisch notwendige Cookies, kein Tracking, keine Werbe-Cookies. Endkunden-Daten werden ausschließlich auf Servern in Deutschland verarbeitet. Details stehen in unserer Datenschutzerklärung."
+          "q": {
+            "de": "Ist GastroHub DSGVO-konform?",
+            "en": "Is GastroHub GDPR-compliant?"
+          },
+          "a": {
+            "de": "Ja. Die Bestellplattform ist nach DSGVO aufgebaut. Sie schließen mit uns einen Auftragsverarbeitungsvertrag (AVV) gemäß Art. 28 DSGVO ab, bevor der erste Endkunde bei Ihnen bestellt. Wir verwenden technisch notwendige Cookies, kein Tracking, keine Werbe-Cookies. Endkunden-Daten werden ausschließlich auf Servern in Deutschland verarbeitet. Details stehen in unserer Datenschutzerklärung.",
+            "en": "Yes. The ordering platform is built according to GDPR. You sign a Data Processing Agreement (DPA) with us under Art. 28 GDPR before the first end customer orders. We use only technically necessary cookies, no tracking, no advertising cookies. End-customer data is processed exclusively on servers in Germany. Details are in our privacy policy."
+          }
         },
         {
           "slug": "wo-werden-daten-gespeichert",
-          "q": "Wo werden meine Daten und die meiner Gäste gespeichert?",
-          "a": "Anwendungsdaten (Speisekarte, Bestellungen, Kundeninformationen) laufen ausschließlich auf Servern in Deutschland. Es gibt keine Datenübertragung in die USA oder andere Drittländer. Lediglich die Marketing-Webseite gastrohub.dev läuft über GitHub Pages, getrennt von der Bestellplattform. Zahlungen über Stripe können nach DSGVO-konformen Standardvertragsklauseln in die USA übermittelt werden; Stripe ist dafür DPF-zertifiziert."
+          "q": {
+            "de": "Wo werden meine Daten und die meiner Gäste gespeichert?",
+            "en": "Where is my data and my guests' data stored?"
+          },
+          "a": {
+            "de": "Anwendungsdaten (Speisekarte, Bestellungen, Kundeninformationen) laufen ausschließlich auf Servern in Deutschland. Es gibt keine Datenübertragung in die USA oder andere Drittländer. Lediglich die Marketing-Webseite gastrohub.dev läuft über GitHub Pages, getrennt von der Bestellplattform. Zahlungen über Stripe können nach DSGVO-konformen Standardvertragsklauseln in die USA übermittelt werden; Stripe ist dafür DPF-zertifiziert.",
+            "en": "Application data (menu, orders, customer information) runs exclusively on servers in Germany. There is no data transfer to the USA or other third countries. Only the marketing website gastrohub.dev runs via GitHub Pages, separate from the ordering platform. Payments via Stripe may be transferred to the USA under GDPR-compliant Standard Contractual Clauses; Stripe is DPF-certified for this purpose."
+          }
         },
         {
           "slug": "allergene-und-pflichten",
-          "q": "Was ist mit Allergenen und gesetzlichen Pflichten?",
-          "a": "Sie pflegen Allergene und Zusatzstoffe pro Gericht direkt im Dashboard, und der Kunde sieht sie vor der Bestellung. Das System ist auf die deutschen und EU-Vorgaben zur Lebensmittelinformationsverordnung (LMIV) ausgelegt. Die Verantwortung für die inhaltliche Richtigkeit liegt bei Ihnen als Restaurantbetreiber, das System macht Ihnen die Pflege so leicht wie möglich."
+          "q": {
+            "de": "Was ist mit Allergenen und gesetzlichen Pflichten?",
+            "en": "What about allergens and legal obligations?"
+          },
+          "a": {
+            "de": "Sie pflegen Allergene und Zusatzstoffe pro Gericht direkt im Dashboard, und der Kunde sieht sie vor der Bestellung. Das System ist auf die deutschen und EU-Vorgaben zur Lebensmittelinformationsverordnung (LMIV) ausgelegt. Die Verantwortung für die inhaltliche Richtigkeit liegt bei Ihnen als Restaurantbetreiber, das System macht Ihnen die Pflege so leicht wie möglich.",
+            "en": "You maintain allergens and additives per dish directly in the dashboard, and the customer sees them before ordering. The system is designed for German and EU rules on food-information regulation (LMIV / EU FIC 1169/2011). Responsibility for the accuracy of the content lies with you as the restaurant operator; the system makes the data entry as easy as possible."
+          }
         },
         {
           "slug": "vertragsbeziehung-stripe",
-          "q": "Habe ich mit Stripe einen separaten Vertrag?",
-          "a": "Ja. Für die Online-Zahlungsabwicklung richten Sie einen eigenen Stripe Connect Account ein, mit Ihren Bank-Daten und Ihrem Gewerbe-Nachweis. Stripe ist Ihr Zahlungs-Dienstleister, GastroHub ist nur die Plattform, die das einbindet. Das ist der gesetzliche Standard und schützt Sie: Sie haben die volle Kontrolle über Ihre Einnahmen und können bei Bedarf auch ohne GastroHub mit Stripe weiterarbeiten."
+          "q": {
+            "de": "Habe ich mit Stripe einen separaten Vertrag?",
+            "en": "Do I have a separate contract with Stripe?"
+          },
+          "a": {
+            "de": "Ja. Für die Online-Zahlungsabwicklung richten Sie einen eigenen Stripe Connect Account ein, mit Ihren Bank-Daten und Ihrem Gewerbe-Nachweis. Stripe ist Ihr Zahlungs-Dienstleister, GastroHub ist nur die Plattform, die das einbindet. Das ist der gesetzliche Standard und schützt Sie: Sie haben die volle Kontrolle über Ihre Einnahmen und können bei Bedarf auch ohne GastroHub mit Stripe weiterarbeiten.",
+            "en": "Yes. For online payment processing you set up your own Stripe Connect account, with your bank details and proof of business. Stripe is your payment processor; GastroHub is only the platform that integrates it. That's the legal standard and it protects you: you have full control over your revenue and could keep working with Stripe even without GastroHub if needed."
+          }
         },
         {
           "slug": "button-loesung-widerruf",
-          "q": "Was ist mit der Button-Lösung und Widerrufsrecht?",
-          "a": "Die Button-Lösung (§ 312j Abs. 3 BGB) ist in den Bestellprozess integriert: der Endkunde bestätigt vor dem Klick auf \"Zahlungspflichtig bestellen\", was er kauft, zu welchem Preis und mit welcher Lieferkosten. Für Lebensmittel-Bestellungen gilt das gesetzliche Widerrufsrecht nach § 312g BGB Abs. 2 Nr. 2 und 4 nicht (verderbliche Waren und vor Ort zubereitete Speisen). Das ist in den Plattform-AGB sauber abgebildet."
+          "q": {
+            "de": "Was ist mit der Button-Lösung und Widerrufsrecht?",
+            "en": "What about the Button-Lösung and the right of withdrawal?"
+          },
+          "a": {
+            "de": "Die Button-Lösung (§ 312j Abs. 3 BGB) ist in den Bestellprozess integriert: der Endkunde bestätigt vor dem Klick auf \"Zahlungspflichtig bestellen\", was er kauft, zu welchem Preis und mit welcher Lieferkosten. Für Lebensmittel-Bestellungen gilt das gesetzliche Widerrufsrecht nach § 312g BGB Abs. 2 Nr. 2 und 4 nicht (verderbliche Waren und vor Ort zubereitete Speisen). Das ist in den Plattform-AGB sauber abgebildet.",
+            "en": "The Button-Lösung (§ 312j para. 3 BGB) is integrated into the checkout flow: the end customer confirms what they buy, at what price and with what delivery cost before clicking \"Zahlungspflichtig bestellen\" (order with obligation to pay). For food orders, the statutory right of withdrawal under § 312g BGB para. 2 nos. 2 and 4 does not apply (perishable goods and food prepared on the spot). This is reflected cleanly in the platform's terms (AGB)."
+          }
         }
       ]
     },
     {
       "id": "support-vertrag",
-      "title": "Support, Vertrag & Sonstiges",
+      "title": {
+        "de": "Support, Vertrag & Sonstiges",
+        "en": "Support, Contract & Other"
+      },
       "items": [
         {
           "slug": "wie-erreiche-ich-support",
-          "q": "Wie erreiche ich den Support?",
-          "a": "Per E-Mail an kontakt@gastrohub.dev. Werktags antworten wir in der Regel am selben oder nächsten Tag. Im 7-Prozent-All-Inclusive-Modell ist Support unbegrenzt enthalten. Im 5-Prozent-Modell und im Einmalzahlungsmodell rechnen wir Support zu 90 Euro pro Stunde ab, in 15-Minuten-Schritten und immer vorher angekündigt."
+          "q": {
+            "de": "Wie erreiche ich den Support?",
+            "en": "How do I reach support?"
+          },
+          "a": {
+            "de": "Per E-Mail an kontakt@gastrohub.dev. Werktags antworten wir in der Regel am selben oder nächsten Tag. Im 7-Prozent-All-Inclusive-Modell ist Support unbegrenzt enthalten. Im 5-Prozent-Modell und im Einmalzahlungsmodell rechnen wir Support zu 90 Euro pro Stunde ab, in 15-Minuten-Schritten und immer vorher angekündigt.",
+            "en": "By email at kontakt@gastrohub.dev. On working days we usually reply the same or next day. In the 7% all-inclusive model, support is included without limit. In the 5% model and the one-time payment model we bill support at €90 per hour, in 15-minute increments, always announced in advance."
+          }
         },
         {
           "slug": "vertragslaufzeit",
-          "q": "Wie lange bin ich an einen Vertrag gebunden?",
-          "a": "Alle drei Preismodelle haben eine Mindestlaufzeit von 12 Monaten. Danach verlängert sich der Vertrag automatisch um jeweils 12 weitere Monate, sofern Sie ihn nicht mit 30 Tagen Frist zum Ende der Vertragsperiode in Textform kündigen. Außerordentliche Kündigung aus wichtigem Grund bleibt jederzeit möglich."
+          "q": {
+            "de": "Wie lange bin ich an einen Vertrag gebunden?",
+            "en": "How long am I committed to a contract?"
+          },
+          "a": {
+            "de": "Alle drei Preismodelle haben eine Mindestlaufzeit von 12 Monaten. Danach verlängert sich der Vertrag automatisch um jeweils 12 weitere Monate, sofern Sie ihn nicht mit 30 Tagen Frist zum Ende der Vertragsperiode in Textform kündigen. Außerordentliche Kündigung aus wichtigem Grund bleibt jederzeit möglich.",
+            "en": "All three pricing models have a minimum term of 12 months. After that, the contract automatically renews for another 12 months unless you cancel it in writing with 30 days' notice before the end of the contract period. Extraordinary termination for cause remains possible at any time."
+          }
         },
         {
           "slug": "mehrere-sprachen",
-          "q": "Kann ich meine Speisekarte mehrsprachig anbieten?",
-          "a": "Ja. Die Plattform unterstützt aktuell Deutsch, Englisch, Arabisch und Türkisch, gleichzeitig im selben System. Ihr Gast wählt die Sprache, Sie pflegen einmal pro Sprache die Texte. Weitere Sprachen können auf Anfrage ergänzt werden. Sinnvoll für Stadtteile mit gemischter Kundschaft, Touristen-Lagen oder Caterer mit internationalen Firmenkunden."
+          "q": {
+            "de": "Kann ich meine Speisekarte mehrsprachig anbieten?",
+            "en": "Can I offer my menu in multiple languages?"
+          },
+          "a": {
+            "de": "Ja. Die Plattform unterstützt aktuell Deutsch, Englisch, Arabisch und Türkisch, gleichzeitig im selben System. Ihr Gast wählt die Sprache, Sie pflegen einmal pro Sprache die Texte. Weitere Sprachen können auf Anfrage ergänzt werden. Sinnvoll für Stadtteile mit gemischter Kundschaft, Touristen-Lagen oder Caterer mit internationalen Firmenkunden.",
+            "en": "Yes. The platform currently supports German, English, Arabic and Turkish, simultaneously in the same system. Your guest picks the language, you maintain the texts once per language. More languages can be added on request. Useful in neighbourhoods with a mixed customer base, tourist locations or caterers with international corporate clients."
+          }
         },
         {
           "slug": "server-ausfall",
-          "q": "Was passiert, wenn die Plattform mal ausfällt?",
-          "a": "Wir bemühen uns um sehr hohe Verfügbarkeit (Server-Standort Deutschland,gespiegelte Datenhaltung, regelmäßige Backups). Garantiert ist eine bestimmte Verfügbarkeit nicht, das wäre unseriös. Bei einem Ausfall sind wir schnellstmöglich für Sie erreichbar. Wartungsarbeiten legen wir, soweit möglich, außerhalb typischer Bestellzeiten (frühmorgens). Im Fall der Fälle können Sie Bestellungen weiter telefonisch annehmen, Ihre Daten gehen nicht verloren."
+          "q": {
+            "de": "Was passiert, wenn die Plattform mal ausfällt?",
+            "en": "What happens if the platform goes down?"
+          },
+          "a": {
+            "de": "Wir bemühen uns um sehr hohe Verfügbarkeit (Server-Standort Deutschland, gespiegelte Datenhaltung, regelmäßige Backups). Garantiert ist eine bestimmte Verfügbarkeit nicht, das wäre unseriös. Bei einem Ausfall sind wir schnellstmöglich für Sie erreichbar. Wartungsarbeiten legen wir, soweit möglich, außerhalb typischer Bestellzeiten (frühmorgens). Im Fall der Fälle können Sie Bestellungen weiter telefonisch annehmen, Ihre Daten gehen nicht verloren.",
+            "en": "We aim for very high availability (server location Germany, mirrored data storage, regular backups). A specific availability is not guaranteed, that would be irresponsible. In case of an outage, we're available as fast as possible. Maintenance is scheduled, where possible, outside typical ordering hours (early morning). If the worst happens, you can keep taking orders by phone; your data is not lost."
+          }
         }
       ]
     }

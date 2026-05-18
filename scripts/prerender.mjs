@@ -32,9 +32,8 @@ const ROUTES = [
   },
   {
     path: "/faq",
-    de: { title: "FAQ | GastroHub", description: "Häufig gestellte Fragen zu GastroHub: Preismodelle, Wechsel von Liefer-Apps, Datenschutz, Stripe-Zahlungen und Einrichtung. Antworten in Klartext." },
-    en: { title: "FAQ | GastroHub", description: "Frequently asked questions about GastroHub: pricing models, switching from delivery apps, privacy, Stripe payments and setup. Answers in plain language." },
-    extraHead: faqJsonLdScript(),
+    de: { title: "FAQ | GastroHub", description: "Häufig gestellte Fragen zu GastroHub: Preismodelle, Wechsel von Liefer-Apps, Datenschutz, Stripe-Zahlungen und Einrichtung. Antworten in Klartext.", extraHead: faqJsonLdScript("de") },
+    en: { title: "FAQ | GastroHub", description: "Frequently asked questions about GastroHub: pricing models, switching from delivery apps, privacy, Stripe payments and setup. Answers in plain language.", extraHead: faqJsonLdScript("en") },
   },
   {
     path: "/kontakt",
@@ -67,15 +66,17 @@ function escapeHtmlAttr(s) {
   return s.replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 }
 
-function faqJsonLdScript() {
+function faqJsonLdScript(lang) {
+  // faq.json schema is bilingual: q/a/title are { de, en } objects. Falls back to de if missing.
+  const pick = (field) => field?.[lang] ?? field?.de ?? "";
   const ld = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     mainEntity: faqData.sections.flatMap((section) =>
       section.items.map((item) => ({
         "@type": "Question",
-        name: item.q,
-        acceptedAnswer: { "@type": "Answer", text: item.a },
+        name: pick(item.q),
+        acceptedAnswer: { "@type": "Answer", text: pick(item.a) },
       })),
     ),
   };
@@ -118,13 +119,13 @@ let count = 0;
 for (const route of ROUTES) {
   const hreflang = hreflangBlock(route.path);
 
-  // DE variant (default)
+  // DE variant (default). extraHead can be a top-level prop OR a per-language prop.
   const deCanonical = `${ORIGIN}${route.path}`;
   const deOut = rewriteHead(indexHtml, {
     title: route.de.title,
     description: route.de.description,
     canonical: deCanonical,
-    extraHead: route.extraHead,
+    extraHead: route.de.extraHead ?? route.extraHead,
     hreflang,
     lang: "de",
   });
@@ -145,7 +146,7 @@ for (const route of ROUTES) {
     title: route.en.title,
     description: route.en.description,
     canonical: enCanonical,
-    extraHead: route.extraHead,
+    extraHead: route.en.extraHead ?? route.extraHead,
     hreflang,
     lang: "en",
   });
