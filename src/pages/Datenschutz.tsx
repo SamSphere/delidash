@@ -63,6 +63,10 @@ export default function Datenschutz() {
 
         <h2 className="text-xl font-semibold mt-8 mb-4">{tk("s7_h")}</h2>
         <p>{tk("s7_body")}</p>
+        <p>
+          {tk("s7_outro_pre")}{" "}
+          <a href={tk("s7_outro_url")} target="_blank" rel="noopener noreferrer">{tk("s7_outro_label")}</a>.
+        </p>
 
         <h2 className="text-xl font-semibold mt-8 mb-4">{tk("s8_h")}</h2>
         <p>{tk("s8_body1")}</p>
