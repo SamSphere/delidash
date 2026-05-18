@@ -1,156 +1,125 @@
 import { useEffect } from "react";
 import { Link } from "wouter";
+import { useTranslation } from "react-i18next";
 
 export default function Datenschutz() {
+  const { t, i18n } = useTranslation("legal");
+  const tk = (k: string) => t(`datenschutz.${k}`);
+  const tImp = (k: string) => t(`impressum.${k}`);
+  const isEn = i18n.language === "en";
+
   useEffect(() => {
-    document.title = "Datenschutz | GastroHub";
+    document.title = `${tk("title")} | GastroHub`;
     const meta = document.querySelector('meta[name="description"]') ?? Object.assign(document.createElement("meta"), { name: "description" });
-    (meta as HTMLMetaElement).content = "Datenschutzerklärung von GastroHub. DSGVO-konform, europäische Server, Stripe Connect als Zahlungsdienstleister.";
+    (meta as HTMLMetaElement).content = tk("meta_description");
     if (!meta.parentNode) document.head.appendChild(meta);
-  }, []);
+  }, [t, i18n.language]);
 
   return (
     <div className="min-h-[100dvh] bg-white py-20">
       <div className="container mx-auto px-4 max-w-3xl prose prose-slate">
-        <h1 className="text-3xl font-bold text-slate-900 mb-8">Datenschutzerklärung</h1>
+        <h1 className="text-3xl font-bold text-slate-900 mb-8">{tk("title")}</h1>
 
-        <h2 className="text-xl font-semibold mt-8 mb-4">1. Allgemeine Hinweise</h2>
-        <p>
-          Die folgenden Hinweise geben einen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen oder unsere Restaurant-Bestellplattform nutzen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können.
-        </p>
-        <p>
-          Diese Erklärung deckt sowohl den Auftritt auf <strong>gastrohub.dev</strong> als auch die von GastroHub betriebene Bestellplattform ab, die Restaurantbetreiber bei sich einsetzen.
-        </p>
+        {isEn && (
+          <div className="not-prose mb-8 rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-900">
+            {t("translation_disclaimer")}
+          </div>
+        )}
 
-        <h2 className="text-xl font-semibold mt-8 mb-4">2. Verantwortlicher</h2>
+        <h2 className="text-xl font-semibold mt-8 mb-4">{tk("s1_h")}</h2>
+        <p>{tk("s1_body1")}</p>
         <p>
-          Verantwortliche Stelle für die Datenverarbeitung im Sinne der DSGVO ist:
-        </p>
-        <p>
-          Osama Farroukh<br />
-          c/o MDC, z.Hd. Osama Farroukh<br />
-          Welserstraße 3<br />
-          87463 Dietmannsried<br />
-          Deutschland<br />
-          E-Mail: <a href="mailto:kontakt@gastrohub.dev">kontakt@gastrohub.dev</a><br />
-          Telefon: +49 151 11017356
+          {tk("s1_body2_pre")} <strong>{tk("s1_body2_strong")}</strong> {tk("s1_body2_post")}
         </p>
 
-        <h2 className="text-xl font-semibold mt-8 mb-4">3. Hosting der Webseite</h2>
+        <h2 className="text-xl font-semibold mt-8 mb-4">{tk("s2_h")}</h2>
+        <p>{tk("s2_intro")}</p>
         <p>
-          Diese Website wird über GitHub Pages (GitHub, Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA) gehostet. Beim Aufruf der Website übermittelt Ihr Browser automatisch technische Daten (z.B. IP-Adresse, Browsertyp, Uhrzeit des Zugriffs) an die Server von GitHub. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer technisch fehlerfreien Bereitstellung). Übermittlung in die USA erfolgt auf Grundlage des EU-US Data Privacy Frameworks.
-        </p>
-        <p>
-          Die Bestellplattform-Anwendungsdaten werden ausschließlich auf Servern in Deutschland (Frankfurt) verarbeitet. Für die Marketing-Website erfolgt ein USA-Transfer an GitHub Pages (siehe Abs. 1).
-        </p>
-        <p>
-          Hosting-Auftragsverarbeiter der Bestellplattform: Hetzner Online GmbH, Industriestr. 25, 91710 Gunzenhausen, Deutschland. Sitz: Deutschland. Zweck: Anwendungs-Hosting und Datenspeicherung. AVV gemäß Art. 28 DSGVO abgeschlossen. Kein Drittlandtransfer.
-        </p>
-
-        <h2 className="text-xl font-semibold mt-8 mb-4">4. Kontaktaufnahme</h2>
-        <p>
-          Wenn Sie uns per E-Mail oder über den auf der Website angebotenen Mailto-Link kontaktieren, verarbeiten wir Ihre Angaben (Name, E-Mail-Adresse, Inhalt der Nachricht) ausschließlich zur Bearbeitung Ihrer Anfrage. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (Vertragsanbahnung) oder Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Beantwortung von Anfragen).
-        </p>
-        <p>
-          Anfragen werden gelöscht, sobald sie abschließend bearbeitet sind und keine gesetzlichen Aufbewahrungspflichten entgegenstehen. Kontaktanfragen werden spätestens nach 12 Monaten gelöscht, soweit keine gesetzlichen Aufbewahrungspflichten entgegenstehen.
+          {tImp("diensteanbieter_name")}<br />
+          {tImp("diensteanbieter_co")}<br />
+          {tImp("diensteanbieter_street")}<br />
+          {tImp("diensteanbieter_city")}<br />
+          {tImp("diensteanbieter_country")}<br />
+          {tImp("kontakt_email_label")}: <a href="mailto:kontakt@gastrohub.dev">kontakt@gastrohub.dev</a><br />
+          {tImp("kontakt_phone_label")}: +49 151 11017356
         </p>
 
-        <h2 className="text-xl font-semibold mt-8 mb-4">5. Restaurantbetreiber als Kunden</h2>
-        <p>
-          Wenn Sie als Restaurantbetreiber unsere Plattform buchen, verarbeiten wir Ihre Stammdaten zur Vertragsabwicklung und Rechnungsstellung:
-        </p>
+        <h2 className="text-xl font-semibold mt-8 mb-4">{tk("s3_h")}</h2>
+        <p>{tk("s3_body1")}</p>
+        <p>{tk("s3_body2")}</p>
+        <p>{tk("s3_body3")}</p>
+
+        <h2 className="text-xl font-semibold mt-8 mb-4">{tk("s4_h")}</h2>
+        <p>{tk("s4_body1")}</p>
+        <p>{tk("s4_body2")}</p>
+
+        <h2 className="text-xl font-semibold mt-8 mb-4">{tk("s5_h")}</h2>
+        <p>{tk("s5_intro")}</p>
         <ul>
-          <li>Name und Anschrift des Betriebs</li>
-          <li>Ansprechpartner, E-Mail, Telefon</li>
-          <li>Umsatzsteuer-ID, sofern vorhanden</li>
-          <li>Stripe Connect Account-ID (siehe Abschnitt 7)</li>
+          <li>{tk("s5_li1")}</li>
+          <li>{tk("s5_li2")}</li>
+          <li>{tk("s5_li3")}</li>
+          <li>{tk("s5_li4")}</li>
+        </ul>
+        <p>{tk("s5_outro")}</p>
+
+        <h2 className="text-xl font-semibold mt-8 mb-4">{tk("s6_h")}</h2>
+        <p>{tk("s6_body1")}</p>
+        <p>{tk("s6_body2")}</p>
+
+        <h2 className="text-xl font-semibold mt-8 mb-4">{tk("s7_h")}</h2>
+        <p>{tk("s7_body1")}</p>
+        <p>
+          {tk("s7_body2_pre")}{" "}
+          <a href="https://stripe.com/de/privacy" target="_blank" rel="noopener noreferrer">stripe.com/de/privacy</a>.
+        </p>
+        <p>{tk("s7_body3")}</p>
+        <p>{tk("s7_body4")}</p>
+        <p>{tk("s7_body5")}</p>
+
+        <h2 className="text-xl font-semibold mt-8 mb-4">{tk("s8_h")}</h2>
+        <p>{tk("s8_body")}</p>
+
+        <h2 className="text-xl font-semibold mt-8 mb-4">{tk("s9_h")}</h2>
+        <p>
+          {tk("s9_body1_pre")}{" "}
+          <Link href="/cookie-richtlinie" className="text-primary hover:underline">{tk("s9_body1_link")}</Link>.
+        </p>
+        <p>{tk("s9_body2")}</p>
+
+        <h2 className="text-xl font-semibold mt-8 mb-4">{tk("s10_h")}</h2>
+        <p>{tk("s10_body")}</p>
+
+        <h2 className="text-xl font-semibold mt-8 mb-4">{tk("s11_h")}</h2>
+        <p>{tk("s11_body")}</p>
+
+        <h2 className="text-xl font-semibold mt-8 mb-4">{tk("s12_h")}</h2>
+        <p>{tk("s12_intro")}</p>
+        <ul>
+          <li>{tk("s12_li1")}</li>
+          <li>{tk("s12_li2")}</li>
+          <li>{tk("s12_li3")}</li>
+          <li>{tk("s12_li4")}</li>
+          <li>{tk("s12_li5")}</li>
+          <li>{tk("s12_li6")}</li>
         </ul>
         <p>
-          Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung). Speicherdauer richtet sich nach den handels- und steuerrechtlichen Aufbewahrungsfristen (in der Regel 10 Jahre nach § 147 AO).
+          {tk("s12_outro_pre")} <a href="mailto:kontakt@gastrohub.dev">kontakt@gastrohub.dev</a>.
         </p>
 
-        <h2 className="text-xl font-semibold mt-8 mb-4">6. Daten der Endkunden des Restaurants</h2>
+        <h2 className="text-xl font-semibold mt-8 mb-4">{tk("s13_h")}</h2>
+        <p>{tk("s13_intro")}</p>
         <p>
-          Endkunden, die über die von GastroHub bereitgestellte Plattform bei einem Restaurant bestellen, geben dabei personenbezogene Daten ein (Name, Lieferadresse, E-Mail, Telefonnummer, Bestelldetails). Verantwortlicher für diese Daten ist primär der Restaurantbetreiber. GastroHub verarbeitet diese Daten als Auftragsverarbeiter im Sinne von Art. 28 DSGVO ausschließlich im Auftrag und nach Weisung des Restaurantbetreibers.
-        </p>
-        <p>
-          Mit jedem Restaurantbetreiber wird eine Auftragsverarbeitungsvereinbarung (AVV) gemäß Art. 28 DSGVO abgeschlossen, in der die Pflichten und Garantien festgelegt sind. Der AVV wird vor Beginn der ersten Verarbeitung personenbezogener Daten von Endkunden abgeschlossen. Die Daten werden ausschließlich auf europäischen Servern verarbeitet und nicht an Dritte weitergegeben, mit Ausnahme der unter Abschnitt 7 genannten Zahlungsdienstleister.
-        </p>
-
-        <h2 className="text-xl font-semibold mt-8 mb-4">7. Zahlungsabwicklung über Stripe Connect</h2>
-        <p>
-          Für die Abwicklung der Zahlungen auf der Restaurantplattform setzen wir Stripe Connect ein (Stripe Payments Europe, Limited, 1 Grand Canal Street Lower, Grand Canal Dock, Dublin, Irland). Stripe ist ein eigenständiger Verantwortlicher im Sinne der DSGVO.
-        </p>
-        <p>
-          Bei einer Bestellung mit Online-Zahlung werden die Zahlungsdaten (insbesondere Kartendaten) direkt an Stripe übermittelt. Wir selbst speichern oder sehen keine vollständigen Kartendaten. Stripe verarbeitet die Daten zur Zahlungsabwicklung sowie zur Betrugsprävention. Die Bedingungen finden Sie unter <a href="https://stripe.com/de/privacy" target="_blank" rel="noopener noreferrer">stripe.com/de/privacy</a>.
-        </p>
-        <p>
-          In den Provisionsmodellen behält Stripe automatisiert die vereinbarte Plattformgebühr (5 % oder 7 %) je Transaktion ein und leitet diese an GastroHub weiter. Hierbei werden uns Transaktions-Metadaten (Bestellzeitpunkt, Betrag, Restaurant-Identifikator) übermittelt, jedoch keine Zahlungsmittel und keine vollständigen Endkundendaten. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO.
-        </p>
-        <p>
-          Stripe behält sich Transfers an verbundene Unternehmen außerhalb der EU vor, abgesichert durch SCCs und das EU-US Data Privacy Framework (Stripe ist DPF-zertifiziert).
-        </p>
-        <p>
-          Transaktionsmetadaten werden gemäß § 147 AO für 10 Jahre aufbewahrt.
-        </p>
-
-        <h2 className="text-xl font-semibold mt-8 mb-4">8. Elektronischer Geschäftsverkehr</h2>
-        <p>
-          Die Bestellplattform stellt eine elektronische Geschäftsverkehrs-Plattform im Sinne des § 312i BGB dar. Die Anforderungen der Button-Lösung gemäß § 312j Abs. 3 BGB werden im Bestellprozess umgesetzt.
-        </p>
-
-        <h2 className="text-xl font-semibold mt-8 mb-4">9. Cookies</h2>
-        <p>
-          Diese Website verwendet ausschließlich technisch notwendige Cookies, insbesondere zur Speicherung Ihrer Cookie-Einwilligung. Es werden keine Tracking-, Analyse- oder Marketing-Cookies eingesetzt. Details finden Sie in unserer{" "}
-          <Link href="/cookie-richtlinie" className="text-primary hover:underline">Cookie-Richtlinie</Link>.
-        </p>
-        <p>
-          Rechtsgrundlage für technisch notwendige Cookies: § 25 Abs. 2 Nr. 2 TTDSG i.V.m. Art. 6 Abs. 1 lit. f DSGVO.
-        </p>
-
-        <h2 className="text-xl font-semibold mt-8 mb-4">10. Server-Logfiles</h2>
-        <p>
-          Bei jedem Aufruf der Website werden technische Zugriffsdaten (Server-Logfiles) automatisiert durch den Hosting-Anbieter (GitHub Pages) bzw. unseren Plattform-Hosting-Anbieter erfasst. Dazu zählen IP-Adresse, Datum und Uhrzeit, aufgerufene URL, übertragene Datenmenge, Referrer-URL, User-Agent. Diese Daten werden ausschließlich zur Sicherstellung des fehlerfreien Betriebs und zur Abwehr von Missbrauch verarbeitet und nach spätestens 90 Tagen gelöscht. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO.
-        </p>
-
-        <h2 className="text-xl font-semibold mt-8 mb-4">11. Datensicherheit</h2>
-        <p>
-          Wir setzen technische und organisatorische Maßnahmen ein, um Ihre Daten gegen Verlust, Manipulation und unbefugten Zugriff zu schützen. Die Verbindung zur Website ist SSL/TLS-verschlüsselt. Zugriffe auf die Plattform sind passwortgeschützt und protokolliert.
-        </p>
-
-        <h2 className="text-xl font-semibold mt-8 mb-4">12. Ihre Rechte</h2>
-        <p>
-          Sie haben gegenüber uns folgende Rechte hinsichtlich Ihrer personenbezogenen Daten:
-        </p>
-        <ul>
-          <li>Recht auf Auskunft (Art. 15 DSGVO)</li>
-          <li>Recht auf Berichtigung (Art. 16 DSGVO)</li>
-          <li>Recht auf Löschung (Art. 17 DSGVO)</li>
-          <li>Recht auf Einschränkung der Verarbeitung (Art. 18 DSGVO)</li>
-          <li>Recht auf Datenübertragbarkeit (Art. 20 DSGVO)</li>
-          <li>Recht auf Widerspruch gegen die Verarbeitung (Art. 21 DSGVO)</li>
-        </ul>
-        <p>
-          Zur Ausübung Ihrer Rechte wenden Sie sich bitte per E-Mail an <a href="mailto:kontakt@gastrohub.dev">kontakt@gastrohub.dev</a>.
-        </p>
-
-        <h2 className="text-xl font-semibold mt-8 mb-4">13. Beschwerderecht bei der Aufsichtsbehörde</h2>
-        <p>
-          Sie haben das Recht, sich bei einer Datenschutz-Aufsichtsbehörde über die Verarbeitung Ihrer personenbezogenen Daten zu beschweren. Die für GastroHub zuständige Aufsichtsbehörde ist:
-        </p>
-        <p>
-          Landesbeauftragter für Datenschutz und Informationsfreiheit Baden-Württemberg<br />
-          Königstraße 10a<br />
-          70173 Stuttgart<br />
+          {tk("s13_authority_l1")}<br />
+          {tk("s13_authority_l2")}<br />
+          {tk("s13_authority_l3")}<br />
           <a href="https://www.baden-wuerttemberg.datenschutz.de" target="_blank" rel="noopener noreferrer">https://www.baden-wuerttemberg.datenschutz.de</a>
         </p>
 
-        <h2 className="text-xl font-semibold mt-8 mb-4">14. Änderung dieser Datenschutzerklärung</h2>
-        <p>
-          Wir behalten uns vor, diese Datenschutzerklärung anzupassen, sofern dies rechtliche Änderungen oder Anpassungen unserer Dienste erforderlich machen. Die jeweils aktuelle Fassung finden Sie stets auf dieser Seite.
-        </p>
+        <h2 className="text-xl font-semibold mt-8 mb-4">{tk("s14_h")}</h2>
+        <p>{tk("s14_body")}</p>
 
-        <p className="text-sm text-slate-400 mt-12">Stand: Mai 2026</p>
+        <p className="text-sm text-slate-400 mt-12">{tk("stand")}</p>
       </div>
     </div>
   );
