@@ -62,13 +62,7 @@ export default function Datenschutz() {
         <p>{tk("s6_body2")}</p>
 
         <h2 className="text-xl font-semibold mt-8 mb-4">{tk("s7_h")}</h2>
-        <p>{tk("s7_body1")}</p>
-        <p>
-          {tk("s7_body2_pre")}{" "}
-          <a href="https://stripe.com/de/privacy" target="_blank" rel="noopener noreferrer">stripe.com/de/privacy</a>.
-        </p>
-        <p>{tk("s7_body3")}</p>
-        <p>{tk("s7_body4")}</p>
+        <p>{tk("s7_body")}</p>
 
         <h2 className="text-xl font-semibold mt-8 mb-4">{tk("s8_h")}</h2>
         <p>{tk("s8_body1")}</p>
