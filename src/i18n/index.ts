@@ -14,6 +14,8 @@ import deFaq from "@/locales/de/faq.json";
 import enFaq from "@/locales/en/faq.json";
 import deLegal from "@/locales/de/legal.json";
 import enLegal from "@/locales/en/legal.json";
+import dePricing from "@/locales/de/pricing.json";
+import enPricing from "@/locales/en/pricing.json";
 
 export const SUPPORTED_LANGS = ["de", "en"] as const;
 export type SupportedLang = (typeof SUPPORTED_LANGS)[number];
@@ -34,14 +36,14 @@ void i18n
   .use(initReactI18next)
   .init({
     resources: {
-      de: { common: deCommon, home: deHome, demo: deDemo, contact: deContact, faq: deFaq, legal: deLegal },
-      en: { common: enCommon, home: enHome, demo: enDemo, contact: enContact, faq: enFaq, legal: enLegal },
+      de: { common: deCommon, home: deHome, demo: deDemo, contact: deContact, faq: deFaq, legal: deLegal, pricing: dePricing },
+      en: { common: enCommon, home: enHome, demo: enDemo, contact: enContact, faq: enFaq, legal: enLegal, pricing: enPricing },
     },
     lng: urlLang ?? undefined,
     fallbackLng: DEFAULT_LANG,
     supportedLngs: SUPPORTED_LANGS as unknown as string[],
     defaultNS: "common",
-    ns: ["common", "home", "demo", "contact", "faq", "legal"],
+    ns: ["common", "home", "demo", "contact", "faq", "legal", "pricing"],
     interpolation: { escapeValue: false },
     detection: {
       order: ["localStorage", "navigator"],

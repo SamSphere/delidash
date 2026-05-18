@@ -1,9 +1,10 @@
 import { Link } from "wouter";
 import { motion, type Variants } from "framer-motion";
 import { ArrowRight, CheckCircle2, TrendingUp, ShieldCheck, Clock, Check, PackageOpen, Globe, UserRound, Settings, ShoppingCart, Languages, LayoutDashboard, Sparkles } from "lucide-react";
-import { useTranslation, Trans } from "react-i18next";
+import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { CostCalculator } from "@/components/CostCalculator";
 import { useEffect } from "react";
 
 export default function Home() {
@@ -50,15 +51,6 @@ export default function Home() {
     { icon: CheckCircle2, k: "law" },
     { icon: ArrowRight, k: "contact" },
   ] as const;
-
-  const comparisonRows: Array<{ labelKey: string; a: string; b: string; gh: string }> = [
-    { labelKey: "row_provision", a: t("comparison.pa_commission"), b: t("comparison.pb_commission"), gh: t("comparison.gh_commission") },
-    { labelKey: "row_monthly",   a: t("comparison.pa_monthly"),    b: t("comparison.pb_monthly"),    gh: t("comparison.gh_monthly") },
-    { labelKey: "row_setup",     a: t("comparison.pa_setup"),      b: t("comparison.pb_setup"),      gh: t("comparison.gh_setup") },
-    { labelKey: "row_customers", a: t("comparison.platform"),      b: t("comparison.platform"),      gh: t("comparison.yours") },
-    { labelKey: "row_branding",  a: t("comparison.no"),            b: t("comparison.no"),            gh: t("comparison.full") },
-    { labelKey: "row_payment",   a: t("comparison.platform"),      b: t("comparison.platform"),      gh: t("comparison.direct_stripe") },
-  ];
 
   return (
     <div className="flex flex-col min-h-[100dvh]">
@@ -178,43 +170,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Comparison */}
-      <section className="py-20 lg:py-28 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">{t("comparison.title")}</h2>
-            <p className="text-lg text-slate-600">{t("comparison.subtitle")}</p>
-          </div>
-          <div className="max-w-3xl mx-auto overflow-x-auto">
-            <div className="grid grid-cols-4 text-xs font-semibold text-slate-500 uppercase tracking-wide mb-3 px-4 min-w-[560px]">
-              <div></div>
-              <div className="text-center">{t("comparison.col_platform_a")}</div>
-              <div className="text-center">{t("comparison.col_platform_b")}</div>
-              <div className="text-center text-primary">{t("comparison.col_gastrohub")}</div>
-            </div>
-            {comparisonRows.map((row, i) => (
-              <div key={i} className={`grid grid-cols-4 px-4 py-4 rounded-xl mb-2 items-center min-w-[560px] ${i % 2 === 0 ? "bg-slate-50" : "bg-white"}`}>
-                <div className="text-sm font-medium text-slate-700">{t(`comparison.${row.labelKey}`)}</div>
-                <div className="text-center text-sm text-red-500 font-medium">{row.a}</div>
-                <div className="text-center text-sm text-red-400 font-medium">{row.b}</div>
-                <div className="text-center text-sm text-emerald-600 font-semibold">{row.gh}</div>
-              </div>
-            ))}
-            <div className="mt-6 bg-secondary/40 border border-primary/15 rounded-2xl p-6 text-center">
-              <p className="text-slate-700 text-base">{t("comparison.savings_text")}</p>
-              <p className="text-slate-700 text-base mt-2">
-                <Trans
-                  i18nKey="comparison.savings_text2"
-                  ns="home"
-                  components={{ strong: <span className="font-bold text-emerald-600" /> }}
-                  values={{ strong: t("comparison.savings_strong") }}
-                />
-              </p>
-              <p className="text-xs text-slate-400 mt-4">{t("comparison.disclaimer")}</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Cost Calculator (replaces static comparison table) */}
+      <CostCalculator />
 
       {/* Pricing */}
       <section className="py-20 lg:py-28 bg-slate-50">
