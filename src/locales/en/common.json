@@ -1,0 +1,39 @@
+{
+  "nav": {
+    "home": "Home",
+    "demo": "Demo",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "cta": "View demo",
+    "open_menu": "Open menu",
+    "close_menu": "Close menu",
+    "language": "Language",
+    "language_german": "German",
+    "language_english": "English",
+    "switch_to_german": "Switch to German",
+    "switch_to_english": "Switch to English"
+  },
+  "footer": {
+    "tagline": "The restaurant platform for direct orders, menu management and a mobile owner dashboard.",
+    "impressum": "Imprint",
+    "datenschutz": "Privacy Policy",
+    "agb": "Terms",
+    "cookie_policy": "Cookie Policy",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "copyright": "© 2026 GastroHub. All rights reserved."
+  },
+  "cookie_banner": {
+    "text": "This website uses technically necessary cookies to ensure functionality. For details see our",
+    "datenschutz_link": "privacy policy",
+    "accept": "Accept",
+    "decline": "Decline"
+  },
+  "not_found": {
+    "title": "Page not found",
+    "subtitle": "404",
+    "body": "The page you requested does not exist (anymore). One of the options below may help:",
+    "back_home": "Back to home",
+    "open_demo": "View demo"
+  }
+}

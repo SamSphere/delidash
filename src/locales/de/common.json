@@ -1,0 +1,39 @@
+{
+  "nav": {
+    "home": "Start",
+    "demo": "Demo",
+    "faq": "FAQ",
+    "contact": "Kontakt",
+    "cta": "Demo ansehen",
+    "open_menu": "Menü öffnen",
+    "close_menu": "Menü schließen",
+    "language": "Sprache",
+    "language_german": "Deutsch",
+    "language_english": "Englisch",
+    "switch_to_german": "Auf Deutsch wechseln",
+    "switch_to_english": "Auf Englisch wechseln"
+  },
+  "footer": {
+    "tagline": "Die Restaurantplattform für direkte Bestellungen, Menüverwaltung und mobiles Owner-Dashboard.",
+    "impressum": "Impressum",
+    "datenschutz": "Datenschutz",
+    "agb": "AGB",
+    "cookie_policy": "Cookie-Richtlinie",
+    "faq": "FAQ",
+    "contact": "Kontakt",
+    "copyright": "© 2026 GastroHub. Alle Rechte vorbehalten."
+  },
+  "cookie_banner": {
+    "text": "Diese Website verwendet technisch notwendige Cookies, um die Funktionalität sicherzustellen. Weitere Informationen finden Sie in unserer",
+    "datenschutz_link": "Datenschutzerklärung",
+    "accept": "Akzeptieren",
+    "decline": "Ablehnen"
+  },
+  "not_found": {
+    "title": "Seite nicht gefunden",
+    "subtitle": "404",
+    "body": "Die aufgerufene Seite gibt es nicht (mehr). Vielleicht hilft eine der folgenden Optionen weiter:",
+    "back_home": "Zur Startseite",
+    "open_demo": "Demo ansehen"
+  }
+}
