@@ -5,6 +5,27 @@
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https://images.unsplash.com data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline'; connect-src 'self' https://formspree.io; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://formspree.io;" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script type="text/javascript">
+      // First-visit browser-language auto-detection. Runs BEFORE the SPA decoder
+      // and BEFORE React bundles, to avoid a flash of wrong language.
+      // - Respects an existing language choice (manual toggle wins permanently).
+      // - Skips when already on /en/* (URL is authoritative).
+      // - GDPR-safe: navigator.language only, no IP lookup, no third-party.
+      // - Manual toggle stores its choice under gastrohub_lang via i18next; this
+      //   block reads the same key so the two paths agree.
+      (function () {
+        try {
+          if (localStorage.getItem('gastrohub_lang')) return;
+        } catch (e) { /* private mode etc, fail open to DE */ return; }
+        var path = window.location.pathname;
+        if (path === '/en' || path.indexOf('/en/') === 0) return;
+        var lang = (navigator.language || 'de').toLowerCase();
+        if (lang.indexOf('en') === 0) {
+          var target = '/en' + (path === '/' ? '' : path) + window.location.search + window.location.hash;
+          window.location.replace(target);
+        }
+      })();
+    </script>
+    <script type="text/javascript">
       // SPA fallback decoder: reads ?/path from 404.html redirect and rewrites history.
       (function(l){if(l.search[1]==='/'){var d=l.search.slice(1).split('&').map(function(s){return s.replace(/~and~/g,'&')}).join('?');window.history.replaceState(null,null,l.pathname.slice(0,-1)+d+l.hash)}}(window.location));
     </script>
