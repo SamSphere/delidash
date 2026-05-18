@@ -22,7 +22,7 @@
         {
           "slug": "unterschied-zu-liefer-apps",
           "q": "Was unterscheidet GastroHub von den großen Liefer-Apps?",
-          "a": "Drei Dinge. Erstens: Die Bestellung läuft direkt bei Ihnen ein, nicht über ein fremdes System, das Ihre Marke verdeckt. Zweitens: Ihre Kunden sind Ihre Kunden. Sie sehen Namen, E-Mail-Adressen und Bestellhistorie und können diese Gäste für Wiederbestellungen oder Aktionen anschreiben. Drittens: Sie zahlen 0 % bei Einmalzahlung (Hosting separat berechnet), 5 % ohne Support (Wartung separat berechnet) oder 7 % alles inklusive."
+          "a": "Drei Dinge. Erstens: Die Bestellung läuft direkt bei Ihnen ein, nicht über ein fremdes System, das Ihre Marke verdeckt. Zweitens: Ihre Kunden sind Ihre Kunden. Sie sehen Namen, E-Mail-Adressen und Bestellhistorie und können diese Gäste für Wiederbestellungen oder Aktionen anschreiben. Drittens: Sie zahlen 0 %, 5 % oder 7 % je Bestellung statt 15 bis 30 % bei den großen Aggregatoren."
         }
       ]
     },
@@ -33,22 +33,22 @@
         {
           "slug": "was-kostet-gastrohub",
           "q": "Was kostet GastroHub?",
-          "a": "Es gibt zwei Modelle. Im Einmalzahlungsmodell zahlen Sie einen festen Betrag für die Einrichtung, danach 0 % Provision, kein Abo. Im Provisionsmodell zahlen Sie keine Einrichtung, sondern 5 % pro Bestellung (Grundpaket) oder 7 % pro Bestellung inklusive Wartung und Support. Den Einrichtungspreis nennen wir nach einem kurzen Gespräch, weil er von Speisekarten-Größe, Lieferzonen und Ihrer aktuellen Daten-Lage abhängt."
+          "a": "Drei Modelle, alle mit 12 Monaten Mindestlaufzeit. Einmalzahlung: ab 2.500 Euro Einrichtungsgebühr plus 149 Euro pro Monat (Hosting, Domain, E-Mail, Basis-Wartung), 0 Prozent Provision, Support separat zu 90 Euro pro Stunde. 5-Prozent-Modell: ab 499 Euro Einrichtungsgebühr, 5 Prozent pro Bestellung, mindestens 149 Euro pro Monat, Support separat zu 90 Euro pro Stunde. 7-Prozent-All-Inclusive: ab 499 Euro Einrichtungsgebühr, 7 Prozent pro Bestellung, mindestens 249 Euro pro Monat, Support und Wartung komplett enthalten. Den exakten Einrichtungspreis nennen wir nach einem kurzen Gespräch, weil er von Speisekarten-Größe, Lieferzonen, Sprachen und Migrationsaufwand abhängt."
         },
         {
           "slug": "was-bedeuten-15-30-prozent",
           "q": "Was bedeuten 15 bis 30 % Provision in echtem Geld?",
-          "a": "Rechnen Sie es durch: Bei 10.000 Euro Monatsumsatz nimmt eine Plattform mit 20 % Provision 2.000 Euro pro Monat. Das sind 24.000 Euro im Jahr. Bei 25 % sind es 30.000 Euro. Restaurants arbeiten typischerweise mit 5 bis 8 % Nettomarge. Die Plattform nimmt also oft mehr von der einzelnen Bestellung weg, als am Ende für Sie übrig bleibt. Bei GastroHub bleibt der gleiche Umsatz bei Ihnen, minus einer einmaligen Gebühr oder 5 %."
+          "a": "Rechnen Sie es durch: Bei 10.000 Euro Monatsumsatz nimmt eine Plattform mit 20 % Provision 2.000 Euro pro Monat. Das sind 24.000 Euro im Jahr. Bei 25 % sind es 30.000 Euro. Restaurants arbeiten typischerweise mit 5 bis 8 % Nettomarge. Die Plattform nimmt also oft mehr von der einzelnen Bestellung weg, als am Ende für Sie übrig bleibt. Bei GastroHub liegt die Provision zwischen 0 und 7 Prozent, je nach gewähltem Modell, plus einer monatlichen Grundgebühr ab 149 Euro."
         },
         {
           "slug": "welches-modell-besser",
           "q": "Welches Modell ist für mich besser?",
-          "a": "Einmalzahlung lohnt sich, wenn Sie langfristig denken und nach einem Jahr keine laufenden Kosten mehr haben wollen. Sie zahlen einmal, danach nichts mehr. Provision (5 % oder 7 %) lohnt sich, wenn Sie klein starten wollen, ohne in Vorkasse zu gehen. Sie zahlen nur, wenn Sie verdienen. Beides ist deutlich günstiger als die großen Aggregatoren. Im Erstgespräch rechnen wir mit Ihren echten Zahlen durch, welches Modell sich für Sie rechnet."
+          "a": "Einmalzahlung lohnt sich, wenn Sie langfristig hohe Bestellzahlen erwarten: höhere Anfangsinvestition, aber 0 Prozent Provision. 5-Prozent-Modell: niedriger Einstieg (ab 499 Euro), Sie zahlen anteilig mit dem Umsatz, Support buchen Sie nach Bedarf. 7-Prozent-All-Inclusive: gleicher niedriger Einstieg, dafür Support und Wartung komplett im Preis, gut wenn Sie sich um Technik nicht kümmern möchten. Alle drei Modelle haben eine monatliche Grundgebühr (149 oder 249 Euro) und 12 Monate Mindestlaufzeit. Im Erstgespräch rechnen wir mit Ihren echten Zahlen durch, welches Modell sich für Sie rechnet."
         },
         {
           "slug": "versteckte-kosten",
           "q": "Gibt es versteckte Kosten?",
-          "a": "Nein. Was im Angebot steht, ist der vollständige Preis von uns. Zusätzlich fallen Stripe-Gebühren an (etwa 1,5 % plus 25 Cent pro erfolgreicher Kartentransaktion). Diese gehen direkt an Stripe und sind in jedem Online-Bezahlsystem üblich. Sie sehen jede einzelne Gebühr in Ihrem Stripe-Dashboard. Es gibt keine Sponsored-Listings, keinen Premium-Platzierung-Aufpreis, keine verpflichtenden Werbebudgets."
+          "a": "Nein. Das Angebot nennt alle Bestandteile: Einrichtungsgebühr (einmalig), monatliche Grundgebühr (149 oder 249 Euro), Provisionssatz (0, 5 oder 7 Prozent) und gegebenenfalls Support-Stundensätze (90 Euro pro Stunde, außerhalb des 7-Prozent-All-Inclusive). Zusätzlich fallen die marktüblichen Stripe-Gebühren an (etwa 1,5 Prozent plus 25 Cent pro erfolgreicher Kartentransaktion), diese gehen direkt an Stripe. Sie sehen jede einzelne Gebühr in Ihrem Stripe-Dashboard. Keine Sponsored-Listings, keine Premium-Platzierung-Aufpreise, keine verpflichtenden Werbebudgets."
         }
       ]
     },
@@ -189,12 +189,12 @@
         {
           "slug": "wie-erreiche-ich-support",
           "q": "Wie erreiche ich den Support?",
-          "a": "Per E-Mail an kontakt@gastrohub.dev. Werktags antworten wir in der Regel am selben oder nächsten Tag. Im 7%-Provisionsmodell ist der Support unbegrenzt inbegriffen. Im 5%-Modell und im Einmalzahlungsmodell wird Wartung separat berechnet, zu fairen Stundensätzen, immer transparent angekündigt."
+          "a": "Per E-Mail an kontakt@gastrohub.dev. Werktags antworten wir in der Regel am selben oder nächsten Tag. Im 7-Prozent-All-Inclusive-Modell ist Support unbegrenzt enthalten. Im 5-Prozent-Modell und im Einmalzahlungsmodell rechnen wir Support zu 90 Euro pro Stunde ab, in 15-Minuten-Schritten und immer vorher angekündigt."
         },
         {
           "slug": "vertragslaufzeit",
           "q": "Wie lange bin ich an einen Vertrag gebunden?",
-          "a": "Im Einmalzahlungsmodell gibt es keine Vertragslaufzeit. Sie zahlen einmal, danach steht die Plattform Ihnen zur Verfügung. Im Provisionsmodell läuft der Vertrag unbestimmt und kann von beiden Seiten mit 30 Tagen Frist zum Monatsende gekündigt werden. Keine Mindestlaufzeit, keine Strafgebühren bei Ausstieg."
+          "a": "Alle drei Preismodelle haben eine Mindestlaufzeit von 12 Monaten. Danach verlängert sich der Vertrag automatisch um jeweils 12 weitere Monate, sofern Sie ihn nicht mit 30 Tagen Frist zum Ende der Vertragsperiode in Textform kündigen. Außerordentliche Kündigung aus wichtigem Grund bleibt jederzeit möglich."
         },
         {
           "slug": "mehrere-sprachen",

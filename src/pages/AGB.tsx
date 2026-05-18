@@ -41,17 +41,20 @@ export default function AGB() {
         </p>
         <ul>
           <li>
-            <strong>Einmalzahlungsmodell:</strong> Der Kunde zahlt einen einmaligen, im Angebot benannten Festpreis für Einrichtung und Bereitstellung. Es fällt keine laufende Provision an. Wartung und Updates werden separat abgerechnet.
+            <strong>Einmalzahlungsmodell:</strong> Einrichtungsgebühr ab 2.500&thinsp;€ (Festpreis im Angebot) zuzüglich 149&thinsp;€ pro Monat für Hosting, Domain, E-Mail und Basis-Wartung. Es fällt keine Provision pro Bestellung an. Technischer Support wird separat zu 90&thinsp;€ pro Stunde abgerechnet.
           </li>
           <li>
-            <strong>Provisionsmodell 5 %:</strong> Es fällt keine Einrichtungsgebühr an. GastroHub erhält 5 % je verarbeiteter Bestellung. Wartung und Updates werden separat abgerechnet.
+            <strong>Provisionsmodell 5 %:</strong> Einrichtungsgebühr ab 499&thinsp;€. GastroHub erhält 5 % je verarbeiteter Bestellung, mindestens jedoch 149&thinsp;€ pro Monat. Wartung und technischer Support werden separat zu 90&thinsp;€ pro Stunde abgerechnet.
           </li>
           <li>
-            <strong>Provisionsmodell 7 %:</strong> Es fällt keine Einrichtungsgebühr an. GastroHub erhält 7 % je verarbeiteter Bestellung. Wartung und Updates sowie technischer Support sind im Preis enthalten.
+            <strong>Provisionsmodell 7 % All-Inclusive:</strong> Einrichtungsgebühr ab 499&thinsp;€. GastroHub erhält 7 % je verarbeiteter Bestellung, mindestens jedoch 249&thinsp;€ pro Monat. Wartung, Updates und technischer Support sind im Preis enthalten.
           </li>
         </ul>
         <p>
-          Die Provision wird im Provisionsmodell automatisiert über Stripe Connect (Application Fee) je Transaktion einbehalten, ausgewiesen und an GastroHub ausgezahlt. Eine zusätzliche Rechnungsstellung an den Kunden entfällt insoweit. Einmalbeträge und gesonderte Wartungspauschalen werden per Rechnung mit einem Zahlungsziel von 14 Tagen fällig.
+          Die genaue Einrichtungsgebühr richtet sich nach dem im Angebot vereinbarten Leistungsumfang (insbesondere Anzahl der Speisekarten-Positionen, Lieferzonen, Sprachen und Migrationsaufwand) und wird vor Vertragsschluss verbindlich genannt.
+        </p>
+        <p>
+          Die Provision wird im Provisionsmodell automatisiert über Stripe Connect (Application Fee) je Transaktion einbehalten, ausgewiesen und an GastroHub ausgezahlt. Der monatliche Mindestbetrag wird, soweit die im Monat angefallene Provision unter dem Mindestbetrag liegt, in Höhe der Differenz separat in Rechnung gestellt. Monatliche Pauschalen (Hosting und Basis-Wartung), Einmalbeträge sowie gesondert abgerechnete Wartungs- oder Supportstunden werden per Rechnung mit einem Zahlungsziel von 14 Tagen fällig.
         </p>
 
         <h2 className="text-xl font-semibold mt-8 mb-4">§ 5 Umsatzsteuer</h2>
@@ -93,10 +96,13 @@ export default function AGB() {
 
         <h2 className="text-xl font-semibold mt-8 mb-4">§ 11 Laufzeit und Kündigung</h2>
         <p>
-          Im Einmalzahlungsmodell besteht keine feste Laufzeit. Mit Zahlung der Einmalsumme bleibt die bereitgestellte Plattform nutzbar; eine Kündigung der Bereitstellung ist nicht vorgesehen, optional gebuchte Wartungs- oder Supportleistungen sind monatlich kündbar.
+          Die Vertragslaufzeit beträgt für alle drei Preismodelle (Einmalzahlung, 5 % Provision und 7 % All-Inclusive) mindestens 12 Monate, beginnend mit dem im Angebot genannten Vertragsstart oder, sofern nicht abweichend vereinbart, mit der ersten Bereitstellung der Bestellplattform.
         </p>
         <p>
-          Das Provisionsmodell (5 % oder 7 %) kann von beiden Parteien mit einer Frist von 30 Tagen zum Monatsende ordentlich gekündigt werden, sofern keine längere Bindung individuell vereinbart wurde. Mit Wirksamwerden der Kündigung wird die Bestellplattform deaktiviert; bereits angefallene Provisionen bleiben hiervon unberührt.
+          Nach Ablauf der Mindestlaufzeit verlängert sich der Vertrag automatisch um jeweils 12 Monate, sofern er nicht mit einer Frist von 30 Tagen zum Ende der jeweiligen Vertragsperiode in Textform gekündigt wird.
+        </p>
+        <p>
+          Mit Wirksamwerden der Kündigung wird die Bestellplattform deaktiviert. Bereits angefallene Provisionen, monatliche Pauschalen, Einrichtungsgebühren und bereits geleistete Support- oder Wartungsstunden bleiben hiervon unberührt und werden vollständig fällig.
         </p>
         <p>
           Das Recht zur außerordentlichen Kündigung aus wichtigem Grund bleibt für beide Parteien unberührt. Kündigungen bedürfen der Textform.

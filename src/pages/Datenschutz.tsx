@@ -85,7 +85,7 @@ export default function Datenschutz() {
           Bei einer Bestellung mit Online-Zahlung werden die Zahlungsdaten (insbesondere Kartendaten) direkt an Stripe übermittelt. Wir selbst speichern oder sehen keine vollständigen Kartendaten. Stripe verarbeitet die Daten zur Zahlungsabwicklung sowie zur Betrugsprävention. Die Bedingungen finden Sie unter <a href="https://stripe.com/de/privacy" target="_blank" rel="noopener noreferrer">stripe.com/de/privacy</a>.
         </p>
         <p>
-          Im Provisionsmodell behält Stripe automatisiert eine Plattformgebühr von 5 % je Transaktion ein und leitet diese an GastroHub weiter. Hierbei werden uns Transaktions-Metadaten (Bestellzeitpunkt, Betrag, Restaurant-Identifikator) übermittelt, jedoch keine Zahlungsmittel und keine vollständigen Endkundendaten. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO.
+          In den Provisionsmodellen behält Stripe automatisiert die vereinbarte Plattformgebühr (5 % oder 7 %) je Transaktion ein und leitet diese an GastroHub weiter. Hierbei werden uns Transaktions-Metadaten (Bestellzeitpunkt, Betrag, Restaurant-Identifikator) übermittelt, jedoch keine Zahlungsmittel und keine vollständigen Endkundendaten. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO.
         </p>
         <p>
           Stripe behält sich Transfers an verbundene Unternehmen außerhalb der EU vor, abgesichert durch SCCs und das EU-US Data Privacy Framework (Stripe ist DPF-zertifiziert).

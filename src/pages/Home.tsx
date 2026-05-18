@@ -170,7 +170,7 @@ export default function Home() {
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Alle wichtigen Funktionen an einem Ort</h2>
             <p className="text-lg text-slate-600">
-              Vom ersten Kontakt bis zur laufenden Bestellung deckt GastroHub den gesamten Ablauf ab. Im Einmalzahlungsmodell ohne laufende Kosten, im Provisionsmodell mit niedriger Beteiligung.
+              Vom ersten Kontakt bis zur laufenden Bestellung deckt GastroHub den gesamten Ablauf ab. Drei Preismodelle, Sie wählen das passende für Ihr Restaurant.
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -212,8 +212,8 @@ export default function Home() {
               <div className="text-center text-primary">GastroHub</div>
             </div>
             {[
-              { label: "Provision", lieferando: "Branchenüblich deutlich höhere Provisionen", ubereats: "Branchenüblich deutlich höhere Provisionen", gastrohub: "0 % oder 5 %" },
-              { label: "Monatl. Gebühr", lieferando: "Ab €99/Mo.", ubereats: "Ab €0 (höhere %)", gastrohub: "Kein Abo" },
+              { label: "Provision", lieferando: "Branchenüblich deutlich höhere Provisionen", ubereats: "Branchenüblich deutlich höhere Provisionen", gastrohub: "0 %, 5 % oder 7 %" },
+              { label: "Monatl. Gebühr", lieferando: "Ab €99/Mo.", ubereats: "Ab €0 (höhere %)", gastrohub: "Ab 149 €" },
               { label: "Kundendaten", lieferando: "Plattform", ubereats: "Plattform", gastrohub: "Ihnen" },
               { label: "Eigenes Branding", lieferando: "Nein", ubereats: "Nein", gastrohub: "Vollständig" },
               { label: "Zahlung", lieferando: "Plattform", ubereats: "Plattform", gastrohub: "Direkt (Stripe)" },
@@ -241,45 +241,72 @@ export default function Home() {
       {/* Pricing */}
       <section className="py-20 lg:py-28 bg-slate-50">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
+          <div className="max-w-5xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Flexible Preismodelle</h2>
             <p className="text-lg text-slate-600 mb-10">
-              Wählen Sie das Modell, das zu Ihrem Restaurant passt, beide deutlich günstiger als Lieferando.
+              Drei Modelle, alle mit 12 Monaten Mindestlaufzeit. Sie wählen, was zu Ihrem Restaurant passt.
             </p>
-            <div className="grid md:grid-cols-2 gap-6 mb-8">
-              {/* Option A: One-time */}
-              <div className="bg-white rounded-2xl shadow-md border border-slate-200 p-8 text-left flex flex-col">
-                <div className="text-2xl font-extrabold text-slate-900 mb-1">Einmalzahlung</div>
-                <div className="text-slate-500 text-sm mb-6">Einmalige Einrichtungsgebühr, kein Abo</div>
-                <ul className="space-y-3 text-sm text-slate-700 flex-1">
+            <div className="grid md:grid-cols-3 gap-6 mb-8">
+              {/* Einmalzahlung */}
+              <div className="bg-white rounded-2xl shadow-md border border-slate-200 p-7 text-left flex flex-col">
+                <div className="text-xl font-extrabold text-slate-900 mb-1">Einmalzahlung</div>
+                <div className="text-3xl font-extrabold text-primary mt-2 mb-1">ab 2.500&thinsp;€</div>
+                <div className="text-slate-500 text-sm mb-5">Einrichtungsgebühr</div>
+                <ul className="space-y-2.5 text-sm text-slate-700 flex-1">
                   {[
-                    "0 % Provision auf jede Bestellung",
-                    "Kein monatliches Abo",
-                    "Vollständiges Bestellsystem",
-                    "Wartung & Updates werden separat abgerechnet",
+                    "149&thinsp;€/Monat (Hosting, Domain, E-Mail, Basis-Wartung)",
+                    "0 % Provision pro Bestellung",
+                    "Support separat (90&thinsp;€/Stunde)",
+                    "12 Monate Mindestlaufzeit",
                   ].map((t, i) => (
-                    <li key={i} className="flex items-start gap-2"><Check className="w-4 h-4 text-emerald-500 mt-0.5 shrink-0" />{t}</li>
+                    <li key={i} className="flex items-start gap-2">
+                      <Check className="w-4 h-4 text-emerald-500 mt-0.5 shrink-0" />
+                      <span dangerouslySetInnerHTML={{ __html: t }} />
+                    </li>
                   ))}
                 </ul>
               </div>
-              {/* Option B: Provision */}
-              <div className="bg-white rounded-2xl shadow-md border-2 border-primary p-8 text-left flex flex-col relative">
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full">Empfohlen</div>
-                <div className="text-2xl font-extrabold text-slate-900 mb-1">Provision</div>
-                <div className="text-slate-500 text-sm mb-6">Niedrige Beteiligung statt Einmalgebühr</div>
-                <ul className="space-y-3 text-sm text-slate-700 flex-1">
+              {/* 5% Provision */}
+              <div className="bg-white rounded-2xl shadow-md border border-slate-200 p-7 text-left flex flex-col">
+                <div className="text-xl font-extrabold text-slate-900 mb-1">5 % Provision</div>
+                <div className="text-3xl font-extrabold text-primary mt-2 mb-1">ab 499&thinsp;€</div>
+                <div className="text-slate-500 text-sm mb-5">Einrichtungsgebühr</div>
+                <ul className="space-y-2.5 text-sm text-slate-700 flex-1">
                   {[
-                    "5 % Provision, Grundpaket",
-                    "7 % Provision, inkl. Wartung & Support",
-                    "Weit unter branchenüblichen Provisionsmodellen",
-                    "Vollständiges Bestellsystem",
+                    "5 % pro Bestellung",
+                    "Mindestens 149&thinsp;€/Monat",
+                    "Support separat (90&thinsp;€/Stunde)",
+                    "12 Monate Mindestlaufzeit",
                   ].map((t, i) => (
-                    <li key={i} className="flex items-start gap-2"><Check className="w-4 h-4 text-emerald-500 mt-0.5 shrink-0" />{t}</li>
+                    <li key={i} className="flex items-start gap-2">
+                      <Check className="w-4 h-4 text-emerald-500 mt-0.5 shrink-0" />
+                      <span dangerouslySetInnerHTML={{ __html: t }} />
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              {/* 7% All-Inclusive (recommended) */}
+              <div className="bg-white rounded-2xl shadow-md border-2 border-primary p-7 text-left flex flex-col relative">
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full">Empfohlen</div>
+                <div className="text-xl font-extrabold text-slate-900 mb-1">7 % All-Inclusive</div>
+                <div className="text-3xl font-extrabold text-primary mt-2 mb-1">ab 499&thinsp;€</div>
+                <div className="text-slate-500 text-sm mb-5">Einrichtungsgebühr</div>
+                <ul className="space-y-2.5 text-sm text-slate-700 flex-1">
+                  {[
+                    "7 % pro Bestellung",
+                    "Mindestens 249&thinsp;€/Monat",
+                    "Support und Wartung komplett inklusive",
+                    "12 Monate Mindestlaufzeit",
+                  ].map((t, i) => (
+                    <li key={i} className="flex items-start gap-2">
+                      <Check className="w-4 h-4 text-emerald-500 mt-0.5 shrink-0" />
+                      <span dangerouslySetInnerHTML={{ __html: t }} />
+                    </li>
                   ))}
                 </ul>
               </div>
             </div>
-            <p className="text-slate-500 text-sm mb-6">Alle Preise individuell nach Restaurantgröße, sprechen Sie uns an.</p>
+            <p className="text-slate-500 text-sm mb-6">Alle Preise abhängig von Restaurantgröße und Anforderungen, sprechen Sie uns an.</p>
             <Button asChild size="lg" className="h-14 px-10 text-base font-semibold">
               <Link href="/kontakt">Angebot anfragen</Link>
             </Button>
