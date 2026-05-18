@@ -52,19 +52,24 @@
   "comparison": {
     "title": "Platform fees in comparison",
     "subtitle": "See for yourself, and work out what you save per year.",
-    "col_lieferando": "Lieferando",
-    "col_ubereats": "Uber Eats",
+    "col_platform_a": "Major delivery platform A",
+    "col_platform_b": "Major delivery platform B",
     "col_gastrohub": "GastroHub",
     "row_provision": "Commission",
     "row_monthly": "Monthly fee",
+    "row_setup": "Setup fee",
     "row_customers": "Customer data",
     "row_branding": "Own branding",
     "row_payment": "Payment",
-    "competitor_high_commission": "Industry-standard, significantly higher commissions",
-    "gh_commission": "0%, 5% or 7%",
-    "lf_monthly": "From €99/mo",
-    "uber_monthly": "From €0 (higher %)",
+    "pa_commission": "13–30%",
+    "pb_commission": "15–30%",
+    "gh_commission": "5% or 7% (or one-time payment, no commission)",
+    "pa_monthly": "Not publicly disclosed",
+    "pb_monthly": "Not publicly disclosed",
     "gh_monthly": "From €149",
+    "pa_setup": "Variable, typically from €399",
+    "pb_setup": "Variable",
+    "gh_setup": "€499 (with commission) or €2,500 (one-time)",
     "platform": "Platform",
     "yours": "You",
     "no": "No",
@@ -73,7 +78,7 @@
     "savings_text": "With industry-standard platform commissions, monthly revenues in the five-figure range can mean substantial costs, which GastroHub reduces significantly.",
     "savings_text2": "With GastroHub you pay {{strong}}, and keep the rest.",
     "savings_strong": "significantly less",
-    "disclaimer": "* Figures are based on publicly available standard conditions. Actual commission rates may vary by individual contract. Lieferando and Uber Eats are registered trademarks of their respective owners. This comparison serves objective price comparison purposes under § 6 UWG."
+    "disclaimer": "* Comparison values reflect publicly reported rates of major delivery platforms in Germany. Exact rates vary by contract, region, and platform. § 6 UWG."
   },
   "pricing": {
     "title": "Flexible pricing models",
@@ -117,10 +122,10 @@
   },
   "final_cta": {
     "title": "Your restaurant. Your orders.",
-    "subline": "Choose the model that fits, significantly cheaper than Lieferando, no dependence on third-party platforms.",
+    "subline": "Choose the model that fits, significantly cheaper than major delivery apps, no dependence on third-party platforms.",
     "primary": "View demo",
     "secondary": "Questions? Get in touch",
     "check1": "Free, no-commitment first call",
-    "check2": "Well below Lieferando rates"
+    "check2": "Well below typical aggregator rates"
   }
 }

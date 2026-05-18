@@ -51,12 +51,13 @@ export default function Home() {
     { icon: ArrowRight, k: "contact" },
   ] as const;
 
-  const comparisonRows: Array<{ labelKey: string; lieferando: string; ubereats: string; gastrohub: string }> = [
-    { labelKey: "row_provision", lieferando: t("comparison.competitor_high_commission"), ubereats: t("comparison.competitor_high_commission"), gastrohub: t("comparison.gh_commission") },
-    { labelKey: "row_monthly", lieferando: t("comparison.lf_monthly"), ubereats: t("comparison.uber_monthly"), gastrohub: t("comparison.gh_monthly") },
-    { labelKey: "row_customers", lieferando: t("comparison.platform"), ubereats: t("comparison.platform"), gastrohub: t("comparison.yours") },
-    { labelKey: "row_branding", lieferando: t("comparison.no"), ubereats: t("comparison.no"), gastrohub: t("comparison.full") },
-    { labelKey: "row_payment", lieferando: t("comparison.platform"), ubereats: t("comparison.platform"), gastrohub: t("comparison.direct_stripe") },
+  const comparisonRows: Array<{ labelKey: string; a: string; b: string; gh: string }> = [
+    { labelKey: "row_provision", a: t("comparison.pa_commission"), b: t("comparison.pb_commission"), gh: t("comparison.gh_commission") },
+    { labelKey: "row_monthly",   a: t("comparison.pa_monthly"),    b: t("comparison.pb_monthly"),    gh: t("comparison.gh_monthly") },
+    { labelKey: "row_setup",     a: t("comparison.pa_setup"),      b: t("comparison.pb_setup"),      gh: t("comparison.gh_setup") },
+    { labelKey: "row_customers", a: t("comparison.platform"),      b: t("comparison.platform"),      gh: t("comparison.yours") },
+    { labelKey: "row_branding",  a: t("comparison.no"),            b: t("comparison.no"),            gh: t("comparison.full") },
+    { labelKey: "row_payment",   a: t("comparison.platform"),      b: t("comparison.platform"),      gh: t("comparison.direct_stripe") },
   ];
 
   return (
@@ -187,16 +188,16 @@ export default function Home() {
           <div className="max-w-3xl mx-auto overflow-x-auto">
             <div className="grid grid-cols-4 text-xs font-semibold text-slate-500 uppercase tracking-wide mb-3 px-4 min-w-[560px]">
               <div></div>
-              <div className="text-center">{t("comparison.col_lieferando")}</div>
-              <div className="text-center">{t("comparison.col_ubereats")}</div>
+              <div className="text-center">{t("comparison.col_platform_a")}</div>
+              <div className="text-center">{t("comparison.col_platform_b")}</div>
               <div className="text-center text-primary">{t("comparison.col_gastrohub")}</div>
             </div>
             {comparisonRows.map((row, i) => (
               <div key={i} className={`grid grid-cols-4 px-4 py-4 rounded-xl mb-2 items-center min-w-[560px] ${i % 2 === 0 ? "bg-slate-50" : "bg-white"}`}>
                 <div className="text-sm font-medium text-slate-700">{t(`comparison.${row.labelKey}`)}</div>
-                <div className="text-center text-sm text-red-500 font-medium">{row.lieferando}</div>
-                <div className="text-center text-sm text-red-400 font-medium">{row.ubereats}</div>
-                <div className="text-center text-sm text-emerald-600 font-semibold">{row.gastrohub}</div>
+                <div className="text-center text-sm text-red-500 font-medium">{row.a}</div>
+                <div className="text-center text-sm text-red-400 font-medium">{row.b}</div>
+                <div className="text-center text-sm text-emerald-600 font-semibold">{row.gh}</div>
               </div>
             ))}
             <div className="mt-6 bg-secondary/40 border border-primary/15 rounded-2xl p-6 text-center">

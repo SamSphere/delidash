@@ -52,28 +52,33 @@
   "comparison": {
     "title": "Plattformgebühren im Vergleich",
     "subtitle": "Vergleichen Sie selbst, und rechnen Sie nach, was Sie jährlich sparen.",
-    "col_lieferando": "Lieferando",
-    "col_ubereats": "Uber Eats",
+    "col_platform_a": "Bekannte Liefer-Plattform A",
+    "col_platform_b": "Bekannte Liefer-Plattform B",
     "col_gastrohub": "GastroHub",
     "row_provision": "Provision",
     "row_monthly": "Monatl. Gebühr",
+    "row_setup": "Einrichtungsgebühr",
     "row_customers": "Kundendaten",
     "row_branding": "Eigenes Branding",
     "row_payment": "Zahlung",
-    "competitor_high_commission": "Branchenüblich deutlich höhere Provisionen",
-    "gh_commission": "0 %, 5 % oder 7 %",
-    "lf_monthly": "Ab €99/Mo.",
-    "uber_monthly": "Ab €0 (höhere %)",
+    "pa_commission": "13–30 %",
+    "pb_commission": "15–30 %",
+    "gh_commission": "5 % oder 7 % (oder Einmalzahlung ohne Provision)",
+    "pa_monthly": "Nicht öffentlich angegeben",
+    "pb_monthly": "Nicht öffentlich angegeben",
     "gh_monthly": "Ab 149 €",
+    "pa_setup": "Variabel, typisch ab 399 €",
+    "pb_setup": "Variabel",
+    "gh_setup": "499 € (mit Provision) oder 2.500 € (Einmalzahlung)",
     "platform": "Plattform",
-    "yours": "Ihnen",
+    "yours": "Sie",
     "no": "Nein",
     "full": "Vollständig",
     "direct_stripe": "Direkt (Stripe)",
     "savings_text": "Bei branchenüblichen Plattformprovisionen können bei monatlichen Umsätzen im fünfstelligen Bereich erhebliche Kosten anfallen, die mit GastroHub deutlich reduziert werden.",
     "savings_text2": "Mit GastroHub zahlen Sie {{strong}}, und behalten den Rest.",
     "savings_strong": "deutlich weniger",
-    "disclaimer": "* Angaben basieren auf veröffentlichten Standardkonditionen. Tatsächliche Provisionsraten können je nach individuellem Vertrag abweichen. Lieferando und Uber Eats sind eingetragene Marken ihrer jeweiligen Inhaber. Diese Darstellung dient dem sachlichen Preisvergleich gemäß § 6 UWG."
+    "disclaimer": "* Vergleichswerte basieren auf öffentlich berichteten Konditionen großer Liefer-Plattformen in Deutschland. Genaue Sätze variieren je nach Vertrag, Region und Anbieter. § 6 UWG."
   },
   "pricing": {
     "title": "Flexible Preismodelle",
@@ -117,10 +122,10 @@
   },
   "final_cta": {
     "title": "Ihr Restaurant. Ihre Bestellungen.",
-    "subline": "Wählen Sie das Modell, das zu Ihnen passt, deutlich günstiger als Lieferando, ohne Abhängigkeit von fremden Plattformen.",
+    "subline": "Wählen Sie das Modell, das zu Ihnen passt, deutlich günstiger als große Liefer-Apps, ohne Abhängigkeit von fremden Plattformen.",
     "primary": "Demo ansehen",
     "secondary": "Fragen? Kontaktieren Sie uns",
     "check1": "Unverbindliches Erstgespräch",
-    "check2": "Weit unter Lieferando-Konditionen"
+    "check2": "Weit unter branchenüblichen Konditionen"
   }
 }
