@@ -23,12 +23,6 @@
     "contact": "Contact",
     "copyright": "© 2026 GastroHub. All rights reserved."
   },
-  "cookie_banner": {
-    "text": "This website uses technically necessary cookies to ensure functionality. For details see our",
-    "datenschutz_link": "privacy policy",
-    "accept": "Accept",
-    "decline": "Decline"
-  },
   "not_found": {
     "title": "Page not found",
     "subtitle": "404",

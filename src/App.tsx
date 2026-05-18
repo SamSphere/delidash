@@ -6,7 +6,6 @@ import NotFound from "@/pages/not-found";
 
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import { CookieBanner } from "@/components/CookieBanner";
 
 import Home from "@/pages/Home";
 import Demo from "@/pages/Demo";
@@ -63,7 +62,6 @@ function App() {
           </Layout>
         </WouterRouter>
         <Toaster />
-        <CookieBanner />
       </TooltipProvider>
     </QueryClientProvider>
   );
