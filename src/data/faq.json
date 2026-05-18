@@ -100,8 +100,8 @@
             "en": "Are there any hidden costs?"
           },
           "a": {
-            "de": "Nein. Was im Angebot steht, ist der vollständige Preis von uns. Zusätzlich fallen Stripe-Gebühren an, etwa 1,5% plus 25 Cent pro erfolgreicher Kartentransaktion. Diese gehen direkt an Stripe und sind in jedem Online-Bezahlsystem üblich. Sie sehen jede einzelne Gebühr in Ihrem Stripe-Dashboard. Es gibt keine Sponsored-Listings, keine Premium-Platzierung-Aufpreise, keine verpflichtenden Werbebudgets. Bei Modell 1 und Modell 2 wird technischer Support separat zu 90€ pro Stunde abgerechnet, bei Modell 3 ist Support komplett inklusive.",
-            "en": "No. What's in the offer is our full price. On top, Stripe fees apply, roughly 1.5% plus 25 cents per successful card transaction. Those go directly to Stripe and are standard in any online payment system. You see every single fee in your Stripe dashboard. There are no sponsored listings, no premium-placement surcharges, no mandatory ad budgets. In Model 1 and Model 2, technical support is billed separately at €90 per hour. In Model 3, support is fully included."
+            "de": "Nein. Was im Angebot steht, ist der vollständige Preis von uns. Zusätzlich fallen Stripe-Gebühren an, etwa 1,5% plus 25 Cent pro erfolgreicher Kartentransaktion. Diese gehen direkt an Stripe und sind in jedem Online-Bezahlsystem üblich. Sie sehen jede einzelne Gebühr in Ihrem Stripe-Dashboard. Es gibt keine Sponsored-Listings, keine Premium-Platzierung-Aufpreise, keine verpflichtenden Werbebudgets. Bei Modell 1 und Modell 2 wird technischer Support nach Aufwand abgerechnet, bei Modell 3 ist Support komplett inklusive.",
+            "en": "No. What's in the offer is our full price. On top, Stripe fees apply, roughly 1.5% plus 25 cents per successful card transaction. Those go directly to Stripe and are standard in any online payment system. You see every single fee in your Stripe dashboard. There are no sponsored listings, no premium-placement surcharges, no mandatory ad budgets. In Model 1 and Model 2, technical support is billed separately on a time-and-materials basis. In Model 3, support is fully included."
           }
         }
       ]
@@ -385,8 +385,8 @@
             "en": "How do I reach support?"
           },
           "a": {
-            "de": "Per E-Mail an kontakt@gastrohub.dev. Werktags antworten wir in der Regel am selben oder nächsten Tag. Im 7-Prozent-All-Inclusive-Modell ist Support unbegrenzt enthalten. Im 5-Prozent-Modell und im Einmalzahlungsmodell rechnen wir Support zu 90 Euro pro Stunde ab, in 15-Minuten-Schritten und immer vorher angekündigt.",
-            "en": "By email at kontakt@gastrohub.dev. On working days we usually reply the same or next day. In the 7% all-inclusive model, support is included without limit. In the 5% model and the one-time payment model we bill support at €90 per hour, in 15-minute increments, always announced in advance."
+            "de": "Per E-Mail an kontakt@gastrohub.dev. Werktags antworten wir in der Regel am selben oder nächsten Tag. Im 7-Prozent-All-Inclusive-Modell ist Support unbegrenzt enthalten. Im 5-Prozent-Modell und im Einmalzahlungsmodell rechnen wir Support nach Aufwand ab, in 15-Minuten-Schritten und immer vorher angekündigt.",
+            "en": "By email at kontakt@gastrohub.dev. On working days we usually reply the same or next day. In the 7% all-inclusive model, support is included without limit. In the 5% model and the one-time payment model we bill support on a time-and-materials basis, in 15-minute increments, always announced in advance."
           }
         },
         {

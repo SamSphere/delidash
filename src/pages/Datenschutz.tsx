@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import { Link } from "wouter";
 import { useTranslation } from "react-i18next";
 
 export default function Datenschutz() {
@@ -20,17 +19,13 @@ export default function Datenschutz() {
       <div className="container mx-auto px-4 max-w-3xl prose prose-slate">
         <h1 className="text-3xl font-bold text-slate-900 mb-8">{tk("title")}</h1>
 
-        {isEn && (
-          <div className="not-prose mb-8 rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-900">
-            {t("translation_disclaimer")}
-          </div>
+        {isEn && tk("disclaimer_inline") && (
+          <p className="text-slate-500 italic">{tk("disclaimer_inline")}</p>
         )}
 
         <h2 className="text-xl font-semibold mt-8 mb-4">{tk("s1_h")}</h2>
         <p>{tk("s1_body1")}</p>
-        <p>
-          {tk("s1_body2_pre")} <strong>{tk("s1_body2_strong")}</strong> {tk("s1_body2_post")}
-        </p>
+        <p>{tk("s1_body2")}</p>
 
         <h2 className="text-xl font-semibold mt-8 mb-4">{tk("s2_h")}</h2>
         <p>{tk("s2_intro")}</p>
@@ -45,9 +40,8 @@ export default function Datenschutz() {
         </p>
 
         <h2 className="text-xl font-semibold mt-8 mb-4">{tk("s3_h")}</h2>
-        <p>{tk("s3_body1")}</p>
-        <p>{tk("s3_body2")}</p>
-        <p>{tk("s3_body3")}</p>
+        <p><strong>{tk("s3_marketing_label")}</strong> {tk("s3_marketing_body")}</p>
+        <p><strong>{tk("s3_platform_label")}</strong> {tk("s3_platform_body")}</p>
 
         <h2 className="text-xl font-semibold mt-8 mb-4">{tk("s4_h")}</h2>
         <p>{tk("s4_body1")}</p>
@@ -75,49 +69,72 @@ export default function Datenschutz() {
         </p>
         <p>{tk("s7_body3")}</p>
         <p>{tk("s7_body4")}</p>
-        <p>{tk("s7_body5")}</p>
 
         <h2 className="text-xl font-semibold mt-8 mb-4">{tk("s8_h")}</h2>
-        <p>{tk("s8_body")}</p>
+        <p>{tk("s8_body1")}</p>
+        <p>
+          {tk("s8_body2_pre")}{" "}
+          <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a>
+        </p>
 
         <h2 className="text-xl font-semibold mt-8 mb-4">{tk("s9_h")}</h2>
-        <p>
-          {tk("s9_body1_pre")}{" "}
-          <Link href="/cookie-richtlinie" className="text-primary hover:underline">{tk("s9_body1_link")}</Link>.
-        </p>
-        <p>{tk("s9_body2")}</p>
+        <p>{tk("s9_body")}</p>
 
         <h2 className="text-xl font-semibold mt-8 mb-4">{tk("s10_h")}</h2>
         <p>{tk("s10_body")}</p>
 
         <h2 className="text-xl font-semibold mt-8 mb-4">{tk("s11_h")}</h2>
-        <p>{tk("s11_body")}</p>
+        <p>{tk("s11_body1")}</p>
+        <p>{tk("s11_body2")}</p>
 
         <h2 className="text-xl font-semibold mt-8 mb-4">{tk("s12_h")}</h2>
-        <p>{tk("s12_intro")}</p>
-        <ul>
-          <li>{tk("s12_li1")}</li>
-          <li>{tk("s12_li2")}</li>
-          <li>{tk("s12_li3")}</li>
-          <li>{tk("s12_li4")}</li>
-          <li>{tk("s12_li5")}</li>
-          <li>{tk("s12_li6")}</li>
-        </ul>
-        <p>
-          {tk("s12_outro_pre")} <a href="mailto:kontakt@gastrohub.dev">kontakt@gastrohub.dev</a>.
-        </p>
+        <p>{tk("s12_body")}</p>
 
         <h2 className="text-xl font-semibold mt-8 mb-4">{tk("s13_h")}</h2>
-        <p>{tk("s13_intro")}</p>
-        <p>
-          {tk("s13_authority_l1")}<br />
-          {tk("s13_authority_l2")}<br />
-          {tk("s13_authority_l3")}<br />
-          <a href="https://www.baden-wuerttemberg.datenschutz.de" target="_blank" rel="noopener noreferrer">https://www.baden-wuerttemberg.datenschutz.de</a>
-        </p>
+        <p>{tk("s13_body")}</p>
 
         <h2 className="text-xl font-semibold mt-8 mb-4">{tk("s14_h")}</h2>
         <p>{tk("s14_body")}</p>
+
+        <h2 className="text-xl font-semibold mt-8 mb-4">{tk("s15_h")}</h2>
+        <p>{tk("s15_body")}</p>
+
+        <h2 className="text-xl font-semibold mt-8 mb-4">{tk("s16_h")}</h2>
+        <p>{tk("s16_intro")}</p>
+        <ul>
+          <li>{tk("s16_li1")}</li>
+          <li>{tk("s16_li2")}</li>
+          <li>{tk("s16_li3")}</li>
+          <li>{tk("s16_li4")}</li>
+          <li>{tk("s16_li5")}</li>
+          <li>{tk("s16_li6")}</li>
+          <li>{tk("s16_li7")}</li>
+        </ul>
+        <p>
+          {tk("s16_outro_pre")} <a href="mailto:kontakt@gastrohub.dev">kontakt@gastrohub.dev</a>.
+        </p>
+
+        <h2 className="text-xl font-semibold mt-8 mb-4">{tk("s17_h")}</h2>
+        <p>{tk("s17_intro")}</p>
+        <p>
+          {tk("s17_authority_l1")}<br />
+          {tk("s17_authority_l2")}<br />
+          {tk("s17_authority_l3")}<br />
+          <a href="https://www.baden-wuerttemberg.datenschutz.de" target="_blank" rel="noopener noreferrer">https://www.baden-wuerttemberg.datenschutz.de</a>
+        </p>
+
+        <h2 className="text-xl font-semibold mt-8 mb-4">{tk("s18_h")}</h2>
+        <ul>
+          <li>{tk("s18_li1")}</li>
+          <li>{tk("s18_li2")}</li>
+          <li>{tk("s18_li3")}</li>
+          <li>{tk("s18_li4")}</li>
+          <li>{tk("s18_li5")}</li>
+          <li>{tk("s18_li6")}</li>
+        </ul>
+
+        <h2 className="text-xl font-semibold mt-8 mb-4">{tk("s19_h")}</h2>
+        <p>{tk("s19_body")}</p>
 
         <p className="text-sm text-slate-400 mt-12">{tk("stand")}</p>
       </div>
