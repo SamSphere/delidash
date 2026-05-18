@@ -95,7 +95,7 @@ export default function Demo() {
                 </li>
                 <li className="flex items-start gap-2">
                   <Check className="h-5 w-5 text-emerald-600 shrink-0 mt-0.5" />
-                  <span>Die Demo wird täglich um 03:00 Uhr zurückgesetzt. Alles, was Sie eingeben, ist temporär.</span>
+                  <span>Die Demo wird nachts zurückgesetzt. Alles, was Sie eingeben, ist temporär.</span>
                 </li>
               </ul>
             </div>
